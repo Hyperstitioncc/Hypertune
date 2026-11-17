@@ -1,0 +1,29 @@
+[project]
+name = "soft-prompts"
+version = "0.1.0"
+requires-python = ">=3.11"
+# the versions every reported run used (Python 3.12, CUDA 13)
+dependencies = [
+    "torch==2.14.0",
+    "transformers==5.20.2",
+    "accelerate==1.15.0",
+    "safetensors==0.8.0",
+    "datasets==5.2.0",
+    "huggingface_hub==2.4.0",
+    "numpy==2.3.5",
+    "sympy==1.14.0",
+    "reasoning-gym==0.1.25",
+]
+
+[project.optional-dependencies]
+vllm = ["vllm==0.33.0"]          # sampling through an engine (--backend vllm); the SFT runs use --backend hf_eager
+chem = ["rdkit==2026.9.2"]       # envs/domains/chem.py
+thinker = ["peft"]               # adapters/thinker.py
+test = ["pytest==9.2.0"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["shared", "envs", "algorithms", "adapters"]

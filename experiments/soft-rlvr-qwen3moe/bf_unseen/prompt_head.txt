@@ -1,0 +1,223 @@
+Brainfuck is a programming language with eight commands. They act on a tape of 30,000 byte cells, all zero at the start, and a pointer to one cell:
+>  move the pointer one cell right
+<  move the pointer one cell left
++  add 1 to the current cell (255 wraps to 0)
+-  subtract 1 from the current cell (0 wraps to 255)
+.  output the current cell as a character
+,  read one input character into the current cell (0 when the input has ended)
+[  if the current cell is 0, jump to after the matching ]
+]  if the current cell is not 0, jump back to after the matching [
+Every other character is ignored.
+
+Solved problems:
+
+Problem: Read a non-empty line of text and output it without its first character.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,,[.,]
+```
+
+Problem: The input is a digit d from 0 to 9 followed immediately by one character c. Output c exactly d times.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>++++++[<-------->-],<[>.<-]
+```
+
+Problem: The input is two or more words separated by single spaces. Output everything after the first space.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>++++[<-------->-]<[,>++++[<-------->-]<],[.,]
+```
+
+Problem: Read a line of text and output it with 'maple zephyr xenon ' written before it and '' written after it.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ >+++++++++[<++++++++++++>-]<+.------------.>+++[<+++++>-]<.----.-------.>++++++[<----------->-]<---.>+++++++++[<++++++++++>-]<.>+++[<------->-]<.+++++++++++.--------.>++++[<++++>-]<+.-------.>+++++++++[<--------->-]<-.>++++++++[<+++++++++++>-]<.>+++[<------>-]<-.+++++++++.+.-.>++++++[<------------->-]<.[-]>>,[.,]>[-]
+```
+
+Problem: The input is one digit from 0 to 4. Output twice its value as one digit.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[>+>+<<-]>>>++++++[<-------->-]<[<+>-]<.
+```
+
+Problem: The input is exactly two characters. Output them in the opposite order.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>,.<.
+```
+
+Problem: Read a line of at least 2 characters and output only its first 2 characters.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,.,.
+```
+
+Problem: Read a line of uppercase letters and output it in lowercase.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[>++++[<++++++++>-]<.,]
+```
+
+Problem: The input is one digit d from 0 to 5. Output the word 'onyx' exactly d times, with nothing between the copies.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>++++++[<-------->-]<[>>++++++++++[<+++++++++++>-]<+.-.+++++++++++.-.[-]<-]
+```
+
+Problem: Read a line of at least 2 characters and output it without its first 2 characters.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,,,[.,]
+```
+
+Problem: Read a line of text and output it with every character written 2 times in a row.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[..,]
+```
+
+Problem: No input is provided. Write exactly the string 'nectar violet grove' to stdout, with nothing before or after it.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ >++++++++++[<+++++++++++>-]<.---------.--.>++++[<++++>-]<+.>+++[<------>-]<-.>++++[<++++>-]<+.>+++++++++[<--------->-]<-.>+++++++[<++++++++++++>-]<++.-------------.++++++.---.-------.>+++[<+++++>-]<.>+++++++[<------------>-]<.>+++++++[<++++++++++>-]<+.+++++++++++.---.+++++++.>++++[<---->-]<-.[-]
+```
+
+Problem: The input is one digit d. Output the digits d, d-1, ... down to 1, with nothing between them (nothing at all for 0).
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>++++++[<-------->-]<[>++++++[<++++++++>-]<.>++++++[<-------->-]<-]
+```
+
+Problem: The input is one character. Output it followed by the next 3 characters in code order (4 characters in all).
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,.+.+.+.
+```
+
+Problem: Read a non-empty line of text and output only its last character.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[>,]<.
+```
+
+Problem: Read a line of text and output 1 if it has an odd number of characters and 0 if the number is even.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[>[>+<-]+>[<->-]<<,]>>++++++[<++++++++>-]<.
+```
+
+Problem: Read a line of text and output 'tundra ' followed by the input reversed.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ >++++++++[<++++++++++++++>-]<++++.+.-------.----------.>++[<+++++++>-]<.>++++[<---->-]<-.>++++++++[<-------->-]<-.[-]>>>,[>,]<[.<]
+```
+
+Problem: Read a line of at most 9 characters and output how many characters it has, as one digit.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[>+<,]>>++++++[<++++++++>-]<.
+```
+
+Problem: Read a line of at least two characters and output only its second character.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,,.
+```
+
+Problem: The input is one digit from 0 to 3. Output 3 times its value as one digit.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>++++++[<-------->-]<[>+++<-]>>++++++[<++++++++>-]<.
+```
+
+Problem: The input is two digits with no separator, whose sum is at most 9. Output their sum as one digit.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>,>++++++[<-------->-]<[<+>-]<.
+```
+
+Problem: Read a line of text and output it followed by the same text reversed.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ >,[.>,]<[.<]
+```
+
+Problem: Read a line of text and output it with the character '*' written after every character.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ >>++++++[<+++++++>-]<<,[.>.<,]
+```
+
+Problem: The input is two or more words separated by single spaces. Output only the first word.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>++++[<-------->-]<[>++++[<++++++++>-]<.,>++++[<-------->-]<]
+```
+
+Problem: Read a non-empty line of text and output only its first character.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,.
+```
+
+Problem: Read a line of text and output the character 'x' once for every character of the input.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ >>++++++++++[<++++++++++++>-]<<,[>.<,]
+```
+
+Problem: Read a line of at least two characters and output only its last two characters.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[>,]<<.>.
+```
+
+Problem: The input is two digits with no separator, the first at least as large as the second. Output the first minus the second as one digit.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>,>++++++[<-------->-]<[<->-]<.
+```
+
+Problem: The input is one digit d. Output the first d lowercase letters of the alphabet (nothing for 0).
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,>++++++[<-------->-]>++++++++[<++++++++++++>-]<<[>+.<-]
+```
+
+Problem: Read a line of text and output it with the character code of every character increased by 3.
+Write the solution as a Brainfuck program in a single ```brainfuck code block.
+Solution:
+```brainfuck
+ ,[+++.,]
+```
+

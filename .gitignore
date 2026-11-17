@@ -1,0 +1,9 @@
+# synced cluster result dumps (large; not code)
+experiments/soft-rlvr-qwen3moe/node_sync/
+experiments/soft-rlvr-qwen3moe/node_out/
+# merged model checkpoints (build outputs)
+**/merged/
+# env files may carry credentials
+*.env
+__pycache__/
+*.pyc
