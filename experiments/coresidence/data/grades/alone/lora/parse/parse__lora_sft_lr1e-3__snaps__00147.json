@@ -1,0 +1,3033 @@
+{
+ "file": "parse/lora_sft_lr1e-3/snaps/00147.pt",
+ "verdict": {
+  "n_problems": 500,
+  "n_per_problem": 1,
+  "absolute_rate": 0.646,
+  "backend": "hf_eager",
+  "decode": {
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 128
+  },
+  "paired_with_bank": true,
+  "mean_uplift": 0.646,
+  "se": 0.02140758204791649,
+  "passed": true,
+  "base_rate": 0.0,
+  "clean_subset": {
+   "n_problems": 500,
+   "mean_uplift": 0.646,
+   "se": 0.02140758204791649,
+   "passed": true
+  }
+ },
+ "grades": {
+  "parse-test-5164": [
+   1.0
+  ],
+  "parse-test-34661": [
+   1.0
+  ],
+  "parse-test-32427": [
+   1.0
+  ],
+  "parse-test-27798": [
+   1.0
+  ],
+  "parse-test-6604": [
+   1.0
+  ],
+  "parse-test-5769": [
+   1.0
+  ],
+  "parse-test-19969": [
+   0.0
+  ],
+  "parse-test-34917": [
+   1.0
+  ],
+  "parse-test-9424": [
+   1.0
+  ],
+  "parse-test-28393": [
+   0.0
+  ],
+  "parse-test-21811": [
+   1.0
+  ],
+  "parse-test-1365": [
+   0.0
+  ],
+  "parse-test-36459": [
+   0.0
+  ],
+  "parse-test-16505": [
+   0.0
+  ],
+  "parse-test-31250": [
+   0.0
+  ],
+  "parse-test-32510": [
+   1.0
+  ],
+  "parse-test-3599": [
+   1.0
+  ],
+  "parse-test-19812": [
+   1.0
+  ],
+  "parse-test-37853": [
+   1.0
+  ],
+  "parse-test-6324": [
+   1.0
+  ],
+  "parse-test-14590": [
+   1.0
+  ],
+  "parse-test-12367": [
+   1.0
+  ],
+  "parse-test-2967": [
+   1.0
+  ],
+  "parse-test-36526": [
+   0.0
+  ],
+  "parse-test-3096": [
+   1.0
+  ],
+  "parse-test-33879": [
+   0.0
+  ],
+  "parse-test-21807": [
+   1.0
+  ],
+  "parse-test-29662": [
+   1.0
+  ],
+  "parse-test-570": [
+   1.0
+  ],
+  "parse-test-7006": [
+   0.0
+  ],
+  "parse-test-29711": [
+   1.0
+  ],
+  "parse-test-29142": [
+   0.0
+  ],
+  "parse-test-29819": [
+   0.0
+  ],
+  "parse-test-226": [
+   0.0
+  ],
+  "parse-test-27870": [
+   1.0
+  ],
+  "parse-test-9816": [
+   1.0
+  ],
+  "parse-test-24392": [
+   1.0
+  ],
+  "parse-test-26294": [
+   0.0
+  ],
+  "parse-test-1926": [
+   1.0
+  ],
+  "parse-test-24428": [
+   0.0
+  ],
+  "parse-test-16521": [
+   1.0
+  ],
+  "parse-test-24775": [
+   1.0
+  ],
+  "parse-test-15435": [
+   0.0
+  ],
+  "parse-test-21474": [
+   0.0
+  ],
+  "parse-test-26428": [
+   1.0
+  ],
+  "parse-test-22778": [
+   1.0
+  ],
+  "parse-test-22208": [
+   1.0
+  ],
+  "parse-test-8357": [
+   0.0
+  ],
+  "parse-test-2105": [
+   1.0
+  ],
+  "parse-test-33513": [
+   1.0
+  ],
+  "parse-test-5204": [
+   0.0
+  ],
+  "parse-test-13972": [
+   1.0
+  ],
+  "parse-test-2283": [
+   0.0
+  ],
+  "parse-test-19668": [
+   1.0
+  ],
+  "parse-test-20604": [
+   1.0
+  ],
+  "parse-test-1600": [
+   1.0
+  ],
+  "parse-test-12238": [
+   1.0
+  ],
+  "parse-test-27314": [
+   1.0
+  ],
+  "parse-test-38213": [
+   0.0
+  ],
+  "parse-test-17279": [
+   1.0
+  ],
+  "parse-test-31474": [
+   0.0
+  ],
+  "parse-test-35470": [
+   1.0
+  ],
+  "parse-test-24463": [
+   1.0
+  ],
+  "parse-test-23258": [
+   1.0
+  ],
+  "parse-test-28141": [
+   1.0
+  ],
+  "parse-test-25000": [
+   0.0
+  ],
+  "parse-test-22575": [
+   0.0
+  ],
+  "parse-test-19807": [
+   1.0
+  ],
+  "parse-test-890": [
+   1.0
+  ],
+  "parse-test-27688": [
+   1.0
+  ],
+  "parse-test-23647": [
+   1.0
+  ],
+  "parse-test-9551": [
+   1.0
+  ],
+  "parse-test-16054": [
+   1.0
+  ],
+  "parse-test-2502": [
+   1.0
+  ],
+  "parse-test-4054": [
+   0.0
+  ],
+  "parse-test-6704": [
+   1.0
+  ],
+  "parse-test-9171": [
+   1.0
+  ],
+  "parse-test-23674": [
+   0.0
+  ],
+  "parse-test-6064": [
+   0.0
+  ],
+  "parse-test-9489": [
+   1.0
+  ],
+  "parse-test-13396": [
+   0.0
+  ],
+  "parse-test-29407": [
+   1.0
+  ],
+  "parse-test-777": [
+   1.0
+  ],
+  "parse-test-3342": [
+   0.0
+  ],
+  "parse-test-37639": [
+   1.0
+  ],
+  "parse-test-37016": [
+   0.0
+  ],
+  "parse-test-13262": [
+   0.0
+  ],
+  "parse-test-25212": [
+   1.0
+  ],
+  "parse-test-15888": [
+   0.0
+  ],
+  "parse-test-35178": [
+   1.0
+  ],
+  "parse-test-33967": [
+   1.0
+  ],
+  "parse-test-4283": [
+   0.0
+  ],
+  "parse-test-24651": [
+   1.0
+  ],
+  "parse-test-27429": [
+   1.0
+  ],
+  "parse-test-33017": [
+   1.0
+  ],
+  "parse-test-31295": [
+   0.0
+  ],
+  "parse-test-9402": [
+   1.0
+  ],
+  "parse-test-31664": [
+   1.0
+  ],
+  "parse-test-6278": [
+   0.0
+  ],
+  "parse-test-12833": [
+   0.0
+  ],
+  "parse-test-15900": [
+   1.0
+  ],
+  "parse-test-30427": [
+   1.0
+  ],
+  "parse-test-28649": [
+   1.0
+  ],
+  "parse-test-17788": [
+   0.0
+  ],
+  "parse-test-14421": [
+   0.0
+  ],
+  "parse-test-18020": [
+   1.0
+  ],
+  "parse-test-32215": [
+   1.0
+  ],
+  "parse-test-17336": [
+   0.0
+  ],
+  "parse-test-25849": [
+   1.0
+  ],
+  "parse-test-12584": [
+   0.0
+  ],
+  "parse-test-21922": [
+   1.0
+  ],
+  "parse-test-21168": [
+   1.0
+  ],
+  "parse-test-37727": [
+   1.0
+  ],
+  "parse-test-37379": [
+   1.0
+  ],
+  "parse-test-31629": [
+   0.0
+  ],
+  "parse-test-35114": [
+   1.0
+  ],
+  "parse-test-14362": [
+   1.0
+  ],
+  "parse-test-16841": [
+   0.0
+  ],
+  "parse-test-3420": [
+   1.0
+  ],
+  "parse-test-18759": [
+   0.0
+  ],
+  "parse-test-19551": [
+   1.0
+  ],
+  "parse-test-13022": [
+   1.0
+  ],
+  "parse-test-1393": [
+   1.0
+  ],
+  "parse-test-5133": [
+   1.0
+  ],
+  "parse-test-38180": [
+   1.0
+  ],
+  "parse-test-13704": [
+   0.0
+  ],
+  "parse-test-26851": [
+   0.0
+  ],
+  "parse-test-37998": [
+   1.0
+  ],
+  "parse-test-17141": [
+   0.0
+  ],
+  "parse-test-23550": [
+   1.0
+  ],
+  "parse-test-2908": [
+   1.0
+  ],
+  "parse-test-5011": [
+   1.0
+  ],
+  "parse-test-27546": [
+   1.0
+  ],
+  "parse-test-15740": [
+   1.0
+  ],
+  "parse-test-217": [
+   1.0
+  ],
+  "parse-test-35467": [
+   1.0
+  ],
+  "parse-test-10032": [
+   0.0
+  ],
+  "parse-test-31882": [
+   0.0
+  ],
+  "parse-test-145": [
+   1.0
+  ],
+  "parse-test-16672": [
+   0.0
+  ],
+  "parse-test-18699": [
+   1.0
+  ],
+  "parse-test-24048": [
+   0.0
+  ],
+  "parse-test-1154": [
+   1.0
+  ],
+  "parse-test-34759": [
+   1.0
+  ],
+  "parse-test-18700": [
+   1.0
+  ],
+  "parse-test-5048": [
+   1.0
+  ],
+  "parse-test-9284": [
+   1.0
+  ],
+  "parse-test-15035": [
+   1.0
+  ],
+  "parse-test-30705": [
+   1.0
+  ],
+  "parse-test-15990": [
+   0.0
+  ],
+  "parse-test-27795": [
+   1.0
+  ],
+  "parse-test-18156": [
+   1.0
+  ],
+  "parse-test-9360": [
+   1.0
+  ],
+  "parse-test-7653": [
+   1.0
+  ],
+  "parse-test-33051": [
+   1.0
+  ],
+  "parse-test-4252": [
+   1.0
+  ],
+  "parse-test-3924": [
+   1.0
+  ],
+  "parse-test-26123": [
+   1.0
+  ],
+  "parse-test-30848": [
+   1.0
+  ],
+  "parse-test-19918": [
+   1.0
+  ],
+  "parse-test-4136": [
+   0.0
+  ],
+  "parse-test-23224": [
+   1.0
+  ],
+  "parse-test-31977": [
+   0.0
+  ],
+  "parse-test-28860": [
+   1.0
+  ],
+  "parse-test-34677": [
+   1.0
+  ],
+  "parse-test-21015": [
+   1.0
+  ],
+  "parse-test-25393": [
+   0.0
+  ],
+  "parse-test-33495": [
+   1.0
+  ],
+  "parse-test-20403": [
+   0.0
+  ],
+  "parse-test-17042": [
+   0.0
+  ],
+  "parse-test-28712": [
+   0.0
+  ],
+  "parse-test-5651": [
+   0.0
+  ],
+  "parse-test-23595": [
+   1.0
+  ],
+  "parse-test-9855": [
+   1.0
+  ],
+  "parse-test-36391": [
+   1.0
+  ],
+  "parse-test-9922": [
+   1.0
+  ],
+  "parse-test-13828": [
+   0.0
+  ],
+  "parse-test-27834": [
+   1.0
+  ],
+  "parse-test-32841": [
+   1.0
+  ],
+  "parse-test-1855": [
+   1.0
+  ],
+  "parse-test-12834": [
+   1.0
+  ],
+  "parse-test-3618": [
+   1.0
+  ],
+  "parse-test-1435": [
+   1.0
+  ],
+  "parse-test-31305": [
+   0.0
+  ],
+  "parse-test-28038": [
+   1.0
+  ],
+  "parse-test-7690": [
+   0.0
+  ],
+  "parse-test-24074": [
+   1.0
+  ],
+  "parse-test-14691": [
+   0.0
+  ],
+  "parse-test-15661": [
+   1.0
+  ],
+  "parse-test-10853": [
+   1.0
+  ],
+  "parse-test-15841": [
+   1.0
+  ],
+  "parse-test-32508": [
+   1.0
+  ],
+  "parse-test-17936": [
+   1.0
+  ],
+  "parse-test-4101": [
+   0.0
+  ],
+  "parse-test-8963": [
+   1.0
+  ],
+  "parse-test-18464": [
+   1.0
+  ],
+  "parse-test-14537": [
+   0.0
+  ],
+  "parse-test-37223": [
+   1.0
+  ],
+  "parse-test-26342": [
+   1.0
+  ],
+  "parse-test-21770": [
+   0.0
+  ],
+  "parse-test-14410": [
+   1.0
+  ],
+  "parse-test-38227": [
+   0.0
+  ],
+  "parse-test-17577": [
+   0.0
+  ],
+  "parse-test-19001": [
+   0.0
+  ],
+  "parse-test-11509": [
+   1.0
+  ],
+  "parse-test-38667": [
+   1.0
+  ],
+  "parse-test-30398": [
+   1.0
+  ],
+  "parse-test-34552": [
+   1.0
+  ],
+  "parse-test-20271": [
+   0.0
+  ],
+  "parse-test-27962": [
+   1.0
+  ],
+  "parse-test-12117": [
+   0.0
+  ],
+  "parse-test-34929": [
+   1.0
+  ],
+  "parse-test-4466": [
+   1.0
+  ],
+  "parse-test-14603": [
+   0.0
+  ],
+  "parse-test-16665": [
+   0.0
+  ],
+  "parse-test-6102": [
+   1.0
+  ],
+  "parse-test-19660": [
+   0.0
+  ],
+  "parse-test-24151": [
+   1.0
+  ],
+  "parse-test-8328": [
+   1.0
+  ],
+  "parse-test-5996": [
+   1.0
+  ],
+  "parse-test-2706": [
+   1.0
+  ],
+  "parse-test-30334": [
+   0.0
+  ],
+  "parse-test-14293": [
+   0.0
+  ],
+  "parse-test-22102": [
+   0.0
+  ],
+  "parse-test-459": [
+   1.0
+  ],
+  "parse-test-38051": [
+   1.0
+  ],
+  "parse-test-18910": [
+   1.0
+  ],
+  "parse-test-38580": [
+   1.0
+  ],
+  "parse-test-2824": [
+   1.0
+  ],
+  "parse-test-29953": [
+   1.0
+  ],
+  "parse-test-16093": [
+   1.0
+  ],
+  "parse-test-34076": [
+   1.0
+  ],
+  "parse-test-9539": [
+   0.0
+  ],
+  "parse-test-38212": [
+   1.0
+  ],
+  "parse-test-10965": [
+   0.0
+  ],
+  "parse-test-36419": [
+   1.0
+  ],
+  "parse-test-19796": [
+   0.0
+  ],
+  "parse-test-25188": [
+   1.0
+  ],
+  "parse-test-13056": [
+   1.0
+  ],
+  "parse-test-19124": [
+   1.0
+  ],
+  "parse-test-1992": [
+   1.0
+  ],
+  "parse-test-30370": [
+   1.0
+  ],
+  "parse-test-34390": [
+   0.0
+  ],
+  "parse-test-14640": [
+   0.0
+  ],
+  "parse-test-35127": [
+   1.0
+  ],
+  "parse-test-38144": [
+   1.0
+  ],
+  "parse-test-24787": [
+   1.0
+  ],
+  "parse-test-31066": [
+   1.0
+  ],
+  "parse-test-8747": [
+   0.0
+  ],
+  "parse-test-14079": [
+   1.0
+  ],
+  "parse-test-18942": [
+   0.0
+  ],
+  "parse-test-21234": [
+   1.0
+  ],
+  "parse-test-22556": [
+   0.0
+  ],
+  "parse-test-17322": [
+   0.0
+  ],
+  "parse-test-32484": [
+   0.0
+  ],
+  "parse-test-28906": [
+   1.0
+  ],
+  "parse-test-16088": [
+   1.0
+  ],
+  "parse-test-4097": [
+   0.0
+  ],
+  "parse-test-21885": [
+   0.0
+  ],
+  "parse-test-20205": [
+   0.0
+  ],
+  "parse-test-16371": [
+   0.0
+  ],
+  "parse-test-35043": [
+   1.0
+  ],
+  "parse-test-7864": [
+   1.0
+  ],
+  "parse-test-23934": [
+   0.0
+  ],
+  "parse-test-2699": [
+   1.0
+  ],
+  "parse-test-12294": [
+   1.0
+  ],
+  "parse-test-26936": [
+   0.0
+  ],
+  "parse-test-5359": [
+   0.0
+  ],
+  "parse-test-37206": [
+   1.0
+  ],
+  "parse-test-38559": [
+   1.0
+  ],
+  "parse-test-30254": [
+   0.0
+  ],
+  "parse-test-33585": [
+   1.0
+  ],
+  "parse-test-22321": [
+   0.0
+  ],
+  "parse-test-31886": [
+   1.0
+  ],
+  "parse-test-8988": [
+   1.0
+  ],
+  "parse-test-28513": [
+   1.0
+  ],
+  "parse-test-5633": [
+   1.0
+  ],
+  "parse-test-17355": [
+   0.0
+  ],
+  "parse-test-32412": [
+   1.0
+  ],
+  "parse-test-11388": [
+   0.0
+  ],
+  "parse-test-36119": [
+   1.0
+  ],
+  "parse-test-26279": [
+   0.0
+  ],
+  "parse-test-13403": [
+   1.0
+  ],
+  "parse-test-7658": [
+   1.0
+  ],
+  "parse-test-1886": [
+   0.0
+  ],
+  "parse-test-31452": [
+   1.0
+  ],
+  "parse-test-25726": [
+   1.0
+  ],
+  "parse-test-7779": [
+   0.0
+  ],
+  "parse-test-29736": [
+   0.0
+  ],
+  "parse-test-9026": [
+   1.0
+  ],
+  "parse-test-21213": [
+   0.0
+  ],
+  "parse-test-12199": [
+   1.0
+  ],
+  "parse-test-14855": [
+   1.0
+  ],
+  "parse-test-9051": [
+   0.0
+  ],
+  "parse-test-4786": [
+   1.0
+  ],
+  "parse-test-18415": [
+   1.0
+  ],
+  "parse-test-4351": [
+   1.0
+  ],
+  "parse-test-27105": [
+   0.0
+  ],
+  "parse-test-24799": [
+   0.0
+  ],
+  "parse-test-4738": [
+   1.0
+  ],
+  "parse-test-25428": [
+   1.0
+  ],
+  "parse-test-9416": [
+   1.0
+  ],
+  "parse-test-19850": [
+   1.0
+  ],
+  "parse-test-29329": [
+   1.0
+  ],
+  "parse-test-20701": [
+   1.0
+  ],
+  "parse-test-5687": [
+   1.0
+  ],
+  "parse-test-36586": [
+   1.0
+  ],
+  "parse-test-31439": [
+   0.0
+  ],
+  "parse-test-3677": [
+   1.0
+  ],
+  "parse-test-34278": [
+   1.0
+  ],
+  "parse-test-13278": [
+   1.0
+  ],
+  "parse-test-860": [
+   1.0
+  ],
+  "parse-test-9856": [
+   1.0
+  ],
+  "parse-test-23677": [
+   1.0
+  ],
+  "parse-test-10477": [
+   0.0
+  ],
+  "parse-test-37505": [
+   1.0
+  ],
+  "parse-test-3787": [
+   1.0
+  ],
+  "parse-test-18834": [
+   1.0
+  ],
+  "parse-test-22530": [
+   0.0
+  ],
+  "parse-test-17245": [
+   1.0
+  ],
+  "parse-test-25899": [
+   0.0
+  ],
+  "parse-test-23216": [
+   1.0
+  ],
+  "parse-test-32967": [
+   0.0
+  ],
+  "parse-test-24607": [
+   1.0
+  ],
+  "parse-test-36798": [
+   1.0
+  ],
+  "parse-test-35522": [
+   1.0
+  ],
+  "parse-test-30656": [
+   0.0
+  ],
+  "parse-test-18707": [
+   1.0
+  ],
+  "parse-test-934": [
+   0.0
+  ],
+  "parse-test-4399": [
+   0.0
+  ],
+  "parse-test-15407": [
+   0.0
+  ],
+  "parse-test-4962": [
+   1.0
+  ],
+  "parse-test-30579": [
+   0.0
+  ],
+  "parse-test-9512": [
+   1.0
+  ],
+  "parse-test-2841": [
+   0.0
+  ],
+  "parse-test-19161": [
+   0.0
+  ],
+  "parse-test-9071": [
+   1.0
+  ],
+  "parse-test-19055": [
+   0.0
+  ],
+  "parse-test-34896": [
+   1.0
+  ],
+  "parse-test-14059": [
+   1.0
+  ],
+  "parse-test-32767": [
+   0.0
+  ],
+  "parse-test-10744": [
+   1.0
+  ],
+  "parse-test-32932": [
+   1.0
+  ],
+  "parse-test-31685": [
+   1.0
+  ],
+  "parse-test-25553": [
+   1.0
+  ],
+  "parse-test-35284": [
+   1.0
+  ],
+  "parse-test-9312": [
+   1.0
+  ],
+  "parse-test-6623": [
+   1.0
+  ],
+  "parse-test-5717": [
+   0.0
+  ],
+  "parse-test-22728": [
+   1.0
+  ],
+  "parse-test-10498": [
+   0.0
+  ],
+  "parse-test-31368": [
+   0.0
+  ],
+  "parse-test-26707": [
+   1.0
+  ],
+  "parse-test-7500": [
+   1.0
+  ],
+  "parse-test-36633": [
+   1.0
+  ],
+  "parse-test-2982": [
+   1.0
+  ],
+  "parse-test-12472": [
+   1.0
+  ],
+  "parse-test-20564": [
+   1.0
+  ],
+  "parse-test-25006": [
+   0.0
+  ],
+  "parse-test-8604": [
+   1.0
+  ],
+  "parse-test-6351": [
+   1.0
+  ],
+  "parse-test-29963": [
+   0.0
+  ],
+  "parse-test-37239": [
+   1.0
+  ],
+  "parse-test-20189": [
+   0.0
+  ],
+  "parse-test-34058": [
+   1.0
+  ],
+  "parse-test-20990": [
+   1.0
+  ],
+  "parse-test-16949": [
+   0.0
+  ],
+  "parse-test-35863": [
+   1.0
+  ],
+  "parse-test-14730": [
+   0.0
+  ],
+  "parse-test-18852": [
+   0.0
+  ],
+  "parse-test-3707": [
+   1.0
+  ],
+  "parse-test-21832": [
+   0.0
+  ],
+  "parse-test-13752": [
+   1.0
+  ],
+  "parse-test-30255": [
+   1.0
+  ],
+  "parse-test-27085": [
+   0.0
+  ],
+  "parse-test-24778": [
+   1.0
+  ],
+  "parse-test-20780": [
+   1.0
+  ],
+  "parse-test-4242": [
+   0.0
+  ],
+  "parse-test-20841": [
+   0.0
+  ],
+  "parse-test-3061": [
+   0.0
+  ],
+  "parse-test-20023": [
+   0.0
+  ],
+  "parse-test-3686": [
+   1.0
+  ],
+  "parse-test-33186": [
+   0.0
+  ],
+  "parse-test-7923": [
+   0.0
+  ],
+  "parse-test-31461": [
+   0.0
+  ],
+  "parse-test-38136": [
+   0.0
+  ],
+  "parse-test-26376": [
+   0.0
+  ],
+  "parse-test-13614": [
+   1.0
+  ],
+  "parse-test-14353": [
+   0.0
+  ],
+  "parse-test-3040": [
+   1.0
+  ],
+  "parse-test-16621": [
+   1.0
+  ],
+  "parse-test-651": [
+   1.0
+  ],
+  "parse-test-21046": [
+   1.0
+  ],
+  "parse-test-34927": [
+   1.0
+  ],
+  "parse-test-36705": [
+   1.0
+  ],
+  "parse-test-4811": [
+   1.0
+  ],
+  "parse-test-19568": [
+   1.0
+  ],
+  "parse-test-25916": [
+   1.0
+  ],
+  "parse-test-957": [
+   1.0
+  ],
+  "parse-test-22209": [
+   0.0
+  ],
+  "parse-test-29212": [
+   1.0
+  ],
+  "parse-test-25756": [
+   1.0
+  ],
+  "parse-test-37006": [
+   0.0
+  ],
+  "parse-test-1866": [
+   0.0
+  ],
+  "parse-test-26558": [
+   1.0
+  ],
+  "parse-test-25415": [
+   0.0
+  ],
+  "parse-test-27340": [
+   0.0
+  ],
+  "parse-test-23081": [
+   0.0
+  ],
+  "parse-test-7539": [
+   1.0
+  ],
+  "parse-test-38416": [
+   1.0
+  ],
+  "parse-test-20851": [
+   0.0
+  ],
+  "parse-test-5055": [
+   1.0
+  ],
+  "parse-test-7246": [
+   1.0
+  ],
+  "parse-test-37806": [
+   1.0
+  ],
+  "parse-test-37485": [
+   1.0
+  ],
+  "parse-test-21094": [
+   1.0
+  ],
+  "parse-test-25208": [
+   1.0
+  ],
+  "parse-test-948": [
+   1.0
+  ],
+  "parse-test-11320": [
+   0.0
+  ],
+  "parse-test-1285": [
+   1.0
+  ],
+  "parse-test-37334": [
+   1.0
+  ],
+  "parse-test-3858": [
+   1.0
+  ],
+  "parse-test-8789": [
+   1.0
+  ],
+  "parse-test-24687": [
+   1.0
+  ],
+  "parse-test-17771": [
+   1.0
+  ],
+  "parse-test-26455": [
+   1.0
+  ],
+  "parse-test-5021": [
+   1.0
+  ],
+  "parse-test-36144": [
+   1.0
+  ],
+  "parse-test-4557": [
+   0.0
+  ],
+  "parse-test-37154": [
+   0.0
+  ],
+  "parse-test-11984": [
+   0.0
+  ],
+  "parse-test-34290": [
+   1.0
+  ],
+  "parse-test-7831": [
+   1.0
+  ],
+  "parse-test-17670": [
+   1.0
+  ],
+  "parse-test-21329": [
+   0.0
+  ],
+  "parse-test-31555": [
+   1.0
+  ],
+  "parse-test-28446": [
+   0.0
+  ],
+  "parse-test-15063": [
+   1.0
+  ],
+  "parse-test-23260": [
+   0.0
+  ],
+  "parse-test-26629": [
+   0.0
+  ],
+  "parse-test-4856": [
+   1.0
+  ],
+  "parse-test-31253": [
+   1.0
+  ],
+  "parse-test-26813": [
+   1.0
+  ],
+  "parse-test-7333": [
+   0.0
+  ],
+  "parse-test-19970": [
+   0.0
+  ],
+  "parse-test-19854": [
+   0.0
+  ],
+  "parse-test-1611": [
+   1.0
+  ],
+  "parse-test-22477": [
+   0.0
+  ],
+  "parse-test-2637": [
+   1.0
+  ],
+  "parse-test-14778": [
+   1.0
+  ],
+  "parse-test-32904": [
+   1.0
+  ],
+  "parse-test-1794": [
+   1.0
+  ],
+  "parse-test-2171": [
+   0.0
+  ],
+  "parse-test-34490": [
+   0.0
+  ],
+  "parse-test-26274": [
+   1.0
+  ],
+  "parse-test-30162": [
+   1.0
+  ],
+  "parse-test-21455": [
+   0.0
+  ],
+  "parse-test-27846": [
+   1.0
+  ],
+  "parse-test-4855": [
+   1.0
+  ],
+  "parse-test-37470": [
+   1.0
+  ],
+  "parse-test-4182": [
+   0.0
+  ],
+  "parse-test-27635": [
+   0.0
+  ],
+  "parse-test-18859": [
+   1.0
+  ],
+  "parse-test-6181": [
+   0.0
+  ],
+  "parse-test-25938": [
+   1.0
+  ],
+  "parse-test-31244": [
+   0.0
+  ],
+  "parse-test-31645": [
+   1.0
+  ],
+  "parse-test-6759": [
+   1.0
+  ],
+  "parse-test-25819": [
+   0.0
+  ],
+  "parse-test-35811": [
+   1.0
+  ],
+  "parse-test-18526": [
+   0.0
+  ],
+  "parse-test-24823": [
+   1.0
+  ],
+  "parse-test-15665": [
+   0.0
+  ],
+  "parse-test-21919": [
+   1.0
+  ],
+  "parse-test-33258": [
+   1.0
+  ],
+  "parse-test-13535": [
+   1.0
+  ],
+  "parse-test-1332": [
+   1.0
+  ],
+  "parse-test-7468": [
+   1.0
+  ],
+  "parse-test-2155": [
+   0.0
+  ],
+  "parse-test-21517": [
+   1.0
+  ],
+  "parse-test-29100": [
+   1.0
+  ],
+  "parse-test-19514": [
+   0.0
+  ],
+  "parse-test-5052": [
+   0.0
+  ],
+  "parse-test-28247": [
+   1.0
+  ],
+  "parse-test-7450": [
+   0.0
+  ],
+  "parse-test-24017": [
+   1.0
+  ],
+  "parse-test-23931": [
+   1.0
+  ],
+  "parse-test-5804": [
+   1.0
+  ],
+  "parse-test-4549": [
+   1.0
+  ],
+  "parse-test-31953": [
+   0.0
+  ],
+  "parse-test-25830": [
+   1.0
+  ],
+  "parse-test-6929": [
+   0.0
+  ],
+  "parse-test-4692": [
+   1.0
+  ],
+  "parse-test-18097": [
+   0.0
+  ],
+  "parse-test-426": [
+   1.0
+  ],
+  "parse-test-1883": [
+   1.0
+  ],
+  "parse-test-174": [
+   1.0
+  ],
+  "parse-test-13684": [
+   0.0
+  ],
+  "parse-test-20999": [
+   1.0
+  ],
+  "parse-test-8190": [
+   0.0
+  ]
+ },
+ "grades_sampled": {
+  "parse-test-5164": [
+   1.0
+  ],
+  "parse-test-34661": [
+   1.0
+  ],
+  "parse-test-32427": [
+   1.0
+  ],
+  "parse-test-27798": [
+   1.0
+  ],
+  "parse-test-6604": [
+   1.0
+  ],
+  "parse-test-5769": [
+   1.0
+  ],
+  "parse-test-19969": [
+   0.0
+  ],
+  "parse-test-34917": [
+   1.0
+  ],
+  "parse-test-9424": [
+   1.0
+  ],
+  "parse-test-28393": [
+   0.0
+  ],
+  "parse-test-21811": [
+   1.0
+  ],
+  "parse-test-1365": [
+   0.0
+  ],
+  "parse-test-36459": [
+   0.0
+  ],
+  "parse-test-16505": [
+   0.0
+  ],
+  "parse-test-31250": [
+   0.0
+  ],
+  "parse-test-32510": [
+   1.0
+  ],
+  "parse-test-3599": [
+   1.0
+  ],
+  "parse-test-19812": [
+   1.0
+  ],
+  "parse-test-37853": [
+   1.0
+  ],
+  "parse-test-6324": [
+   1.0
+  ],
+  "parse-test-14590": [
+   1.0
+  ],
+  "parse-test-12367": [
+   1.0
+  ],
+  "parse-test-2967": [
+   1.0
+  ],
+  "parse-test-36526": [
+   0.0
+  ],
+  "parse-test-3096": [
+   1.0
+  ],
+  "parse-test-33879": [
+   0.0
+  ],
+  "parse-test-21807": [
+   1.0
+  ],
+  "parse-test-29662": [
+   1.0
+  ],
+  "parse-test-570": [
+   1.0
+  ],
+  "parse-test-7006": [
+   0.0
+  ],
+  "parse-test-29711": [
+   1.0
+  ],
+  "parse-test-29142": [
+   0.0
+  ],
+  "parse-test-29819": [
+   0.0
+  ],
+  "parse-test-226": [
+   0.0
+  ],
+  "parse-test-27870": [
+   1.0
+  ],
+  "parse-test-9816": [
+   1.0
+  ],
+  "parse-test-24392": [
+   1.0
+  ],
+  "parse-test-26294": [
+   0.0
+  ],
+  "parse-test-1926": [
+   1.0
+  ],
+  "parse-test-24428": [
+   0.0
+  ],
+  "parse-test-16521": [
+   1.0
+  ],
+  "parse-test-24775": [
+   1.0
+  ],
+  "parse-test-15435": [
+   0.0
+  ],
+  "parse-test-21474": [
+   0.0
+  ],
+  "parse-test-26428": [
+   1.0
+  ],
+  "parse-test-22778": [
+   1.0
+  ],
+  "parse-test-22208": [
+   1.0
+  ],
+  "parse-test-8357": [
+   0.0
+  ],
+  "parse-test-2105": [
+   1.0
+  ],
+  "parse-test-33513": [
+   1.0
+  ],
+  "parse-test-5204": [
+   0.0
+  ],
+  "parse-test-13972": [
+   1.0
+  ],
+  "parse-test-2283": [
+   0.0
+  ],
+  "parse-test-19668": [
+   1.0
+  ],
+  "parse-test-20604": [
+   1.0
+  ],
+  "parse-test-1600": [
+   1.0
+  ],
+  "parse-test-12238": [
+   1.0
+  ],
+  "parse-test-27314": [
+   1.0
+  ],
+  "parse-test-38213": [
+   0.0
+  ],
+  "parse-test-17279": [
+   1.0
+  ],
+  "parse-test-31474": [
+   0.0
+  ],
+  "parse-test-35470": [
+   1.0
+  ],
+  "parse-test-24463": [
+   1.0
+  ],
+  "parse-test-23258": [
+   1.0
+  ],
+  "parse-test-28141": [
+   1.0
+  ],
+  "parse-test-25000": [
+   0.0
+  ],
+  "parse-test-22575": [
+   0.0
+  ],
+  "parse-test-19807": [
+   1.0
+  ],
+  "parse-test-890": [
+   1.0
+  ],
+  "parse-test-27688": [
+   1.0
+  ],
+  "parse-test-23647": [
+   1.0
+  ],
+  "parse-test-9551": [
+   1.0
+  ],
+  "parse-test-16054": [
+   1.0
+  ],
+  "parse-test-2502": [
+   1.0
+  ],
+  "parse-test-4054": [
+   0.0
+  ],
+  "parse-test-6704": [
+   1.0
+  ],
+  "parse-test-9171": [
+   1.0
+  ],
+  "parse-test-23674": [
+   0.0
+  ],
+  "parse-test-6064": [
+   0.0
+  ],
+  "parse-test-9489": [
+   1.0
+  ],
+  "parse-test-13396": [
+   0.0
+  ],
+  "parse-test-29407": [
+   1.0
+  ],
+  "parse-test-777": [
+   1.0
+  ],
+  "parse-test-3342": [
+   0.0
+  ],
+  "parse-test-37639": [
+   1.0
+  ],
+  "parse-test-37016": [
+   0.0
+  ],
+  "parse-test-13262": [
+   0.0
+  ],
+  "parse-test-25212": [
+   1.0
+  ],
+  "parse-test-15888": [
+   0.0
+  ],
+  "parse-test-35178": [
+   1.0
+  ],
+  "parse-test-33967": [
+   1.0
+  ],
+  "parse-test-4283": [
+   0.0
+  ],
+  "parse-test-24651": [
+   1.0
+  ],
+  "parse-test-27429": [
+   1.0
+  ],
+  "parse-test-33017": [
+   1.0
+  ],
+  "parse-test-31295": [
+   0.0
+  ],
+  "parse-test-9402": [
+   1.0
+  ],
+  "parse-test-31664": [
+   1.0
+  ],
+  "parse-test-6278": [
+   0.0
+  ],
+  "parse-test-12833": [
+   0.0
+  ],
+  "parse-test-15900": [
+   1.0
+  ],
+  "parse-test-30427": [
+   1.0
+  ],
+  "parse-test-28649": [
+   1.0
+  ],
+  "parse-test-17788": [
+   0.0
+  ],
+  "parse-test-14421": [
+   0.0
+  ],
+  "parse-test-18020": [
+   1.0
+  ],
+  "parse-test-32215": [
+   1.0
+  ],
+  "parse-test-17336": [
+   0.0
+  ],
+  "parse-test-25849": [
+   1.0
+  ],
+  "parse-test-12584": [
+   0.0
+  ],
+  "parse-test-21922": [
+   1.0
+  ],
+  "parse-test-21168": [
+   1.0
+  ],
+  "parse-test-37727": [
+   1.0
+  ],
+  "parse-test-37379": [
+   1.0
+  ],
+  "parse-test-31629": [
+   0.0
+  ],
+  "parse-test-35114": [
+   1.0
+  ],
+  "parse-test-14362": [
+   1.0
+  ],
+  "parse-test-16841": [
+   0.0
+  ],
+  "parse-test-3420": [
+   1.0
+  ],
+  "parse-test-18759": [
+   0.0
+  ],
+  "parse-test-19551": [
+   1.0
+  ],
+  "parse-test-13022": [
+   1.0
+  ],
+  "parse-test-1393": [
+   1.0
+  ],
+  "parse-test-5133": [
+   1.0
+  ],
+  "parse-test-38180": [
+   1.0
+  ],
+  "parse-test-13704": [
+   0.0
+  ],
+  "parse-test-26851": [
+   0.0
+  ],
+  "parse-test-37998": [
+   1.0
+  ],
+  "parse-test-17141": [
+   0.0
+  ],
+  "parse-test-23550": [
+   1.0
+  ],
+  "parse-test-2908": [
+   1.0
+  ],
+  "parse-test-5011": [
+   1.0
+  ],
+  "parse-test-27546": [
+   1.0
+  ],
+  "parse-test-15740": [
+   1.0
+  ],
+  "parse-test-217": [
+   1.0
+  ],
+  "parse-test-35467": [
+   1.0
+  ],
+  "parse-test-10032": [
+   0.0
+  ],
+  "parse-test-31882": [
+   0.0
+  ],
+  "parse-test-145": [
+   1.0
+  ],
+  "parse-test-16672": [
+   0.0
+  ],
+  "parse-test-18699": [
+   1.0
+  ],
+  "parse-test-24048": [
+   0.0
+  ],
+  "parse-test-1154": [
+   1.0
+  ],
+  "parse-test-34759": [
+   1.0
+  ],
+  "parse-test-18700": [
+   1.0
+  ],
+  "parse-test-5048": [
+   1.0
+  ],
+  "parse-test-9284": [
+   1.0
+  ],
+  "parse-test-15035": [
+   1.0
+  ],
+  "parse-test-30705": [
+   1.0
+  ],
+  "parse-test-15990": [
+   0.0
+  ],
+  "parse-test-27795": [
+   1.0
+  ],
+  "parse-test-18156": [
+   1.0
+  ],
+  "parse-test-9360": [
+   1.0
+  ],
+  "parse-test-7653": [
+   1.0
+  ],
+  "parse-test-33051": [
+   1.0
+  ],
+  "parse-test-4252": [
+   1.0
+  ],
+  "parse-test-3924": [
+   1.0
+  ],
+  "parse-test-26123": [
+   1.0
+  ],
+  "parse-test-30848": [
+   1.0
+  ],
+  "parse-test-19918": [
+   1.0
+  ],
+  "parse-test-4136": [
+   0.0
+  ],
+  "parse-test-23224": [
+   1.0
+  ],
+  "parse-test-31977": [
+   0.0
+  ],
+  "parse-test-28860": [
+   1.0
+  ],
+  "parse-test-34677": [
+   1.0
+  ],
+  "parse-test-21015": [
+   1.0
+  ],
+  "parse-test-25393": [
+   0.0
+  ],
+  "parse-test-33495": [
+   1.0
+  ],
+  "parse-test-20403": [
+   0.0
+  ],
+  "parse-test-17042": [
+   0.0
+  ],
+  "parse-test-28712": [
+   0.0
+  ],
+  "parse-test-5651": [
+   0.0
+  ],
+  "parse-test-23595": [
+   1.0
+  ],
+  "parse-test-9855": [
+   1.0
+  ],
+  "parse-test-36391": [
+   1.0
+  ],
+  "parse-test-9922": [
+   1.0
+  ],
+  "parse-test-13828": [
+   0.0
+  ],
+  "parse-test-27834": [
+   1.0
+  ],
+  "parse-test-32841": [
+   1.0
+  ],
+  "parse-test-1855": [
+   1.0
+  ],
+  "parse-test-12834": [
+   1.0
+  ],
+  "parse-test-3618": [
+   1.0
+  ],
+  "parse-test-1435": [
+   1.0
+  ],
+  "parse-test-31305": [
+   0.0
+  ],
+  "parse-test-28038": [
+   1.0
+  ],
+  "parse-test-7690": [
+   0.0
+  ],
+  "parse-test-24074": [
+   1.0
+  ],
+  "parse-test-14691": [
+   0.0
+  ],
+  "parse-test-15661": [
+   1.0
+  ],
+  "parse-test-10853": [
+   1.0
+  ],
+  "parse-test-15841": [
+   1.0
+  ],
+  "parse-test-32508": [
+   1.0
+  ],
+  "parse-test-17936": [
+   1.0
+  ],
+  "parse-test-4101": [
+   0.0
+  ],
+  "parse-test-8963": [
+   1.0
+  ],
+  "parse-test-18464": [
+   1.0
+  ],
+  "parse-test-14537": [
+   0.0
+  ],
+  "parse-test-37223": [
+   1.0
+  ],
+  "parse-test-26342": [
+   1.0
+  ],
+  "parse-test-21770": [
+   0.0
+  ],
+  "parse-test-14410": [
+   1.0
+  ],
+  "parse-test-38227": [
+   0.0
+  ],
+  "parse-test-17577": [
+   0.0
+  ],
+  "parse-test-19001": [
+   0.0
+  ],
+  "parse-test-11509": [
+   1.0
+  ],
+  "parse-test-38667": [
+   1.0
+  ],
+  "parse-test-30398": [
+   1.0
+  ],
+  "parse-test-34552": [
+   1.0
+  ],
+  "parse-test-20271": [
+   0.0
+  ],
+  "parse-test-27962": [
+   1.0
+  ],
+  "parse-test-12117": [
+   0.0
+  ],
+  "parse-test-34929": [
+   1.0
+  ],
+  "parse-test-4466": [
+   1.0
+  ],
+  "parse-test-14603": [
+   0.0
+  ],
+  "parse-test-16665": [
+   0.0
+  ],
+  "parse-test-6102": [
+   1.0
+  ],
+  "parse-test-19660": [
+   0.0
+  ],
+  "parse-test-24151": [
+   1.0
+  ],
+  "parse-test-8328": [
+   1.0
+  ],
+  "parse-test-5996": [
+   1.0
+  ],
+  "parse-test-2706": [
+   1.0
+  ],
+  "parse-test-30334": [
+   0.0
+  ],
+  "parse-test-14293": [
+   0.0
+  ],
+  "parse-test-22102": [
+   0.0
+  ],
+  "parse-test-459": [
+   1.0
+  ],
+  "parse-test-38051": [
+   1.0
+  ],
+  "parse-test-18910": [
+   1.0
+  ],
+  "parse-test-38580": [
+   1.0
+  ],
+  "parse-test-2824": [
+   1.0
+  ],
+  "parse-test-29953": [
+   1.0
+  ],
+  "parse-test-16093": [
+   1.0
+  ],
+  "parse-test-34076": [
+   1.0
+  ],
+  "parse-test-9539": [
+   0.0
+  ],
+  "parse-test-38212": [
+   1.0
+  ],
+  "parse-test-10965": [
+   0.0
+  ],
+  "parse-test-36419": [
+   1.0
+  ],
+  "parse-test-19796": [
+   0.0
+  ],
+  "parse-test-25188": [
+   1.0
+  ],
+  "parse-test-13056": [
+   1.0
+  ],
+  "parse-test-19124": [
+   1.0
+  ],
+  "parse-test-1992": [
+   1.0
+  ],
+  "parse-test-30370": [
+   1.0
+  ],
+  "parse-test-34390": [
+   0.0
+  ],
+  "parse-test-14640": [
+   0.0
+  ],
+  "parse-test-35127": [
+   1.0
+  ],
+  "parse-test-38144": [
+   1.0
+  ],
+  "parse-test-24787": [
+   1.0
+  ],
+  "parse-test-31066": [
+   1.0
+  ],
+  "parse-test-8747": [
+   0.0
+  ],
+  "parse-test-14079": [
+   1.0
+  ],
+  "parse-test-18942": [
+   0.0
+  ],
+  "parse-test-21234": [
+   1.0
+  ],
+  "parse-test-22556": [
+   0.0
+  ],
+  "parse-test-17322": [
+   0.0
+  ],
+  "parse-test-32484": [
+   0.0
+  ],
+  "parse-test-28906": [
+   1.0
+  ],
+  "parse-test-16088": [
+   1.0
+  ],
+  "parse-test-4097": [
+   0.0
+  ],
+  "parse-test-21885": [
+   0.0
+  ],
+  "parse-test-20205": [
+   0.0
+  ],
+  "parse-test-16371": [
+   0.0
+  ],
+  "parse-test-35043": [
+   1.0
+  ],
+  "parse-test-7864": [
+   1.0
+  ],
+  "parse-test-23934": [
+   0.0
+  ],
+  "parse-test-2699": [
+   1.0
+  ],
+  "parse-test-12294": [
+   1.0
+  ],
+  "parse-test-26936": [
+   0.0
+  ],
+  "parse-test-5359": [
+   0.0
+  ],
+  "parse-test-37206": [
+   1.0
+  ],
+  "parse-test-38559": [
+   1.0
+  ],
+  "parse-test-30254": [
+   0.0
+  ],
+  "parse-test-33585": [
+   1.0
+  ],
+  "parse-test-22321": [
+   0.0
+  ],
+  "parse-test-31886": [
+   1.0
+  ],
+  "parse-test-8988": [
+   1.0
+  ],
+  "parse-test-28513": [
+   1.0
+  ],
+  "parse-test-5633": [
+   1.0
+  ],
+  "parse-test-17355": [
+   0.0
+  ],
+  "parse-test-32412": [
+   1.0
+  ],
+  "parse-test-11388": [
+   0.0
+  ],
+  "parse-test-36119": [
+   1.0
+  ],
+  "parse-test-26279": [
+   0.0
+  ],
+  "parse-test-13403": [
+   1.0
+  ],
+  "parse-test-7658": [
+   1.0
+  ],
+  "parse-test-1886": [
+   0.0
+  ],
+  "parse-test-31452": [
+   1.0
+  ],
+  "parse-test-25726": [
+   1.0
+  ],
+  "parse-test-7779": [
+   0.0
+  ],
+  "parse-test-29736": [
+   0.0
+  ],
+  "parse-test-9026": [
+   1.0
+  ],
+  "parse-test-21213": [
+   0.0
+  ],
+  "parse-test-12199": [
+   1.0
+  ],
+  "parse-test-14855": [
+   1.0
+  ],
+  "parse-test-9051": [
+   0.0
+  ],
+  "parse-test-4786": [
+   1.0
+  ],
+  "parse-test-18415": [
+   1.0
+  ],
+  "parse-test-4351": [
+   1.0
+  ],
+  "parse-test-27105": [
+   0.0
+  ],
+  "parse-test-24799": [
+   0.0
+  ],
+  "parse-test-4738": [
+   1.0
+  ],
+  "parse-test-25428": [
+   1.0
+  ],
+  "parse-test-9416": [
+   1.0
+  ],
+  "parse-test-19850": [
+   1.0
+  ],
+  "parse-test-29329": [
+   1.0
+  ],
+  "parse-test-20701": [
+   1.0
+  ],
+  "parse-test-5687": [
+   1.0
+  ],
+  "parse-test-36586": [
+   1.0
+  ],
+  "parse-test-31439": [
+   0.0
+  ],
+  "parse-test-3677": [
+   1.0
+  ],
+  "parse-test-34278": [
+   1.0
+  ],
+  "parse-test-13278": [
+   1.0
+  ],
+  "parse-test-860": [
+   1.0
+  ],
+  "parse-test-9856": [
+   1.0
+  ],
+  "parse-test-23677": [
+   1.0
+  ],
+  "parse-test-10477": [
+   0.0
+  ],
+  "parse-test-37505": [
+   1.0
+  ],
+  "parse-test-3787": [
+   1.0
+  ],
+  "parse-test-18834": [
+   1.0
+  ],
+  "parse-test-22530": [
+   0.0
+  ],
+  "parse-test-17245": [
+   1.0
+  ],
+  "parse-test-25899": [
+   0.0
+  ],
+  "parse-test-23216": [
+   1.0
+  ],
+  "parse-test-32967": [
+   0.0
+  ],
+  "parse-test-24607": [
+   1.0
+  ],
+  "parse-test-36798": [
+   1.0
+  ],
+  "parse-test-35522": [
+   1.0
+  ],
+  "parse-test-30656": [
+   0.0
+  ],
+  "parse-test-18707": [
+   1.0
+  ],
+  "parse-test-934": [
+   0.0
+  ],
+  "parse-test-4399": [
+   0.0
+  ],
+  "parse-test-15407": [
+   0.0
+  ],
+  "parse-test-4962": [
+   1.0
+  ],
+  "parse-test-30579": [
+   0.0
+  ],
+  "parse-test-9512": [
+   1.0
+  ],
+  "parse-test-2841": [
+   0.0
+  ],
+  "parse-test-19161": [
+   0.0
+  ],
+  "parse-test-9071": [
+   1.0
+  ],
+  "parse-test-19055": [
+   0.0
+  ],
+  "parse-test-34896": [
+   1.0
+  ],
+  "parse-test-14059": [
+   1.0
+  ],
+  "parse-test-32767": [
+   0.0
+  ],
+  "parse-test-10744": [
+   1.0
+  ],
+  "parse-test-32932": [
+   1.0
+  ],
+  "parse-test-31685": [
+   1.0
+  ],
+  "parse-test-25553": [
+   1.0
+  ],
+  "parse-test-35284": [
+   1.0
+  ],
+  "parse-test-9312": [
+   1.0
+  ],
+  "parse-test-6623": [
+   1.0
+  ],
+  "parse-test-5717": [
+   0.0
+  ],
+  "parse-test-22728": [
+   1.0
+  ],
+  "parse-test-10498": [
+   0.0
+  ],
+  "parse-test-31368": [
+   0.0
+  ],
+  "parse-test-26707": [
+   1.0
+  ],
+  "parse-test-7500": [
+   1.0
+  ],
+  "parse-test-36633": [
+   1.0
+  ],
+  "parse-test-2982": [
+   1.0
+  ],
+  "parse-test-12472": [
+   1.0
+  ],
+  "parse-test-20564": [
+   1.0
+  ],
+  "parse-test-25006": [
+   0.0
+  ],
+  "parse-test-8604": [
+   1.0
+  ],
+  "parse-test-6351": [
+   1.0
+  ],
+  "parse-test-29963": [
+   0.0
+  ],
+  "parse-test-37239": [
+   1.0
+  ],
+  "parse-test-20189": [
+   0.0
+  ],
+  "parse-test-34058": [
+   1.0
+  ],
+  "parse-test-20990": [
+   1.0
+  ],
+  "parse-test-16949": [
+   0.0
+  ],
+  "parse-test-35863": [
+   1.0
+  ],
+  "parse-test-14730": [
+   0.0
+  ],
+  "parse-test-18852": [
+   0.0
+  ],
+  "parse-test-3707": [
+   1.0
+  ],
+  "parse-test-21832": [
+   0.0
+  ],
+  "parse-test-13752": [
+   1.0
+  ],
+  "parse-test-30255": [
+   1.0
+  ],
+  "parse-test-27085": [
+   0.0
+  ],
+  "parse-test-24778": [
+   1.0
+  ],
+  "parse-test-20780": [
+   1.0
+  ],
+  "parse-test-4242": [
+   0.0
+  ],
+  "parse-test-20841": [
+   0.0
+  ],
+  "parse-test-3061": [
+   0.0
+  ],
+  "parse-test-20023": [
+   0.0
+  ],
+  "parse-test-3686": [
+   1.0
+  ],
+  "parse-test-33186": [
+   0.0
+  ],
+  "parse-test-7923": [
+   0.0
+  ],
+  "parse-test-31461": [
+   0.0
+  ],
+  "parse-test-38136": [
+   0.0
+  ],
+  "parse-test-26376": [
+   0.0
+  ],
+  "parse-test-13614": [
+   1.0
+  ],
+  "parse-test-14353": [
+   0.0
+  ],
+  "parse-test-3040": [
+   1.0
+  ],
+  "parse-test-16621": [
+   1.0
+  ],
+  "parse-test-651": [
+   1.0
+  ],
+  "parse-test-21046": [
+   1.0
+  ],
+  "parse-test-34927": [
+   1.0
+  ],
+  "parse-test-36705": [
+   1.0
+  ],
+  "parse-test-4811": [
+   1.0
+  ],
+  "parse-test-19568": [
+   1.0
+  ],
+  "parse-test-25916": [
+   1.0
+  ],
+  "parse-test-957": [
+   1.0
+  ],
+  "parse-test-22209": [
+   0.0
+  ],
+  "parse-test-29212": [
+   1.0
+  ],
+  "parse-test-25756": [
+   1.0
+  ],
+  "parse-test-37006": [
+   0.0
+  ],
+  "parse-test-1866": [
+   0.0
+  ],
+  "parse-test-26558": [
+   1.0
+  ],
+  "parse-test-25415": [
+   0.0
+  ],
+  "parse-test-27340": [
+   0.0
+  ],
+  "parse-test-23081": [
+   0.0
+  ],
+  "parse-test-7539": [
+   1.0
+  ],
+  "parse-test-38416": [
+   1.0
+  ],
+  "parse-test-20851": [
+   0.0
+  ],
+  "parse-test-5055": [
+   1.0
+  ],
+  "parse-test-7246": [
+   1.0
+  ],
+  "parse-test-37806": [
+   1.0
+  ],
+  "parse-test-37485": [
+   1.0
+  ],
+  "parse-test-21094": [
+   1.0
+  ],
+  "parse-test-25208": [
+   1.0
+  ],
+  "parse-test-948": [
+   1.0
+  ],
+  "parse-test-11320": [
+   0.0
+  ],
+  "parse-test-1285": [
+   1.0
+  ],
+  "parse-test-37334": [
+   1.0
+  ],
+  "parse-test-3858": [
+   1.0
+  ],
+  "parse-test-8789": [
+   1.0
+  ],
+  "parse-test-24687": [
+   1.0
+  ],
+  "parse-test-17771": [
+   1.0
+  ],
+  "parse-test-26455": [
+   1.0
+  ],
+  "parse-test-5021": [
+   1.0
+  ],
+  "parse-test-36144": [
+   1.0
+  ],
+  "parse-test-4557": [
+   0.0
+  ],
+  "parse-test-37154": [
+   0.0
+  ],
+  "parse-test-11984": [
+   0.0
+  ],
+  "parse-test-34290": [
+   1.0
+  ],
+  "parse-test-7831": [
+   1.0
+  ],
+  "parse-test-17670": [
+   1.0
+  ],
+  "parse-test-21329": [
+   0.0
+  ],
+  "parse-test-31555": [
+   1.0
+  ],
+  "parse-test-28446": [
+   0.0
+  ],
+  "parse-test-15063": [
+   1.0
+  ],
+  "parse-test-23260": [
+   0.0
+  ],
+  "parse-test-26629": [
+   0.0
+  ],
+  "parse-test-4856": [
+   1.0
+  ],
+  "parse-test-31253": [
+   1.0
+  ],
+  "parse-test-26813": [
+   1.0
+  ],
+  "parse-test-7333": [
+   0.0
+  ],
+  "parse-test-19970": [
+   0.0
+  ],
+  "parse-test-19854": [
+   0.0
+  ],
+  "parse-test-1611": [
+   1.0
+  ],
+  "parse-test-22477": [
+   0.0
+  ],
+  "parse-test-2637": [
+   1.0
+  ],
+  "parse-test-14778": [
+   1.0
+  ],
+  "parse-test-32904": [
+   1.0
+  ],
+  "parse-test-1794": [
+   1.0
+  ],
+  "parse-test-2171": [
+   0.0
+  ],
+  "parse-test-34490": [
+   0.0
+  ],
+  "parse-test-26274": [
+   1.0
+  ],
+  "parse-test-30162": [
+   1.0
+  ],
+  "parse-test-21455": [
+   0.0
+  ],
+  "parse-test-27846": [
+   1.0
+  ],
+  "parse-test-4855": [
+   1.0
+  ],
+  "parse-test-37470": [
+   1.0
+  ],
+  "parse-test-4182": [
+   0.0
+  ],
+  "parse-test-27635": [
+   0.0
+  ],
+  "parse-test-18859": [
+   1.0
+  ],
+  "parse-test-6181": [
+   0.0
+  ],
+  "parse-test-25938": [
+   1.0
+  ],
+  "parse-test-31244": [
+   0.0
+  ],
+  "parse-test-31645": [
+   1.0
+  ],
+  "parse-test-6759": [
+   1.0
+  ],
+  "parse-test-25819": [
+   0.0
+  ],
+  "parse-test-35811": [
+   1.0
+  ],
+  "parse-test-18526": [
+   0.0
+  ],
+  "parse-test-24823": [
+   1.0
+  ],
+  "parse-test-15665": [
+   0.0
+  ],
+  "parse-test-21919": [
+   1.0
+  ],
+  "parse-test-33258": [
+   1.0
+  ],
+  "parse-test-13535": [
+   1.0
+  ],
+  "parse-test-1332": [
+   1.0
+  ],
+  "parse-test-7468": [
+   1.0
+  ],
+  "parse-test-2155": [
+   0.0
+  ],
+  "parse-test-21517": [
+   1.0
+  ],
+  "parse-test-29100": [
+   1.0
+  ],
+  "parse-test-19514": [
+   0.0
+  ],
+  "parse-test-5052": [
+   0.0
+  ],
+  "parse-test-28247": [
+   1.0
+  ],
+  "parse-test-7450": [
+   0.0
+  ],
+  "parse-test-24017": [
+   1.0
+  ],
+  "parse-test-23931": [
+   1.0
+  ],
+  "parse-test-5804": [
+   1.0
+  ],
+  "parse-test-4549": [
+   1.0
+  ],
+  "parse-test-31953": [
+   0.0
+  ],
+  "parse-test-25830": [
+   1.0
+  ],
+  "parse-test-6929": [
+   0.0
+  ],
+  "parse-test-4692": [
+   1.0
+  ],
+  "parse-test-18097": [
+   0.0
+  ],
+  "parse-test-426": [
+   1.0
+  ],
+  "parse-test-1883": [
+   1.0
+  ],
+  "parse-test-174": [
+   1.0
+  ],
+  "parse-test-13684": [
+   0.0
+  ],
+  "parse-test-20999": [
+   1.0
+  ],
+  "parse-test-8190": [
+   0.0
+  ]
+ },
+ "regraded": {
+  "flips": 0,
+  "to_correct": 0
+ }
+}

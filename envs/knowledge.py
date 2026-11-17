@@ -11,14 +11,18 @@ from typing import Any
 
 from envs.base import Problem
 from envs.math import STOPS, Shots, render
-from envs.mathgrade import last_boxed
+from envs.mathgrade import final_boxed
 from envs.splits import check as check_split
 from shared.config import parse
 
 
-def em_norm(s: str) -> str:
+TEXT_CMD = re.compile(r"\\(?:text|textbf|textrm|textit|mathrm|mathbf|mbox|emph)\s*\{([^{}]*)\}")
+
+
+def em_norm(s: str, hyphen: str = "") -> str:
     s = s.lower().strip().strip("$")
-    s = re.sub(r"\\text\{([^{}]*)\}", r"\1", s)
+    s = TEXT_CMD.sub(r"\1", s)
+    s = s.replace("-", hyphen)
     s = "".join(ch for ch in s if ch not in set(string.punctuation))
     s = re.sub(r"\b(a|an|the)\b", " ", s)
     return " ".join(s.split())
@@ -27,16 +31,32 @@ def em_norm(s: str) -> str:
 def em_match(b: str, aliases: list[str]) -> bool:
     letters = {x.strip().upper() for x in aliases if re.fullmatch(r"[A-Za-z]", x.strip())}
     if letters:
-        bb = re.sub(r"\\text(?:bf)?\{([^{}]*)\}", r"\1", b).strip().strip("$").strip()
+        bb = TEXT_CMD.sub(r"\1", b).strip().strip("$").strip()
         m = re.fullmatch(r"\(?([A-Za-z])\)?[.:]?", bb)
         if m:
             return m.group(1).upper() in letters
-    n = em_norm(b)
-    return bool(n) and n in {em_norm(x) for x in aliases if x.strip().upper() not in letters}
+        # "B. <option text>" whose text is cut short or extended ("C. Disseminated gonococcal infection (DGI)"): the
+        # letter decides as long as one text is a word-prefix of the other; a paraphrase or another option's text fails
+        m = re.fullmatch(r"\(?([A-Za-z])\)?[.:)]\s+(.+)", bb, re.S)
+        if m and m.group(1).upper() in letters:
+            t = em_norm(m.group(2))
+            for x in aliases:
+                o = em_norm(x)
+                if x.strip().upper() in letters or not t or not o:
+                    continue
+                if (t + " ").startswith(o + " ") or (o + " ").startswith(t + " ") and len(t.split()) >= 2:
+                    return True
+        # "Plasmapheresis (C)", "Enterotoxigenic Escherichia coli (ETEC)": the option text plus its letter or a short tag
+        m = re.fullmatch(r"(.+?)\s*\(([^()\s]{1,8})\)", bb, re.S)
+        if m and (len(m.group(2)) > 1 or m.group(2).upper() in letters) and em_match(m.group(1), aliases):
+            return True
+    texts = [x for x in aliases if x.strip().upper() not in letters]
+    # punctuation is deleted ("ben-hur" -> "benhur"); a hyphen read as a space is also accepted ("Thyroid-stimulating")
+    return any(bool(em_norm(b, h)) and em_norm(b, h) in {em_norm(x, h) for x in texts} for h in ("", " "))
 
 
 def grade_em(text: str, truth: dict[str, Any]) -> bool:
-    b = last_boxed(text)
+    b = final_boxed(text)
     return b is not None and em_match(b, truth["em"])
 
 

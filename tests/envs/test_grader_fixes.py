@@ -39,9 +39,11 @@ def test_sql_duplicates_and_order(db):
 def test_mbpp_pass_fail_timeout_without_preexec():
     assert mbpp.passes("def f(a, b):\n    return a + b\n", ("assert f(1, 2) == 3",), "")
     assert not mbpp.passes("def f(a, b):\n    return a - b\n", ("assert f(1, 2) == 3",), "")
-    assert not mbpp.passes("import sys\nsys.exit(0)\n", (), "")
-    assert not mbpp.passes("raise SystemError\n", (), "")
-    assert mbpp.passes("import sys\nassert sys.flags.isolated\n", (), "")
+    # exiting or raising before the tests cannot pass them (the crashing statement is skipped, the tests still run)
+    assert not mbpp.passes("def f(a, b):\n    return a - b\nimport sys\nsys.exit(0)\n", ("assert f(1, 2) == 3",), "")
+    assert not mbpp.passes("raise SystemError\n", ("assert f(1, 2) == 3",), "")
+    assert mbpp.passes("", ("import os, sys", "assert sys.flags.no_user_site and sys.flags.safe_path",
+                            "assert os.environ.get('PYTHONPATH') is None"), "")
     t = time.time()
     assert not mbpp.passes("while True:\n    pass\n", (), "")
     assert time.time() - t < mbpp.TIMEOUT + 3
@@ -49,10 +51,10 @@ def test_mbpp_pass_fail_timeout_without_preexec():
 
 @pytest.mark.skipif(not sys.platform.startswith("linux"), reason="RLIMIT_AS is enforced on Linux")
 def test_mbpp_limits_still_apply():
-    assert mbpp.passes("import resource as r\nassert r.getrlimit(r.RLIMIT_AS)[0] == 4 << 30\n"
-                       "assert r.getrlimit(r.RLIMIT_CPU)[0] == 8\nassert r.getrlimit(r.RLIMIT_FSIZE)[0] == 16 << 20\n",
-                       (), "")
-    assert not mbpp.passes("x = bytearray(6 << 30)\n", (), "")
+    assert mbpp.passes("", ("import resource as r", "assert r.getrlimit(r.RLIMIT_AS)[0] == 4 << 30",
+                            "assert r.getrlimit(r.RLIMIT_CPU)[0] == 8", "assert r.getrlimit(r.RLIMIT_FSIZE)[0] == 16 << 20"),
+                       "")
+    assert not mbpp.passes("x = bytearray(6 << 30)\n", ("assert len(x) > 0",), "")
 
 
 def test_mbpp_threaded_grading():

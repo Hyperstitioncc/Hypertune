@@ -29,13 +29,51 @@ def calls(text: str) -> list[tuple[str, str]] | None:
                 return None
         if not isinstance(c, dict) or "name" not in c:
             return None
-        out.append((str(c["name"]), json.dumps(c.get("arguments", {}), sort_keys=True)))
+        try:  # a Python literal can hold what JSON cannot (a set, mixed key types): unparsable, not a crash
+            out.append((str(c["name"]), json.dumps(c.get("arguments", {}), sort_keys=True)))
+        except (TypeError, ValueError):
+            return None
     return sorted(out)
+
+
+def canon(v):
+    """An argument value up to equivalent spellings: a number by its value (5 == 5.0; bools stay bools), a string that
+    holds a JSON object or array by its parsed content (the dataset passes documents as JSON strings, and their
+    whitespace and key order mean nothing), and a key set to null the same as a key left out (an optional argument
+    not given). Strings are otherwise exact, list order counts, and a string never equals a non-string."""
+    if isinstance(v, bool) or v is None:
+        return v
+    if isinstance(v, (int, float)):
+        return ("num", float(v))
+    if isinstance(v, str):
+        s = v.strip()
+        if s[:1] in ("{", "[") and s[-1:] in ("}", "]"):
+            try:
+                return ("json", canon(json.loads(s)))
+            except ValueError:
+                pass
+        return v
+    if isinstance(v, dict):
+        return ("obj", tuple(sorted((str(k), canon(x)) for k, x in v.items() if x is not None)))
+    if isinstance(v, list):
+        return ("arr", tuple(canon(x) for x in v))
+    return ("other", repr(v))
+
+
+def _key(name: str, args: str) -> tuple:
+    return name, canon(json.loads(args))
 
 
 def grade(text: str, gold: list) -> bool:
     got = calls(text)
-    return got is not None and [list(c) for c in got] == [list(c) for c in gold]
+    if got is None:
+        return False
+    if [list(c) for c in got] == [list(c) for c in gold]:
+        return True
+    try:
+        return sorted(map(repr, (_key(*c) for c in got))) == sorted(map(repr, (_key(*c) for c in gold)))
+    except (ValueError, TypeError, RecursionError):
+        return False
 
 
 def make(cfg: FuncallCfg) -> DomainEnv:

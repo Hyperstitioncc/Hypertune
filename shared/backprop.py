@@ -152,8 +152,6 @@ def _forward_prefix(dec: Decoder, e: Attached, rows: list[TokenRow], cand: list[
 def logprobs(decoder: Decoder, adapter: Adapter, rows: list[TokenRow], cand: list[torch.Tensor],
              cfg: BackpropCfg) -> list[torch.Tensor]:
     e = attach(adapter, Backend.hf_eager, decoder)
-    if e.positional and cfg.score_mode is not ScoreMode.row:
-        raise ValueError(f"{adapter.kind.value} addresses rows by position: score_mode row only")
     if cfg.score_mode is ScoreMode.pack:
         if decoder.cfg.attn != "flash_attention_2":
             raise ValueError("score_mode pack needs attn=flash_attention_2")

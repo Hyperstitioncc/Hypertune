@@ -1,5 +1,6 @@
 import dataclasses
 import math
+from pathlib import Path
 
 import pytest
 import torch
@@ -106,7 +107,8 @@ def test_build_bank(tmp_path):
     cfg = BankCfg(bank=tmp_path, cal_n=16, n_chunks=3, n_per_chunk=32, min_pool=5)
     ident = (DecoderCfg(model="m1"),)
     bk = build_bank(Sampler(adapter(0)), env, cfg, DecodeCfg(), tmp_path, ident)
-    assert bk.backend is Backend.vllm and len(bk.probe) == min(24, len(bk.held))
+    assert bk.backend is Backend.vllm and set(bk.probe) <= set(bk.held) and not set(bk.held) & set(bk.train)
+    assert len(bk.clean) == len(bk.held) - len(bk.probe) >= min(cfg.held_min, len(bk.train))
     assert Bank.load(tmp_path / "bank.json") == bk
     calls = Sampler(adapter(0))
     assert build_bank(calls, env, cfg, DecodeCfg(), tmp_path, ident) == bk and calls.calls == []
@@ -223,6 +225,32 @@ def test_cosine_restarts_matches_torch():
         ref.step()
 
 
+def test_split_solved_keeps_probe_apart_from_clean_held():
+    from shared.eval import BankCfg, split_solved
+    ids = [f"p{i}" for i in range(269)]
+    probe, held, train = split_solved(ids, BankCfg(bank=Path("x")))
+    assert (len(probe), len(held), len(train)) == (24, 54, 191)  # mbpp-sized: 54 clean, not 53 - 24 = 29
+    assert sorted(probe + held + train) == sorted(ids) and not set(probe) & set(held)
+    probe, held, train = split_solved(ids[:167], BankCfg(bank=Path("x")))
+    assert (len(probe), len(held)) == (24, 50) and len(train) == 93  # held_min lifts 33 to 50
+    probe, held, train = split_solved(ids[:40], BankCfg(bank=Path("x")))
+    assert len(probe) == 10 and len(held) == 15 and len(train) == 15  # small banks: train never below held
+
+
+def test_build_bank_keeps_split_of_a_bank_begun_before_split_v2(tmp_path):
+    from shared.eval import BankCfg, build_bank
+    from shared.fs import atomic_json, read_json
+    env = Env(200)
+    cfg = BankCfg(bank=tmp_path, cal_n=16, n_chunks=3, n_per_chunk=32, min_pool=5)
+    ident = (DecoderCfg(model="m1"),)
+    bk = build_bank(Sampler(adapter(0)), env, cfg, DecodeCfg(), tmp_path, ident)
+    key = read_json(tmp_path / "bank_key.json")
+    for f in ("held_frac", "held_min"):
+        key["BankCfg"].pop(f)
+    atomic_json(key, tmp_path / "bank_key.json")  # as an older library wrote it
+    assert build_bank(Sampler(adapter(0)), env, cfg, DecodeCfg(), tmp_path, ident) == bk
+
+
 def test_merge_banks_balances_train_and_keeps_held():
     from shared.eval import merge_banks
     a, b = bank(Env(60)), bank(Env(120))
@@ -231,6 +259,7 @@ def test_merge_banks_balances_train_and_keeps_held():
     nb = sum(i.startswith("mbpp/") for i in m.train)
     assert na == nb == min(len(a.pool), len(b.pool))
     assert len(m.held) == len(a.held) + len(b.held) and set(m.probe) <= set(m.held)
+    assert set(m.probe) <= {f"math/{i}" for i in a.probe} | {f"mbpp/{i}" for i in b.probe}  # parts' clean stays clean
     assert m.rates["math/" + a.held[0]] == a.rates[a.held[0]] and m.split == "all"
     with pytest.raises(ValueError):
         merge_banks({"math": a, "x": dataclasses.replace(b, decode=dataclasses.replace(b.decode, max_tokens=2048))}, True, 0, 24, 11)
@@ -249,3 +278,25 @@ def test_eval_pairs_refuse_other_decode(tmp_path):
     assert set(diffs(a, a).values()) == {0.0}
     with pytest.raises(ValueError):
         diffs(a, b)
+
+
+def test_extend_bank_adds_new_problems_to_held_only(tmp_path):
+    import importlib.util
+    from shared.eval import BankCfg, build_bank
+    spec = importlib.util.spec_from_file_location(
+        "extend_bank", Path(__file__).parents[2] / "experiments/tools/extend_bank.py")
+    eb = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(eb)
+    env = Env(200)
+    old = {f"p{i}" for i in range(120)}
+    cfg = BankCfg(bank=tmp_path / "base", cal_n=16, n_chunks=2, n_per_chunk=16, min_pool=5)
+    ident = (DecoderCfg(model="m1"),)
+    base = build_bank(Sampler(adapter(0)), eb.Only(env, old), cfg, DecodeCfg(), tmp_path / "base", ident)
+    out = eb.extend(tmp_path / "base", tmp_path / "x", env, Sampler(adapter(0)), cfg, DecodeCfg(), ident, None)
+    added = set(out.held) - set(base.held)
+    assert added and added <= set(env_ids := [p.id for p in env.problems("all")]) - old
+    assert out.train == base.train and out.probe == base.probe and out.held[:len(base.held)] == base.held
+    assert set(out.clean) == set(base.clean) | added and not set(out.held) & set(out.train)
+    sel = Bank.load(tmp_path / "x" / "ext" / "bank.json")  # the new problems went through the same window
+    assert added == set(sel.train) | set(sel.held) and all(0 < out.rates[i] < 1 for i in added)
+    assert len(env_ids) == 200 and Bank.load(tmp_path / "x" / "bank.json") == out

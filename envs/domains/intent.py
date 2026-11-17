@@ -13,8 +13,10 @@ class IntentCfg:
 
 
 def grade(text: str, gold: str) -> bool:
+    # trailing sentence punctuation is not part of a label: banking77 names one label "reverted_card_payment?", and no
+    # two labels differ only in a trailing "?" or "."
     t = text.strip().split("\n")[0].strip().lower()
-    return t == gold.lower()
+    return t.rstrip("?.") == gold.lower().rstrip("?.")
 
 
 def make(cfg: IntentCfg) -> DomainEnv:

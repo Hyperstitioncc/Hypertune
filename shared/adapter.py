@@ -9,11 +9,8 @@ import torch
 
 class AdapterKind(enum.Enum):
     identity = "identity"
-    soft_block = "soft_block"
     lora = "lora"
     kv_prefix = "kv_prefix"
-    rung = "rung"
-    thinker = "thinker"
     full = "full"
 
 

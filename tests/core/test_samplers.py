@@ -42,12 +42,12 @@ def test_load_embedding_matches_decoder(tiny_dir):
     assert torch.equal(load_embedding(dec.cfg).float(), dec.emb.weight)
 
 
-@pytest.mark.parametrize("kind", ["identity", "soft_block", "soft_tail"])
+@pytest.mark.parametrize("kind", ["identity", "kv_prefix", "kv_tail"])
 @pytest.mark.parametrize("multi", [False, True])
 def test_hf_sampler(tiny_dir, kind, multi):
     dec = load(DecoderCfg(model=tiny_dir, dtype="fp32", attn="eager", experts_impl="eager", device="cpu"))
-    k = AdapterKind.identity if kind == "identity" else AdapterKind.soft_block
-    a = build(AdapterCfg(adapter=k, k=4, row_tail=kind == "soft_tail", init_seed=3), dec)
+    k = AdapterKind.identity if kind == "identity" else AdapterKind.kv_prefix
+    a = build(AdapterCfg(adapter=k, k=4, row_tail=kind == "kv_tail", init_seed=3), dec)
     smp = sampler(a, Backend.hf_eager, dec, RolloutCfg(hf_batch=2, hf_multi=multi))
     s = Sampling(n=3, temperature=0.8, top_p=0.95, max_tokens=10, seed=5)
     out = smp.sample(PROMPTS, STOPS, s)
@@ -59,7 +59,7 @@ def test_hf_sampler(tiny_dir, kind, multi):
 
 def test_hf_multi_in_chunks_gives_the_same_greedy_answers(tiny_dir):
     dec = load(DecoderCfg(model=tiny_dir, dtype="fp32", attn="eager", experts_impl="eager", device="cpu"))
-    a = build(AdapterCfg(adapter=AdapterKind.soft_block, k=4, init_seed=3, row_tail=True), dec)
+    a = build(AdapterCfg(adapter=AdapterKind.kv_prefix, k=4, init_seed=3, row_tail=True), dec)
     prompts = PROMPTS + ["Problem: Add 2 and 3.\nSolution:", "Problem: Is 9 odd?\nSolution:", "Problem: 7?\nSolution:"]
     s = Sampling(n=1, temperature=0.0, top_p=1.0, max_tokens=8, seed=5)
     whole = sampler(a, Backend.hf_eager, dec, RolloutCfg(hf_multi=True)).sample(prompts, STOPS, s)
@@ -81,15 +81,14 @@ def test_hf_sampler_kv_tail_pos0(tiny_dir, multi):
     smp.close()
 
 
-@pytest.mark.parametrize("kind", ["identity", "soft_block", "soft_tail", "lora", "lora_merge", "kv_prefix", "full"])
+@pytest.mark.parametrize("kind", ["identity", "lora", "lora_merge", "kv_prefix", "kv_tail", "full"])
 def test_vllm_sampler(tiny_dir, kind):
     dec = load(DecoderCfg(model=tiny_dir, dtype="fp32", attn="sdpa", experts_impl="eager", device="cpu"))
     cfgs = {"identity": AdapterCfg(),
-            "soft_block": AdapterCfg(adapter=AdapterKind.soft_block, k=4, init_seed=3),
-            "soft_tail": AdapterCfg(adapter=AdapterKind.soft_block, k=4, init_seed=3, row_tail=True),
             "lora": AdapterCfg(adapter=AdapterKind.lora, lora_targets=("q_proj", "v_proj")),
             "lora_merge": AdapterCfg(adapter=AdapterKind.lora, lora_targets=("q_proj", "v_proj"), lora_merge=True),
             "kv_prefix": AdapterCfg(adapter=AdapterKind.kv_prefix, k=4, init_seed=3),
+            "kv_tail": AdapterCfg(adapter=AdapterKind.kv_prefix, k=4, init_seed=3, row_tail=True),
             "full": AdapterCfg(adapter=AdapterKind.full)}
     a = build(cfgs[kind], dec)
     if kind.startswith("lora"):
@@ -103,7 +102,7 @@ def test_vllm_sampler(tiny_dir, kind):
         with torch.no_grad():
             dec.model.model.layers[0].self_attn.q_proj.weight.add_(0.1)
         out = smp.sample(PROMPTS, STOPS, s)
-    if kind != "kv_prefix":
+    if not kind.startswith("kv_"):
         check_rows(dec, a, out, s, 2e-2)
     smp.close()
 

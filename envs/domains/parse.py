@@ -12,8 +12,26 @@ class ParseCfg:
     parse_data: Path
 
 
+def tree_key(parse: str) -> list[str]:
+    """The parse as its labels ("[IN:X", "[SL:Y"), closers ("]") and the text between them with spaces removed: TOPv2's
+    own tokenisation of the utterance is inconsistent ("I'd" / "I 'd", "p.m" / "p . m"), so where the text is split
+    into tokens carries no meaning, while every bracket, label and character of text must still match."""
+    out: list[str] = []
+    text = ""
+    for t in parse.split():
+        if t == "]" or t.startswith(("[IN:", "[SL:")):
+            if text:
+                out.append(text)
+                text = ""
+            out.append(t)
+        else:
+            text += t
+    return out + [text] if text else out
+
+
 def grade(text: str, gold: str) -> bool:
-    return " ".join(text.strip().split("\n")[0].split()) == gold
+    line = " ".join(text.strip().split("\n")[0].split())
+    return line == gold or tree_key(line) == tree_key(gold)
 
 
 def make(cfg: ParseCfg) -> DomainEnv:

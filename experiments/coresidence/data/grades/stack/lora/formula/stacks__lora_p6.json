@@ -1,0 +1,3033 @@
+{
+ "file": "stacks/lora_p6.pt",
+ "verdict": {
+  "n_problems": 500,
+  "n_per_problem": 1,
+  "absolute_rate": 0.0,
+  "backend": "hf_eager",
+  "decode": {
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 24
+  },
+  "paired_with_bank": true,
+  "mean_uplift": -0.036,
+  "se": 0.008339490043664344,
+  "passed": false,
+  "base_rate": 0.036,
+  "clean_subset": {
+   "n_problems": 500,
+   "mean_uplift": -0.036,
+   "se": 0.008339490043664344,
+   "passed": false
+  }
+ },
+ "grades": {
+  "formula-test-847": [
+   0.0
+  ],
+  "formula-test-540": [
+   0.0
+  ],
+  "formula-test-811": [
+   0.0
+  ],
+  "formula-test-467": [
+   0.0
+  ],
+  "formula-test-214": [
+   0.0
+  ],
+  "formula-test-692": [
+   0.0
+  ],
+  "formula-test-846": [
+   0.0
+  ],
+  "formula-test-124": [
+   0.0
+  ],
+  "formula-test-493": [
+   0.0
+  ],
+  "formula-test-457": [
+   0.0
+  ],
+  "formula-test-505": [
+   0.0
+  ],
+  "formula-test-930": [
+   0.0
+  ],
+  "formula-test-172": [
+   0.0
+  ],
+  "formula-test-667": [
+   0.0
+  ],
+  "formula-test-476": [
+   0.0
+  ],
+  "formula-test-118": [
+   0.0
+  ],
+  "formula-test-839": [
+   0.0
+  ],
+  "formula-test-514": [
+   0.0
+  ],
+  "formula-test-807": [
+   0.0
+  ],
+  "formula-test-19": [
+   0.0
+  ],
+  "formula-test-700": [
+   0.0
+  ],
+  "formula-test-66": [
+   0.0
+  ],
+  "formula-test-442": [
+   0.0
+  ],
+  "formula-test-794": [
+   0.0
+  ],
+  "formula-test-477": [
+   0.0
+  ],
+  "formula-test-580": [
+   0.0
+  ],
+  "formula-test-948": [
+   0.0
+  ],
+  "formula-test-899": [
+   0.0
+  ],
+  "formula-test-126": [
+   0.0
+  ],
+  "formula-test-117": [
+   0.0
+  ],
+  "formula-test-530": [
+   0.0
+  ],
+  "formula-test-401": [
+   0.0
+  ],
+  "formula-test-446": [
+   0.0
+  ],
+  "formula-test-598": [
+   0.0
+  ],
+  "formula-test-616": [
+   0.0
+  ],
+  "formula-test-659": [
+   0.0
+  ],
+  "formula-test-147": [
+   0.0
+  ],
+  "formula-test-466": [
+   0.0
+  ],
+  "formula-test-850": [
+   0.0
+  ],
+  "formula-test-882": [
+   0.0
+  ],
+  "formula-test-557": [
+   0.0
+  ],
+  "formula-test-916": [
+   0.0
+  ],
+  "formula-test-162": [
+   0.0
+  ],
+  "formula-test-47": [
+   0.0
+  ],
+  "formula-test-938": [
+   0.0
+  ],
+  "formula-test-845": [
+   0.0
+  ],
+  "formula-test-642": [
+   0.0
+  ],
+  "formula-test-465": [
+   0.0
+  ],
+  "formula-test-178": [
+   0.0
+  ],
+  "formula-test-971": [
+   0.0
+  ],
+  "formula-test-280": [
+   0.0
+  ],
+  "formula-test-754": [
+   0.0
+  ],
+  "formula-test-123": [
+   0.0
+  ],
+  "formula-test-44": [
+   0.0
+  ],
+  "formula-test-693": [
+   0.0
+  ],
+  "formula-test-555": [
+   0.0
+  ],
+  "formula-test-88": [
+   0.0
+  ],
+  "formula-test-797": [
+   0.0
+  ],
+  "formula-test-694": [
+   0.0
+  ],
+  "formula-test-810": [
+   0.0
+  ],
+  "formula-test-261": [
+   0.0
+  ],
+  "formula-test-611": [
+   0.0
+  ],
+  "formula-test-279": [
+   0.0
+  ],
+  "formula-test-738": [
+   0.0
+  ],
+  "formula-test-310": [
+   0.0
+  ],
+  "formula-test-535": [
+   0.0
+  ],
+  "formula-test-615": [
+   0.0
+  ],
+  "formula-test-59": [
+   0.0
+  ],
+  "formula-test-666": [
+   0.0
+  ],
+  "formula-test-170": [
+   0.0
+  ],
+  "formula-test-676": [
+   0.0
+  ],
+  "formula-test-492": [
+   0.0
+  ],
+  "formula-test-103": [
+   0.0
+  ],
+  "formula-test-690": [
+   0.0
+  ],
+  "formula-test-453": [
+   0.0
+  ],
+  "formula-test-160": [
+   0.0
+  ],
+  "formula-test-58": [
+   0.0
+  ],
+  "formula-test-307": [
+   0.0
+  ],
+  "formula-test-184": [
+   0.0
+  ],
+  "formula-test-872": [
+   0.0
+  ],
+  "formula-test-887": [
+   0.0
+  ],
+  "formula-test-586": [
+   0.0
+  ],
+  "formula-test-986": [
+   0.0
+  ],
+  "formula-test-452": [
+   0.0
+  ],
+  "formula-test-655": [
+   0.0
+  ],
+  "formula-test-591": [
+   0.0
+  ],
+  "formula-test-402": [
+   0.0
+  ],
+  "formula-test-275": [
+   0.0
+  ],
+  "formula-test-227": [
+   0.0
+  ],
+  "formula-test-740": [
+   0.0
+  ],
+  "formula-test-585": [
+   0.0
+  ],
+  "formula-test-905": [
+   0.0
+  ],
+  "formula-test-326": [
+   0.0
+  ],
+  "formula-test-596": [
+   0.0
+  ],
+  "formula-test-230": [
+   0.0
+  ],
+  "formula-test-781": [
+   0.0
+  ],
+  "formula-test-945": [
+   0.0
+  ],
+  "formula-test-979": [
+   0.0
+  ],
+  "formula-test-469": [
+   0.0
+  ],
+  "formula-test-317": [
+   0.0
+  ],
+  "formula-test-510": [
+   0.0
+  ],
+  "formula-test-701": [
+   0.0
+  ],
+  "formula-test-41": [
+   0.0
+  ],
+  "formula-test-716": [
+   0.0
+  ],
+  "formula-test-228": [
+   0.0
+  ],
+  "formula-test-60": [
+   0.0
+  ],
+  "formula-test-566": [
+   0.0
+  ],
+  "formula-test-150": [
+   0.0
+  ],
+  "formula-test-322": [
+   0.0
+  ],
+  "formula-test-128": [
+   0.0
+  ],
+  "formula-test-191": [
+   0.0
+  ],
+  "formula-test-212": [
+   0.0
+  ],
+  "formula-test-337": [
+   0.0
+  ],
+  "formula-test-30": [
+   0.0
+  ],
+  "formula-test-933": [
+   0.0
+  ],
+  "formula-test-741": [
+   0.0
+  ],
+  "formula-test-456": [
+   0.0
+  ],
+  "formula-test-213": [
+   0.0
+  ],
+  "formula-test-698": [
+   0.0
+  ],
+  "formula-test-380": [
+   0.0
+  ],
+  "formula-test-79": [
+   0.0
+  ],
+  "formula-test-776": [
+   0.0
+  ],
+  "formula-test-880": [
+   0.0
+  ],
+  "formula-test-773": [
+   0.0
+  ],
+  "formula-test-999": [
+   0.0
+  ],
+  "formula-test-455": [
+   0.0
+  ],
+  "formula-test-827": [
+   0.0
+  ],
+  "formula-test-100": [
+   0.0
+  ],
+  "formula-test-436": [
+   0.0
+  ],
+  "formula-test-536": [
+   0.0
+  ],
+  "formula-test-501": [
+   0.0
+  ],
+  "formula-test-112": [
+   0.0
+  ],
+  "formula-test-816": [
+   0.0
+  ],
+  "formula-test-638": [
+   0.0
+  ],
+  "formula-test-1": [
+   0.0
+  ],
+  "formula-test-338": [
+   0.0
+  ],
+  "formula-test-735": [
+   0.0
+  ],
+  "formula-test-315": [
+   0.0
+  ],
+  "formula-test-942": [
+   0.0
+  ],
+  "formula-test-912": [
+   0.0
+  ],
+  "formula-test-634": [
+   0.0
+  ],
+  "formula-test-242": [
+   0.0
+  ],
+  "formula-test-252": [
+   0.0
+  ],
+  "formula-test-15": [
+   0.0
+  ],
+  "formula-test-957": [
+   0.0
+  ],
+  "formula-test-96": [
+   0.0
+  ],
+  "formula-test-125": [
+   0.0
+  ],
+  "formula-test-879": [
+   0.0
+  ],
+  "formula-test-120": [
+   0.0
+  ],
+  "formula-test-630": [
+   0.0
+  ],
+  "formula-test-944": [
+   0.0
+  ],
+  "formula-test-962": [
+   0.0
+  ],
+  "formula-test-998": [
+   0.0
+  ],
+  "formula-test-508": [
+   0.0
+  ],
+  "formula-test-164": [
+   0.0
+  ],
+  "formula-test-635": [
+   0.0
+  ],
+  "formula-test-965": [
+   0.0
+  ],
+  "formula-test-303": [
+   0.0
+  ],
+  "formula-test-684": [
+   0.0
+  ],
+  "formula-test-744": [
+   0.0
+  ],
+  "formula-test-891": [
+   0.0
+  ],
+  "formula-test-270": [
+   0.0
+  ],
+  "formula-test-496": [
+   0.0
+  ],
+  "formula-test-362": [
+   0.0
+  ],
+  "formula-test-628": [
+   0.0
+  ],
+  "formula-test-570": [
+   0.0
+  ],
+  "formula-test-89": [
+   0.0
+  ],
+  "formula-test-394": [
+   0.0
+  ],
+  "formula-test-368": [
+   0.0
+  ],
+  "formula-test-523": [
+   0.0
+  ],
+  "formula-test-374": [
+   0.0
+  ],
+  "formula-test-116": [
+   0.0
+  ],
+  "formula-test-926": [
+   0.0
+  ],
+  "formula-test-931": [
+   0.0
+  ],
+  "formula-test-579": [
+   0.0
+  ],
+  "formula-test-137": [
+   0.0
+  ],
+  "formula-test-877": [
+   0.0
+  ],
+  "formula-test-371": [
+   0.0
+  ],
+  "formula-test-400": [
+   0.0
+  ],
+  "formula-test-56": [
+   0.0
+  ],
+  "formula-test-710": [
+   0.0
+  ],
+  "formula-test-384": [
+   0.0
+  ],
+  "formula-test-9": [
+   0.0
+  ],
+  "formula-test-114": [
+   0.0
+  ],
+  "formula-test-324": [
+   0.0
+  ],
+  "formula-test-984": [
+   0.0
+  ],
+  "formula-test-240": [
+   0.0
+  ],
+  "formula-test-876": [
+   0.0
+  ],
+  "formula-test-552": [
+   0.0
+  ],
+  "formula-test-250": [
+   0.0
+  ],
+  "formula-test-620": [
+   0.0
+  ],
+  "formula-test-97": [
+   0.0
+  ],
+  "formula-test-519": [
+   0.0
+  ],
+  "formula-test-565": [
+   0.0
+  ],
+  "formula-test-335": [
+   0.0
+  ],
+  "formula-test-718": [
+   0.0
+  ],
+  "formula-test-95": [
+   0.0
+  ],
+  "formula-test-373": [
+   0.0
+  ],
+  "formula-test-749": [
+   0.0
+  ],
+  "formula-test-946": [
+   0.0
+  ],
+  "formula-test-992": [
+   0.0
+  ],
+  "formula-test-300": [
+   0.0
+  ],
+  "formula-test-848": [
+   0.0
+  ],
+  "formula-test-475": [
+   0.0
+  ],
+  "formula-test-981": [
+   0.0
+  ],
+  "formula-test-301": [
+   0.0
+  ],
+  "formula-test-491": [
+   0.0
+  ],
+  "formula-test-767": [
+   0.0
+  ],
+  "formula-test-136": [
+   0.0
+  ],
+  "formula-test-415": [
+   0.0
+  ],
+  "formula-test-976": [
+   0.0
+  ],
+  "formula-test-223": [
+   0.0
+  ],
+  "formula-test-488": [
+   0.0
+  ],
+  "formula-test-50": [
+   0.0
+  ],
+  "formula-test-546": [
+   0.0
+  ],
+  "formula-test-529": [
+   0.0
+  ],
+  "formula-test-770": [
+   0.0
+  ],
+  "formula-test-63": [
+   0.0
+  ],
+  "formula-test-10": [
+   0.0
+  ],
+  "formula-test-950": [
+   0.0
+  ],
+  "formula-test-375": [
+   0.0
+  ],
+  "formula-test-974": [
+   0.0
+  ],
+  "formula-test-433": [
+   0.0
+  ],
+  "formula-test-450": [
+   0.0
+  ],
+  "formula-test-13": [
+   0.0
+  ],
+  "formula-test-589": [
+   0.0
+  ],
+  "formula-test-4": [
+   0.0
+  ],
+  "formula-test-902": [
+   0.0
+  ],
+  "formula-test-663": [
+   0.0
+  ],
+  "formula-test-669": [
+   0.0
+  ],
+  "formula-test-978": [
+   0.0
+  ],
+  "formula-test-900": [
+   0.0
+  ],
+  "formula-test-406": [
+   0.0
+  ],
+  "formula-test-334": [
+   0.0
+  ],
+  "formula-test-192": [
+   0.0
+  ],
+  "formula-test-873": [
+   0.0
+  ],
+  "formula-test-451": [
+   0.0
+  ],
+  "formula-test-354": [
+   0.0
+  ],
+  "formula-test-309": [
+   0.0
+  ],
+  "formula-test-556": [
+   0.0
+  ],
+  "formula-test-765": [
+   0.0
+  ],
+  "formula-test-862": [
+   0.0
+  ],
+  "formula-test-157": [
+   0.0
+  ],
+  "formula-test-778": [
+   0.0
+  ],
+  "formula-test-922": [
+   0.0
+  ],
+  "formula-test-299": [
+   0.0
+  ],
+  "formula-test-16": [
+   0.0
+  ],
+  "formula-test-62": [
+   0.0
+  ],
+  "formula-test-991": [
+   0.0
+  ],
+  "formula-test-329": [
+   0.0
+  ],
+  "formula-test-814": [
+   0.0
+  ],
+  "formula-test-830": [
+   0.0
+  ],
+  "formula-test-809": [
+   0.0
+  ],
+  "formula-test-282": [
+   0.0
+  ],
+  "formula-test-599": [
+   0.0
+  ],
+  "formula-test-31": [
+   0.0
+  ],
+  "formula-test-229": [
+   0.0
+  ],
+  "formula-test-109": [
+   0.0
+  ],
+  "formula-test-422": [
+   0.0
+  ],
+  "formula-test-254": [
+   0.0
+  ],
+  "formula-test-893": [
+   0.0
+  ],
+  "formula-test-772": [
+   0.0
+  ],
+  "formula-test-970": [
+   0.0
+  ],
+  "formula-test-215": [
+   0.0
+  ],
+  "formula-test-27": [
+   0.0
+  ],
+  "formula-test-725": [
+   0.0
+  ],
+  "formula-test-235": [
+   0.0
+  ],
+  "formula-test-908": [
+   0.0
+  ],
+  "formula-test-534": [
+   0.0
+  ],
+  "formula-test-980": [
+   0.0
+  ],
+  "formula-test-321": [
+   0.0
+  ],
+  "formula-test-582": [
+   0.0
+  ],
+  "formula-test-110": [
+   0.0
+  ],
+  "formula-test-958": [
+   0.0
+  ],
+  "formula-test-664": [
+   0.0
+  ],
+  "formula-test-853": [
+   0.0
+  ],
+  "formula-test-961": [
+   0.0
+  ],
+  "formula-test-395": [
+   0.0
+  ],
+  "formula-test-497": [
+   0.0
+  ],
+  "formula-test-972": [
+   0.0
+  ],
+  "formula-test-130": [
+   0.0
+  ],
+  "formula-test-102": [
+   0.0
+  ],
+  "formula-test-568": [
+   0.0
+  ],
+  "formula-test-520": [
+   0.0
+  ],
+  "formula-test-71": [
+   0.0
+  ],
+  "formula-test-699": [
+   0.0
+  ],
+  "formula-test-537": [
+   0.0
+  ],
+  "formula-test-188": [
+   0.0
+  ],
+  "formula-test-444": [
+   0.0
+  ],
+  "formula-test-802": [
+   0.0
+  ],
+  "formula-test-815": [
+   0.0
+  ],
+  "formula-test-668": [
+   0.0
+  ],
+  "formula-test-677": [
+   0.0
+  ],
+  "formula-test-389": [
+   0.0
+  ],
+  "formula-test-769": [
+   0.0
+  ],
+  "formula-test-861": [
+   0.0
+  ],
+  "formula-test-468": [
+   0.0
+  ],
+  "formula-test-11": [
+   0.0
+  ],
+  "formula-test-298": [
+   0.0
+  ],
+  "formula-test-364": [
+   0.0
+  ],
+  "formula-test-764": [
+   0.0
+  ],
+  "formula-test-65": [
+   0.0
+  ],
+  "formula-test-968": [
+   0.0
+  ],
+  "formula-test-216": [
+   0.0
+  ],
+  "formula-test-624": [
+   0.0
+  ],
+  "formula-test-780": [
+   0.0
+  ],
+  "formula-test-747": [
+   0.0
+  ],
+  "formula-test-538": [
+   0.0
+  ],
+  "formula-test-32": [
+   0.0
+  ],
+  "formula-test-127": [
+   0.0
+  ],
+  "formula-test-473": [
+   0.0
+  ],
+  "formula-test-84": [
+   0.0
+  ],
+  "formula-test-144": [
+   0.0
+  ],
+  "formula-test-601": [
+   0.0
+  ],
+  "formula-test-511": [
+   0.0
+  ],
+  "formula-test-441": [
+   0.0
+  ],
+  "formula-test-87": [
+   0.0
+  ],
+  "formula-test-232": [
+   0.0
+  ],
+  "formula-test-675": [
+   0.0
+  ],
+  "formula-test-763": [
+   0.0
+  ],
+  "formula-test-571": [
+   0.0
+  ],
+  "formula-test-796": [
+   0.0
+  ],
+  "formula-test-832": [
+   0.0
+  ],
+  "formula-test-224": [
+   0.0
+  ],
+  "formula-test-583": [
+   0.0
+  ],
+  "formula-test-606": [
+   0.0
+  ],
+  "formula-test-367": [
+   0.0
+  ],
+  "formula-test-637": [
+   0.0
+  ],
+  "formula-test-46": [
+   0.0
+  ],
+  "formula-test-320": [
+   0.0
+  ],
+  "formula-test-297": [
+   0.0
+  ],
+  "formula-test-762": [
+   0.0
+  ],
+  "formula-test-430": [
+   0.0
+  ],
+  "formula-test-54": [
+   0.0
+  ],
+  "formula-test-859": [
+   0.0
+  ],
+  "formula-test-953": [
+   0.0
+  ],
+  "formula-test-195": [
+   0.0
+  ],
+  "formula-test-386": [
+   0.0
+  ],
+  "formula-test-399": [
+   0.0
+  ],
+  "formula-test-305": [
+   0.0
+  ],
+  "formula-test-500": [
+   0.0
+  ],
+  "formula-test-483": [
+   0.0
+  ],
+  "formula-test-222": [
+   0.0
+  ],
+  "formula-test-726": [
+   0.0
+  ],
+  "formula-test-715": [
+   0.0
+  ],
+  "formula-test-17": [
+   0.0
+  ],
+  "formula-test-269": [
+   0.0
+  ],
+  "formula-test-25": [
+   0.0
+  ],
+  "formula-test-387": [
+   0.0
+  ],
+  "formula-test-600": [
+   0.0
+  ],
+  "formula-test-201": [
+   0.0
+  ],
+  "formula-test-808": [
+   0.0
+  ],
+  "formula-test-153": [
+   0.0
+  ],
+  "formula-test-432": [
+   0.0
+  ],
+  "formula-test-779": [
+   0.0
+  ],
+  "formula-test-306": [
+   0.0
+  ],
+  "formula-test-521": [
+   0.0
+  ],
+  "formula-test-449": [
+   0.0
+  ],
+  "formula-test-649": [
+   0.0
+  ],
+  "formula-test-560": [
+   0.0
+  ],
+  "formula-test-823": [
+   0.0
+  ],
+  "formula-test-429": [
+   0.0
+  ],
+  "formula-test-285": [
+   0.0
+  ],
+  "formula-test-346": [
+   0.0
+  ],
+  "formula-test-98": [
+   0.0
+  ],
+  "formula-test-290": [
+   0.0
+  ],
+  "formula-test-818": [
+   0.0
+  ],
+  "formula-test-793": [
+   0.0
+  ],
+  "formula-test-134": [
+   0.0
+  ],
+  "formula-test-139": [
+   0.0
+  ],
+  "formula-test-548": [
+   0.0
+  ],
+  "formula-test-74": [
+   0.0
+  ],
+  "formula-test-482": [
+   0.0
+  ],
+  "formula-test-90": [
+   0.0
+  ],
+  "formula-test-92": [
+   0.0
+  ],
+  "formula-test-515": [
+   0.0
+  ],
+  "formula-test-739": [
+   0.0
+  ],
+  "formula-test-608": [
+   0.0
+  ],
+  "formula-test-518": [
+   0.0
+  ],
+  "formula-test-459": [
+   0.0
+  ],
+  "formula-test-903": [
+   0.0
+  ],
+  "formula-test-784": [
+   0.0
+  ],
+  "formula-test-283": [
+   0.0
+  ],
+  "formula-test-983": [
+   0.0
+  ],
+  "formula-test-800": [
+   0.0
+  ],
+  "formula-test-504": [
+   0.0
+  ],
+  "formula-test-507": [
+   0.0
+  ],
+  "formula-test-895": [
+   0.0
+  ],
+  "formula-test-528": [
+   0.0
+  ],
+  "formula-test-774": [
+   0.0
+  ],
+  "formula-test-927": [
+   0.0
+  ],
+  "formula-test-736": [
+   0.0
+  ],
+  "formula-test-866": [
+   0.0
+  ],
+  "formula-test-119": [
+   0.0
+  ],
+  "formula-test-163": [
+   0.0
+  ],
+  "formula-test-259": [
+   0.0
+  ],
+  "formula-test-678": [
+   0.0
+  ],
+  "formula-test-221": [
+   0.0
+  ],
+  "formula-test-390": [
+   0.0
+  ],
+  "formula-test-888": [
+   0.0
+  ],
+  "formula-test-720": [
+   0.0
+  ],
+  "formula-test-34": [
+   0.0
+  ],
+  "formula-test-248": [
+   0.0
+  ],
+  "formula-test-379": [
+   0.0
+  ],
+  "formula-test-707": [
+   0.0
+  ],
+  "formula-test-878": [
+   0.0
+  ],
+  "formula-test-382": [
+   0.0
+  ],
+  "formula-test-423": [
+   0.0
+  ],
+  "formula-test-343": [
+   0.0
+  ],
+  "formula-test-260": [
+   0.0
+  ],
+  "formula-test-91": [
+   0.0
+  ],
+  "formula-test-805": [
+   0.0
+  ],
+  "formula-test-288": [
+   0.0
+  ],
+  "formula-test-253": [
+   0.0
+  ],
+  "formula-test-708": [
+   0.0
+  ],
+  "formula-test-687": [
+   0.0
+  ],
+  "formula-test-461": [
+   0.0
+  ],
+  "formula-test-750": [
+   0.0
+  ],
+  "formula-test-419": [
+   0.0
+  ],
+  "formula-test-276": [
+   0.0
+  ],
+  "formula-test-660": [
+   0.0
+  ],
+  "formula-test-688": [
+   0.0
+  ],
+  "formula-test-837": [
+   0.0
+  ],
+  "formula-test-619": [
+   0.0
+  ],
+  "formula-test-629": [
+   0.0
+  ],
+  "formula-test-939": [
+   0.0
+  ],
+  "formula-test-803": [
+   0.0
+  ],
+  "formula-test-782": [
+   0.0
+  ],
+  "formula-test-332": [
+   0.0
+  ],
+  "formula-test-176": [
+   0.0
+  ],
+  "formula-test-705": [
+   0.0
+  ],
+  "formula-test-975": [
+   0.0
+  ],
+  "formula-test-551": [
+   0.0
+  ],
+  "formula-test-245": [
+   0.0
+  ],
+  "formula-test-996": [
+   0.0
+  ],
+  "formula-test-533": [
+   0.0
+  ],
+  "formula-test-923": [
+   0.0
+  ],
+  "formula-test-377": [
+   0.0
+  ],
+  "formula-test-291": [
+   0.0
+  ],
+  "formula-test-405": [
+   0.0
+  ],
+  "formula-test-783": [
+   0.0
+  ],
+  "formula-test-113": [
+   0.0
+  ],
+  "formula-test-2": [
+   0.0
+  ],
+  "formula-test-502": [
+   0.0
+  ],
+  "formula-test-657": [
+   0.0
+  ],
+  "formula-test-787": [
+   0.0
+  ],
+  "formula-test-994": [
+   0.0
+  ],
+  "formula-test-661": [
+   0.0
+  ],
+  "formula-test-742": [
+   0.0
+  ],
+  "formula-test-889": [
+   0.0
+  ],
+  "formula-test-274": [
+   0.0
+  ],
+  "formula-test-273": [
+   0.0
+  ],
+  "formula-test-39": [
+   0.0
+  ],
+  "formula-test-78": [
+   0.0
+  ],
+  "formula-test-851": [
+   0.0
+  ],
+  "formula-test-541": [
+   0.0
+  ],
+  "formula-test-734": [
+   0.0
+  ],
+  "formula-test-167": [
+   0.0
+  ],
+  "formula-test-696": [
+   0.0
+  ],
+  "formula-test-569": [
+   0.0
+  ],
+  "formula-test-104": [
+   0.0
+  ],
+  "formula-test-177": [
+   0.0
+  ],
+  "formula-test-156": [
+   0.0
+  ],
+  "formula-test-33": [
+   0.0
+  ],
+  "formula-test-189": [
+   0.0
+  ],
+  "formula-test-185": [
+   0.0
+  ],
+  "formula-test-316": [
+   0.0
+  ],
+  "formula-test-896": [
+   0.0
+  ],
+  "formula-test-77": [
+   0.0
+  ],
+  "formula-test-746": [
+   0.0
+  ],
+  "formula-test-573": [
+   0.0
+  ],
+  "formula-test-199": [
+   0.0
+  ],
+  "formula-test-203": [
+   0.0
+  ],
+  "formula-test-977": [
+   0.0
+  ],
+  "formula-test-652": [
+   0.0
+  ],
+  "formula-test-841": [
+   0.0
+  ],
+  "formula-test-920": [
+   0.0
+  ],
+  "formula-test-868": [
+   0.0
+  ],
+  "formula-test-427": [
+   0.0
+  ],
+  "formula-test-790": [
+   0.0
+  ],
+  "formula-test-852": [
+   0.0
+  ],
+  "formula-test-366": [
+   0.0
+  ],
+  "formula-test-361": [
+   0.0
+  ],
+  "formula-test-132": [
+   0.0
+  ],
+  "formula-test-12": [
+   0.0
+  ],
+  "formula-test-605": [
+   0.0
+  ],
+  "formula-test-186": [
+   0.0
+  ],
+  "formula-test-342": [
+   0.0
+  ],
+  "formula-test-901": [
+   0.0
+  ],
+  "formula-test-577": [
+   0.0
+  ],
+  "formula-test-610": [
+   0.0
+  ],
+  "formula-test-775": [
+   0.0
+  ],
+  "formula-test-35": [
+   0.0
+  ],
+  "formula-test-5": [
+   0.0
+  ],
+  "formula-test-647": [
+   0.0
+  ],
+  "formula-test-352": [
+   0.0
+  ],
+  "formula-test-869": [
+   0.0
+  ],
+  "formula-test-621": [
+   0.0
+  ],
+  "formula-test-691": [
+   0.0
+  ],
+  "formula-test-884": [
+   0.0
+  ]
+ },
+ "grades_sampled": {
+  "formula-test-847": [
+   0.0
+  ],
+  "formula-test-540": [
+   0.0
+  ],
+  "formula-test-811": [
+   0.0
+  ],
+  "formula-test-467": [
+   0.0
+  ],
+  "formula-test-214": [
+   0.0
+  ],
+  "formula-test-692": [
+   0.0
+  ],
+  "formula-test-846": [
+   0.0
+  ],
+  "formula-test-124": [
+   0.0
+  ],
+  "formula-test-493": [
+   0.0
+  ],
+  "formula-test-457": [
+   0.0
+  ],
+  "formula-test-505": [
+   0.0
+  ],
+  "formula-test-930": [
+   0.0
+  ],
+  "formula-test-172": [
+   0.0
+  ],
+  "formula-test-667": [
+   0.0
+  ],
+  "formula-test-476": [
+   0.0
+  ],
+  "formula-test-118": [
+   0.0
+  ],
+  "formula-test-839": [
+   0.0
+  ],
+  "formula-test-514": [
+   0.0
+  ],
+  "formula-test-807": [
+   0.0
+  ],
+  "formula-test-19": [
+   0.0
+  ],
+  "formula-test-700": [
+   0.0
+  ],
+  "formula-test-66": [
+   0.0
+  ],
+  "formula-test-442": [
+   0.0
+  ],
+  "formula-test-794": [
+   0.0
+  ],
+  "formula-test-477": [
+   0.0
+  ],
+  "formula-test-580": [
+   0.0
+  ],
+  "formula-test-948": [
+   0.0
+  ],
+  "formula-test-899": [
+   0.0
+  ],
+  "formula-test-126": [
+   0.0
+  ],
+  "formula-test-117": [
+   0.0
+  ],
+  "formula-test-530": [
+   0.0
+  ],
+  "formula-test-401": [
+   0.0
+  ],
+  "formula-test-446": [
+   0.0
+  ],
+  "formula-test-598": [
+   0.0
+  ],
+  "formula-test-616": [
+   0.0
+  ],
+  "formula-test-659": [
+   0.0
+  ],
+  "formula-test-147": [
+   0.0
+  ],
+  "formula-test-466": [
+   0.0
+  ],
+  "formula-test-850": [
+   0.0
+  ],
+  "formula-test-882": [
+   0.0
+  ],
+  "formula-test-557": [
+   0.0
+  ],
+  "formula-test-916": [
+   0.0
+  ],
+  "formula-test-162": [
+   0.0
+  ],
+  "formula-test-47": [
+   0.0
+  ],
+  "formula-test-938": [
+   0.0
+  ],
+  "formula-test-845": [
+   0.0
+  ],
+  "formula-test-642": [
+   0.0
+  ],
+  "formula-test-465": [
+   0.0
+  ],
+  "formula-test-178": [
+   0.0
+  ],
+  "formula-test-971": [
+   0.0
+  ],
+  "formula-test-280": [
+   0.0
+  ],
+  "formula-test-754": [
+   0.0
+  ],
+  "formula-test-123": [
+   0.0
+  ],
+  "formula-test-44": [
+   0.0
+  ],
+  "formula-test-693": [
+   0.0
+  ],
+  "formula-test-555": [
+   0.0
+  ],
+  "formula-test-88": [
+   0.0
+  ],
+  "formula-test-797": [
+   0.0
+  ],
+  "formula-test-694": [
+   0.0
+  ],
+  "formula-test-810": [
+   0.0
+  ],
+  "formula-test-261": [
+   0.0
+  ],
+  "formula-test-611": [
+   0.0
+  ],
+  "formula-test-279": [
+   0.0
+  ],
+  "formula-test-738": [
+   0.0
+  ],
+  "formula-test-310": [
+   0.0
+  ],
+  "formula-test-535": [
+   0.0
+  ],
+  "formula-test-615": [
+   0.0
+  ],
+  "formula-test-59": [
+   0.0
+  ],
+  "formula-test-666": [
+   0.0
+  ],
+  "formula-test-170": [
+   0.0
+  ],
+  "formula-test-676": [
+   0.0
+  ],
+  "formula-test-492": [
+   0.0
+  ],
+  "formula-test-103": [
+   0.0
+  ],
+  "formula-test-690": [
+   0.0
+  ],
+  "formula-test-453": [
+   0.0
+  ],
+  "formula-test-160": [
+   0.0
+  ],
+  "formula-test-58": [
+   0.0
+  ],
+  "formula-test-307": [
+   0.0
+  ],
+  "formula-test-184": [
+   0.0
+  ],
+  "formula-test-872": [
+   0.0
+  ],
+  "formula-test-887": [
+   0.0
+  ],
+  "formula-test-586": [
+   0.0
+  ],
+  "formula-test-986": [
+   0.0
+  ],
+  "formula-test-452": [
+   0.0
+  ],
+  "formula-test-655": [
+   0.0
+  ],
+  "formula-test-591": [
+   0.0
+  ],
+  "formula-test-402": [
+   0.0
+  ],
+  "formula-test-275": [
+   0.0
+  ],
+  "formula-test-227": [
+   0.0
+  ],
+  "formula-test-740": [
+   0.0
+  ],
+  "formula-test-585": [
+   0.0
+  ],
+  "formula-test-905": [
+   0.0
+  ],
+  "formula-test-326": [
+   0.0
+  ],
+  "formula-test-596": [
+   0.0
+  ],
+  "formula-test-230": [
+   0.0
+  ],
+  "formula-test-781": [
+   0.0
+  ],
+  "formula-test-945": [
+   0.0
+  ],
+  "formula-test-979": [
+   0.0
+  ],
+  "formula-test-469": [
+   0.0
+  ],
+  "formula-test-317": [
+   0.0
+  ],
+  "formula-test-510": [
+   0.0
+  ],
+  "formula-test-701": [
+   0.0
+  ],
+  "formula-test-41": [
+   0.0
+  ],
+  "formula-test-716": [
+   0.0
+  ],
+  "formula-test-228": [
+   0.0
+  ],
+  "formula-test-60": [
+   0.0
+  ],
+  "formula-test-566": [
+   0.0
+  ],
+  "formula-test-150": [
+   0.0
+  ],
+  "formula-test-322": [
+   0.0
+  ],
+  "formula-test-128": [
+   0.0
+  ],
+  "formula-test-191": [
+   0.0
+  ],
+  "formula-test-212": [
+   0.0
+  ],
+  "formula-test-337": [
+   0.0
+  ],
+  "formula-test-30": [
+   0.0
+  ],
+  "formula-test-933": [
+   0.0
+  ],
+  "formula-test-741": [
+   0.0
+  ],
+  "formula-test-456": [
+   0.0
+  ],
+  "formula-test-213": [
+   0.0
+  ],
+  "formula-test-698": [
+   0.0
+  ],
+  "formula-test-380": [
+   0.0
+  ],
+  "formula-test-79": [
+   0.0
+  ],
+  "formula-test-776": [
+   0.0
+  ],
+  "formula-test-880": [
+   0.0
+  ],
+  "formula-test-773": [
+   0.0
+  ],
+  "formula-test-999": [
+   0.0
+  ],
+  "formula-test-455": [
+   0.0
+  ],
+  "formula-test-827": [
+   0.0
+  ],
+  "formula-test-100": [
+   0.0
+  ],
+  "formula-test-436": [
+   0.0
+  ],
+  "formula-test-536": [
+   0.0
+  ],
+  "formula-test-501": [
+   0.0
+  ],
+  "formula-test-112": [
+   0.0
+  ],
+  "formula-test-816": [
+   0.0
+  ],
+  "formula-test-638": [
+   0.0
+  ],
+  "formula-test-1": [
+   0.0
+  ],
+  "formula-test-338": [
+   0.0
+  ],
+  "formula-test-735": [
+   0.0
+  ],
+  "formula-test-315": [
+   0.0
+  ],
+  "formula-test-942": [
+   0.0
+  ],
+  "formula-test-912": [
+   0.0
+  ],
+  "formula-test-634": [
+   0.0
+  ],
+  "formula-test-242": [
+   0.0
+  ],
+  "formula-test-252": [
+   0.0
+  ],
+  "formula-test-15": [
+   0.0
+  ],
+  "formula-test-957": [
+   0.0
+  ],
+  "formula-test-96": [
+   0.0
+  ],
+  "formula-test-125": [
+   0.0
+  ],
+  "formula-test-879": [
+   0.0
+  ],
+  "formula-test-120": [
+   0.0
+  ],
+  "formula-test-630": [
+   0.0
+  ],
+  "formula-test-944": [
+   0.0
+  ],
+  "formula-test-962": [
+   0.0
+  ],
+  "formula-test-998": [
+   0.0
+  ],
+  "formula-test-508": [
+   0.0
+  ],
+  "formula-test-164": [
+   0.0
+  ],
+  "formula-test-635": [
+   0.0
+  ],
+  "formula-test-965": [
+   0.0
+  ],
+  "formula-test-303": [
+   0.0
+  ],
+  "formula-test-684": [
+   0.0
+  ],
+  "formula-test-744": [
+   0.0
+  ],
+  "formula-test-891": [
+   0.0
+  ],
+  "formula-test-270": [
+   0.0
+  ],
+  "formula-test-496": [
+   0.0
+  ],
+  "formula-test-362": [
+   0.0
+  ],
+  "formula-test-628": [
+   0.0
+  ],
+  "formula-test-570": [
+   0.0
+  ],
+  "formula-test-89": [
+   0.0
+  ],
+  "formula-test-394": [
+   0.0
+  ],
+  "formula-test-368": [
+   0.0
+  ],
+  "formula-test-523": [
+   0.0
+  ],
+  "formula-test-374": [
+   0.0
+  ],
+  "formula-test-116": [
+   0.0
+  ],
+  "formula-test-926": [
+   0.0
+  ],
+  "formula-test-931": [
+   0.0
+  ],
+  "formula-test-579": [
+   0.0
+  ],
+  "formula-test-137": [
+   0.0
+  ],
+  "formula-test-877": [
+   0.0
+  ],
+  "formula-test-371": [
+   0.0
+  ],
+  "formula-test-400": [
+   0.0
+  ],
+  "formula-test-56": [
+   0.0
+  ],
+  "formula-test-710": [
+   0.0
+  ],
+  "formula-test-384": [
+   0.0
+  ],
+  "formula-test-9": [
+   0.0
+  ],
+  "formula-test-114": [
+   0.0
+  ],
+  "formula-test-324": [
+   0.0
+  ],
+  "formula-test-984": [
+   0.0
+  ],
+  "formula-test-240": [
+   0.0
+  ],
+  "formula-test-876": [
+   0.0
+  ],
+  "formula-test-552": [
+   0.0
+  ],
+  "formula-test-250": [
+   0.0
+  ],
+  "formula-test-620": [
+   0.0
+  ],
+  "formula-test-97": [
+   0.0
+  ],
+  "formula-test-519": [
+   0.0
+  ],
+  "formula-test-565": [
+   0.0
+  ],
+  "formula-test-335": [
+   0.0
+  ],
+  "formula-test-718": [
+   0.0
+  ],
+  "formula-test-95": [
+   0.0
+  ],
+  "formula-test-373": [
+   0.0
+  ],
+  "formula-test-749": [
+   0.0
+  ],
+  "formula-test-946": [
+   0.0
+  ],
+  "formula-test-992": [
+   0.0
+  ],
+  "formula-test-300": [
+   0.0
+  ],
+  "formula-test-848": [
+   0.0
+  ],
+  "formula-test-475": [
+   0.0
+  ],
+  "formula-test-981": [
+   0.0
+  ],
+  "formula-test-301": [
+   0.0
+  ],
+  "formula-test-491": [
+   0.0
+  ],
+  "formula-test-767": [
+   0.0
+  ],
+  "formula-test-136": [
+   0.0
+  ],
+  "formula-test-415": [
+   0.0
+  ],
+  "formula-test-976": [
+   0.0
+  ],
+  "formula-test-223": [
+   0.0
+  ],
+  "formula-test-488": [
+   0.0
+  ],
+  "formula-test-50": [
+   0.0
+  ],
+  "formula-test-546": [
+   0.0
+  ],
+  "formula-test-529": [
+   0.0
+  ],
+  "formula-test-770": [
+   0.0
+  ],
+  "formula-test-63": [
+   0.0
+  ],
+  "formula-test-10": [
+   0.0
+  ],
+  "formula-test-950": [
+   0.0
+  ],
+  "formula-test-375": [
+   0.0
+  ],
+  "formula-test-974": [
+   0.0
+  ],
+  "formula-test-433": [
+   0.0
+  ],
+  "formula-test-450": [
+   0.0
+  ],
+  "formula-test-13": [
+   0.0
+  ],
+  "formula-test-589": [
+   0.0
+  ],
+  "formula-test-4": [
+   0.0
+  ],
+  "formula-test-902": [
+   0.0
+  ],
+  "formula-test-663": [
+   0.0
+  ],
+  "formula-test-669": [
+   0.0
+  ],
+  "formula-test-978": [
+   0.0
+  ],
+  "formula-test-900": [
+   0.0
+  ],
+  "formula-test-406": [
+   0.0
+  ],
+  "formula-test-334": [
+   0.0
+  ],
+  "formula-test-192": [
+   0.0
+  ],
+  "formula-test-873": [
+   0.0
+  ],
+  "formula-test-451": [
+   0.0
+  ],
+  "formula-test-354": [
+   0.0
+  ],
+  "formula-test-309": [
+   0.0
+  ],
+  "formula-test-556": [
+   0.0
+  ],
+  "formula-test-765": [
+   0.0
+  ],
+  "formula-test-862": [
+   0.0
+  ],
+  "formula-test-157": [
+   0.0
+  ],
+  "formula-test-778": [
+   0.0
+  ],
+  "formula-test-922": [
+   0.0
+  ],
+  "formula-test-299": [
+   0.0
+  ],
+  "formula-test-16": [
+   0.0
+  ],
+  "formula-test-62": [
+   0.0
+  ],
+  "formula-test-991": [
+   0.0
+  ],
+  "formula-test-329": [
+   0.0
+  ],
+  "formula-test-814": [
+   0.0
+  ],
+  "formula-test-830": [
+   0.0
+  ],
+  "formula-test-809": [
+   0.0
+  ],
+  "formula-test-282": [
+   0.0
+  ],
+  "formula-test-599": [
+   0.0
+  ],
+  "formula-test-31": [
+   0.0
+  ],
+  "formula-test-229": [
+   0.0
+  ],
+  "formula-test-109": [
+   0.0
+  ],
+  "formula-test-422": [
+   0.0
+  ],
+  "formula-test-254": [
+   0.0
+  ],
+  "formula-test-893": [
+   0.0
+  ],
+  "formula-test-772": [
+   0.0
+  ],
+  "formula-test-970": [
+   0.0
+  ],
+  "formula-test-215": [
+   0.0
+  ],
+  "formula-test-27": [
+   0.0
+  ],
+  "formula-test-725": [
+   0.0
+  ],
+  "formula-test-235": [
+   0.0
+  ],
+  "formula-test-908": [
+   0.0
+  ],
+  "formula-test-534": [
+   0.0
+  ],
+  "formula-test-980": [
+   0.0
+  ],
+  "formula-test-321": [
+   0.0
+  ],
+  "formula-test-582": [
+   0.0
+  ],
+  "formula-test-110": [
+   0.0
+  ],
+  "formula-test-958": [
+   0.0
+  ],
+  "formula-test-664": [
+   0.0
+  ],
+  "formula-test-853": [
+   0.0
+  ],
+  "formula-test-961": [
+   0.0
+  ],
+  "formula-test-395": [
+   0.0
+  ],
+  "formula-test-497": [
+   0.0
+  ],
+  "formula-test-972": [
+   0.0
+  ],
+  "formula-test-130": [
+   0.0
+  ],
+  "formula-test-102": [
+   0.0
+  ],
+  "formula-test-568": [
+   0.0
+  ],
+  "formula-test-520": [
+   0.0
+  ],
+  "formula-test-71": [
+   0.0
+  ],
+  "formula-test-699": [
+   0.0
+  ],
+  "formula-test-537": [
+   0.0
+  ],
+  "formula-test-188": [
+   0.0
+  ],
+  "formula-test-444": [
+   0.0
+  ],
+  "formula-test-802": [
+   0.0
+  ],
+  "formula-test-815": [
+   0.0
+  ],
+  "formula-test-668": [
+   0.0
+  ],
+  "formula-test-677": [
+   0.0
+  ],
+  "formula-test-389": [
+   0.0
+  ],
+  "formula-test-769": [
+   0.0
+  ],
+  "formula-test-861": [
+   0.0
+  ],
+  "formula-test-468": [
+   0.0
+  ],
+  "formula-test-11": [
+   0.0
+  ],
+  "formula-test-298": [
+   0.0
+  ],
+  "formula-test-364": [
+   0.0
+  ],
+  "formula-test-764": [
+   0.0
+  ],
+  "formula-test-65": [
+   0.0
+  ],
+  "formula-test-968": [
+   0.0
+  ],
+  "formula-test-216": [
+   0.0
+  ],
+  "formula-test-624": [
+   0.0
+  ],
+  "formula-test-780": [
+   0.0
+  ],
+  "formula-test-747": [
+   0.0
+  ],
+  "formula-test-538": [
+   0.0
+  ],
+  "formula-test-32": [
+   0.0
+  ],
+  "formula-test-127": [
+   0.0
+  ],
+  "formula-test-473": [
+   0.0
+  ],
+  "formula-test-84": [
+   0.0
+  ],
+  "formula-test-144": [
+   0.0
+  ],
+  "formula-test-601": [
+   0.0
+  ],
+  "formula-test-511": [
+   0.0
+  ],
+  "formula-test-441": [
+   0.0
+  ],
+  "formula-test-87": [
+   0.0
+  ],
+  "formula-test-232": [
+   0.0
+  ],
+  "formula-test-675": [
+   0.0
+  ],
+  "formula-test-763": [
+   0.0
+  ],
+  "formula-test-571": [
+   0.0
+  ],
+  "formula-test-796": [
+   0.0
+  ],
+  "formula-test-832": [
+   0.0
+  ],
+  "formula-test-224": [
+   0.0
+  ],
+  "formula-test-583": [
+   0.0
+  ],
+  "formula-test-606": [
+   0.0
+  ],
+  "formula-test-367": [
+   0.0
+  ],
+  "formula-test-637": [
+   0.0
+  ],
+  "formula-test-46": [
+   0.0
+  ],
+  "formula-test-320": [
+   0.0
+  ],
+  "formula-test-297": [
+   0.0
+  ],
+  "formula-test-762": [
+   0.0
+  ],
+  "formula-test-430": [
+   0.0
+  ],
+  "formula-test-54": [
+   0.0
+  ],
+  "formula-test-859": [
+   0.0
+  ],
+  "formula-test-953": [
+   0.0
+  ],
+  "formula-test-195": [
+   0.0
+  ],
+  "formula-test-386": [
+   0.0
+  ],
+  "formula-test-399": [
+   0.0
+  ],
+  "formula-test-305": [
+   0.0
+  ],
+  "formula-test-500": [
+   0.0
+  ],
+  "formula-test-483": [
+   0.0
+  ],
+  "formula-test-222": [
+   0.0
+  ],
+  "formula-test-726": [
+   0.0
+  ],
+  "formula-test-715": [
+   0.0
+  ],
+  "formula-test-17": [
+   0.0
+  ],
+  "formula-test-269": [
+   0.0
+  ],
+  "formula-test-25": [
+   0.0
+  ],
+  "formula-test-387": [
+   0.0
+  ],
+  "formula-test-600": [
+   0.0
+  ],
+  "formula-test-201": [
+   0.0
+  ],
+  "formula-test-808": [
+   0.0
+  ],
+  "formula-test-153": [
+   0.0
+  ],
+  "formula-test-432": [
+   0.0
+  ],
+  "formula-test-779": [
+   0.0
+  ],
+  "formula-test-306": [
+   0.0
+  ],
+  "formula-test-521": [
+   0.0
+  ],
+  "formula-test-449": [
+   0.0
+  ],
+  "formula-test-649": [
+   0.0
+  ],
+  "formula-test-560": [
+   0.0
+  ],
+  "formula-test-823": [
+   0.0
+  ],
+  "formula-test-429": [
+   0.0
+  ],
+  "formula-test-285": [
+   0.0
+  ],
+  "formula-test-346": [
+   0.0
+  ],
+  "formula-test-98": [
+   0.0
+  ],
+  "formula-test-290": [
+   0.0
+  ],
+  "formula-test-818": [
+   0.0
+  ],
+  "formula-test-793": [
+   0.0
+  ],
+  "formula-test-134": [
+   0.0
+  ],
+  "formula-test-139": [
+   0.0
+  ],
+  "formula-test-548": [
+   0.0
+  ],
+  "formula-test-74": [
+   0.0
+  ],
+  "formula-test-482": [
+   0.0
+  ],
+  "formula-test-90": [
+   0.0
+  ],
+  "formula-test-92": [
+   0.0
+  ],
+  "formula-test-515": [
+   0.0
+  ],
+  "formula-test-739": [
+   0.0
+  ],
+  "formula-test-608": [
+   0.0
+  ],
+  "formula-test-518": [
+   0.0
+  ],
+  "formula-test-459": [
+   0.0
+  ],
+  "formula-test-903": [
+   0.0
+  ],
+  "formula-test-784": [
+   0.0
+  ],
+  "formula-test-283": [
+   0.0
+  ],
+  "formula-test-983": [
+   0.0
+  ],
+  "formula-test-800": [
+   0.0
+  ],
+  "formula-test-504": [
+   0.0
+  ],
+  "formula-test-507": [
+   0.0
+  ],
+  "formula-test-895": [
+   0.0
+  ],
+  "formula-test-528": [
+   0.0
+  ],
+  "formula-test-774": [
+   0.0
+  ],
+  "formula-test-927": [
+   0.0
+  ],
+  "formula-test-736": [
+   0.0
+  ],
+  "formula-test-866": [
+   0.0
+  ],
+  "formula-test-119": [
+   0.0
+  ],
+  "formula-test-163": [
+   0.0
+  ],
+  "formula-test-259": [
+   0.0
+  ],
+  "formula-test-678": [
+   0.0
+  ],
+  "formula-test-221": [
+   0.0
+  ],
+  "formula-test-390": [
+   0.0
+  ],
+  "formula-test-888": [
+   0.0
+  ],
+  "formula-test-720": [
+   0.0
+  ],
+  "formula-test-34": [
+   0.0
+  ],
+  "formula-test-248": [
+   0.0
+  ],
+  "formula-test-379": [
+   0.0
+  ],
+  "formula-test-707": [
+   0.0
+  ],
+  "formula-test-878": [
+   0.0
+  ],
+  "formula-test-382": [
+   0.0
+  ],
+  "formula-test-423": [
+   0.0
+  ],
+  "formula-test-343": [
+   0.0
+  ],
+  "formula-test-260": [
+   0.0
+  ],
+  "formula-test-91": [
+   0.0
+  ],
+  "formula-test-805": [
+   0.0
+  ],
+  "formula-test-288": [
+   0.0
+  ],
+  "formula-test-253": [
+   0.0
+  ],
+  "formula-test-708": [
+   0.0
+  ],
+  "formula-test-687": [
+   0.0
+  ],
+  "formula-test-461": [
+   0.0
+  ],
+  "formula-test-750": [
+   0.0
+  ],
+  "formula-test-419": [
+   0.0
+  ],
+  "formula-test-276": [
+   0.0
+  ],
+  "formula-test-660": [
+   0.0
+  ],
+  "formula-test-688": [
+   0.0
+  ],
+  "formula-test-837": [
+   0.0
+  ],
+  "formula-test-619": [
+   0.0
+  ],
+  "formula-test-629": [
+   0.0
+  ],
+  "formula-test-939": [
+   0.0
+  ],
+  "formula-test-803": [
+   0.0
+  ],
+  "formula-test-782": [
+   0.0
+  ],
+  "formula-test-332": [
+   0.0
+  ],
+  "formula-test-176": [
+   0.0
+  ],
+  "formula-test-705": [
+   0.0
+  ],
+  "formula-test-975": [
+   0.0
+  ],
+  "formula-test-551": [
+   0.0
+  ],
+  "formula-test-245": [
+   0.0
+  ],
+  "formula-test-996": [
+   0.0
+  ],
+  "formula-test-533": [
+   0.0
+  ],
+  "formula-test-923": [
+   0.0
+  ],
+  "formula-test-377": [
+   0.0
+  ],
+  "formula-test-291": [
+   0.0
+  ],
+  "formula-test-405": [
+   0.0
+  ],
+  "formula-test-783": [
+   0.0
+  ],
+  "formula-test-113": [
+   0.0
+  ],
+  "formula-test-2": [
+   0.0
+  ],
+  "formula-test-502": [
+   0.0
+  ],
+  "formula-test-657": [
+   0.0
+  ],
+  "formula-test-787": [
+   0.0
+  ],
+  "formula-test-994": [
+   0.0
+  ],
+  "formula-test-661": [
+   0.0
+  ],
+  "formula-test-742": [
+   0.0
+  ],
+  "formula-test-889": [
+   0.0
+  ],
+  "formula-test-274": [
+   0.0
+  ],
+  "formula-test-273": [
+   0.0
+  ],
+  "formula-test-39": [
+   0.0
+  ],
+  "formula-test-78": [
+   0.0
+  ],
+  "formula-test-851": [
+   0.0
+  ],
+  "formula-test-541": [
+   0.0
+  ],
+  "formula-test-734": [
+   0.0
+  ],
+  "formula-test-167": [
+   0.0
+  ],
+  "formula-test-696": [
+   0.0
+  ],
+  "formula-test-569": [
+   0.0
+  ],
+  "formula-test-104": [
+   0.0
+  ],
+  "formula-test-177": [
+   0.0
+  ],
+  "formula-test-156": [
+   0.0
+  ],
+  "formula-test-33": [
+   0.0
+  ],
+  "formula-test-189": [
+   0.0
+  ],
+  "formula-test-185": [
+   0.0
+  ],
+  "formula-test-316": [
+   0.0
+  ],
+  "formula-test-896": [
+   0.0
+  ],
+  "formula-test-77": [
+   0.0
+  ],
+  "formula-test-746": [
+   0.0
+  ],
+  "formula-test-573": [
+   0.0
+  ],
+  "formula-test-199": [
+   0.0
+  ],
+  "formula-test-203": [
+   0.0
+  ],
+  "formula-test-977": [
+   0.0
+  ],
+  "formula-test-652": [
+   0.0
+  ],
+  "formula-test-841": [
+   0.0
+  ],
+  "formula-test-920": [
+   0.0
+  ],
+  "formula-test-868": [
+   0.0
+  ],
+  "formula-test-427": [
+   0.0
+  ],
+  "formula-test-790": [
+   0.0
+  ],
+  "formula-test-852": [
+   0.0
+  ],
+  "formula-test-366": [
+   0.0
+  ],
+  "formula-test-361": [
+   0.0
+  ],
+  "formula-test-132": [
+   0.0
+  ],
+  "formula-test-12": [
+   0.0
+  ],
+  "formula-test-605": [
+   0.0
+  ],
+  "formula-test-186": [
+   0.0
+  ],
+  "formula-test-342": [
+   0.0
+  ],
+  "formula-test-901": [
+   0.0
+  ],
+  "formula-test-577": [
+   0.0
+  ],
+  "formula-test-610": [
+   0.0
+  ],
+  "formula-test-775": [
+   0.0
+  ],
+  "formula-test-35": [
+   0.0
+  ],
+  "formula-test-5": [
+   0.0
+  ],
+  "formula-test-647": [
+   0.0
+  ],
+  "formula-test-352": [
+   0.0
+  ],
+  "formula-test-869": [
+   0.0
+  ],
+  "formula-test-621": [
+   0.0
+  ],
+  "formula-test-691": [
+   0.0
+  ],
+  "formula-test-884": [
+   0.0
+  ]
+ },
+ "regraded": {
+  "flips": 0,
+  "to_correct": 0
+ }
+}

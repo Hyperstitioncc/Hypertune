@@ -4,7 +4,7 @@ from transformers import AutoTokenizer
 from shared.rollout import rollout_ids
 
 
-@pytest.mark.parametrize("name", ["baidu/ERNIE-4.5-21B-A3B-Base-PT", "Qwen/Qwen3-30B-A3B-Base"])
+@pytest.mark.parametrize("name", ["Qwen/Qwen3-30B-A3B-Base"])
 def test_rollout_ids(name):
     t = AutoTokenizer.from_pretrained(name)
     text = " The numbers are not necessarily equal, so $a=24$."

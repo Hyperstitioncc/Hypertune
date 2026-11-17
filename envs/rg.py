@@ -10,7 +10,7 @@ from typing import Any, Callable
 
 from envs.base import Problem
 from envs.math import STOPS, Shots, math_equal, render
-from envs.mathgrade import last_boxed
+from envs.mathgrade import answer_key, boxed_run
 from envs.splits import check as check_split
 
 TIERS = {
@@ -63,6 +63,7 @@ def _seed(task: str, tier: int, base: int) -> int:
 
 _TEXT = re.compile(r"\\(?:text|textbf|mathrm|mbox)\{([^{}]*)\}")
 _FNS: dict[str, Callable] = {}
+JOINED = frozenset({"knights_knaves"})  # an answer split over adjacent boxes is one answer; the scorer rejects conflicts
 
 
 def clean(pred: str) -> str:
@@ -70,19 +71,32 @@ def clean(pred: str) -> str:
     for _ in range(2):
         s = _TEXT.sub(r"\1", s)
     s = s.replace("\\times", "*").replace("\\cdot", "*").replace("\\,", "").replace("\\ ", " ")
+    s = re.sub(r"\\[;:]|\\q?quad|~", " ", s)
     return s.strip().rstrip(".").strip()
 
 
+def kk_clean(pred: str) -> str:
+    """knights_knaves: "Zoey: knight; Ethan - knave" -> "Zoey knight  Ethan knave" (the scorer splits on spaces)."""
+    return re.sub(r"[:;=\-]|\s+", " ", clean(pred.replace("\\\\", " "))).strip()
+
+
 def grade_rg(text: str, truth: dict[str, Any]) -> bool:
-    pred = last_boxed(text)
-    if pred is None:
-        return False
     task = truth["rg"]
+    run = boxed_run(text)
+    if run is None:
+        return False
+    if task in JOINED:
+        pred = ", ".join(run)
+    elif len({answer_key(c) for c in run}) > 1:
+        return False
+    else:
+        pred = run[-1]
     if task not in _FNS:
         import reasoning_gym as rg
         _FNS[task] = rg.get_score_answer_fn(task)
     entry = {"question": "", "answer": truth["answer"], "metadata": truth["metadata"]}
-    for cand in dict.fromkeys((pred, clean(pred))):
+    cands = (pred, clean(pred), kk_clean(pred)) if task == "knights_knaves" else (pred, clean(pred))
+    for cand in dict.fromkeys(cands):
         try:
             if _FNS[task](cand, entry) >= 1.0:
                 return True

@@ -1,0 +1,102 @@
+{
+ "contest_zs/cart": {
+  "warm": "contest_zs/cart_warm_lr1e-1",
+  "grpo": "contest_zs/cart_grpo_lr1e-1"
+ },
+ "contest_zs/lora": {
+  "warm": "contest_zs/lora_warm_lr3e-5",
+  "grpo": "contest_zs/lora_grpo_lr1e-4"
+ },
+ "contest_zs/lora8": {
+  "warm": "contest_zs/lora8_warm_lr1e-5",
+  "grpo": "contest_zs/lora8_grpo_lr1e-5"
+ },
+ "mbpp_nt_zs/cart": {
+  "warm": "mbpp_nt_zs/cart_warm_lr3e-2",
+  "grpo": "mbpp_nt_zs/cart_grpo_lr1e-1"
+ },
+ "mbpp_nt_zs/lora": {
+  "warm": "mbpp_nt_zs/lora_warm_lr1e-4",
+  "grpo": "mbpp_nt_zs/lora_grpo_lr3e-4"
+ },
+ "mbpp_nt_zs/lora8": {
+  "warm": "mbpp_nt_zs/lora8_warm_lr1e-5",
+  "grpo": "mbpp_nt_zs/lora8_grpo_lr3e-5"
+ },
+ "logic_zs/cart": {
+  "warm": "logic_zs/cart_warm_lr3e-2",
+  "grpo": "logic_zs/cart_grpo_lr3e-3"
+ },
+ "logic_zs/lora": {
+  "warm": "logic_zs/lora_warm_lr3e-5",
+  "grpo": "logic_zs/lora_grpo_lr3e-5"
+ },
+ "know_law/cart": {
+  "warm": "know_law/cart_warm_lr3e-2",
+  "grpo": "know_law/cart_grpo_lr3e-2"
+ },
+ "know_law/lora": {
+  "warm": "know_law/lora_warm_lr3e-5",
+  "grpo": "know_law/lora_grpo_lr1e-4"
+ },
+ "know_casehold/cart": {
+  "warm": "know_casehold/cart_warm_lr1e-2",
+  "grpo": "know_casehold/cart_grpo_lr3e-3"
+ },
+ "know_casehold/lora": {
+  "warm": "know_casehold/lora_warm_lr1e-4",
+  "grpo": "know_casehold/lora_grpo_lr3e-4"
+ },
+ "know_medqa/cart": {
+  "warm": "know_medqa/cart_warm_lr1e-2",
+  "grpo": "know_medqa/cart_grpo_lr3e-3"
+ },
+ "know_medqa/lora": {
+  "warm": "know_medqa/lora_warm_lr3e-5",
+  "grpo": "know_medqa/lora_grpo_lr1e-4"
+ },
+ "know_trivia/cart": {
+  "warm": "know_trivia/cart_warm_lr3e-2",
+  "grpo": "know_trivia/cart_grpo_lr3e-2"
+ },
+ "know_trivia/lora": {
+  "warm": "know_trivia/lora_warm_lr3e-5",
+  "grpo": "know_trivia/lora_grpo_lr3e-4"
+ },
+ "bf/cart": {
+  "sft": "bf/cart_sft_lr3e-2"
+ },
+ "bf/lora": {
+  "sft": "bf/lora_sft_lr1e-4"
+ },
+ "finqa/cart": {
+  "sft": "finqa/cart_sft_lr3e-2"
+ },
+ "finqa/lora": {
+  "sft": "finqa/lora_sft_lr3e-5"
+ },
+ "funcall/cart": {
+  "sft": "funcall/cart_sft_lr1e-4"
+ },
+ "funcall/lora": {
+  "sft": "funcall/lora_sft_lr1e-3"
+ },
+ "intent/cart": {
+  "sft": "intent/cart_sft_lr1e-1"
+ },
+ "intent/lora": {
+  "sft": "intent/lora_sft_lr1e-4"
+ },
+ "parse/cart": {
+  "sft": "parse/cart_sft_lr3e-2"
+ },
+ "parse/lora": {
+  "sft": "parse/lora_sft_lr1e-3"
+ },
+ "formula/cart": {
+  "sft": "formula/cart_sft_lr1e-3"
+ },
+ "formula/lora": {
+  "sft": "formula/lora_sft_lr3e-4"
+ }
+}

@@ -32,7 +32,6 @@ class Attached:
     row_tail: bool
     pos0: bool
     prompt_grad: bool
-    positional: bool
     armed: Callable[[int], ContextManager]
     attn_mass: Callable[[int], ContextManager[list]]
     engine_kw: dict
@@ -183,8 +182,8 @@ def _row_mass(net: Decoder, k: int, row_tail: bool, write: bool = False) -> Call
 
 
 def _hf(net: Decoder, rows, k, armed=_null, row_tail=False, pos0=False, prompt_grad=False,
-        positional=False, attn_mass=None) -> Attached:
-    return Attached(k, rows, row_tail, pos0, prompt_grad, positional, armed,
+        attn_mass=None) -> Attached:
+    return Attached(k, rows, row_tail, pos0, prompt_grad, armed,
                  attn_mass or _row_mass(net, k, row_tail), {}, False, _no_push, _token_request, net,
                  _row_mass(net, k, row_tail, write=True))
 
@@ -202,36 +201,17 @@ def _embeds_request(dec: Decoder, rows, row_tail: bool) -> Callable[[Sequence[in
 
 def _vllm(dec: Decoder, request, engine_kw: dict, push, rows, k: int, row_tail: bool = False,
           own_compile_cache: bool = False) -> Attached:
-    return Attached(k, rows, row_tail, False, False, False, _null, _no_mass("vLLM entries are not probed"),
+    return Attached(k, rows, row_tail, False, False, _null, _no_mass("vLLM entries are not probed"),
                  dict(engine_kw), own_compile_cache, push, request, dec)
 
 
-# ---------------------------------------------------------------- identity / soft_block / thinker / full
+# ---------------------------------------------------------------- identity / full
 
 def _identity(adapter: Adapter, backend: Backend, dec: Decoder) -> Attached:
     rows = _empty_rows(dec)
     if backend is Backend.vllm:
         return _vllm(dec, _embeds_request(dec, rows, False), {}, _no_push, rows, 0)
     return _hf(dec, rows, 0)
-
-
-def _soft_block(adapter: Adapter, backend: Backend, dec: Decoder) -> Attached:
-    m = adapter.module
-    rows = lambda ids: m.rows()
-    k = m.frozen.shape[0] + m.soft.shape[0]
-    if backend is Backend.vllm:
-        if m.pos0:
-            raise ValueError("soft_block with pos0 has no vLLM decode path (rows at RoPE 0 are HF-only)")
-        return _vllm(dec, _embeds_request(dec, rows, m.row_tail), {}, _no_push, rows, k, m.row_tail)
-    return _hf(dec, rows, k, row_tail=m.row_tail, pos0=m.pos0)
-
-
-def _thinker(adapter: Adapter, backend: Backend, dec: Decoder) -> Attached:
-    m = adapter.module
-    rows = lambda ids: m(ids)
-    if backend is Backend.vllm:
-        return _vllm(dec, _embeds_request(dec, rows, False), {}, _no_push, rows, m.k)
-    return _hf(dec, rows, m.k)
 
 
 def _full(adapter: Adapter, backend: Backend, dec: Decoder) -> Attached:
@@ -587,81 +567,10 @@ def _kv_prefix(adapter: Adapter, backend: Backend, dec: Decoder) -> Attached:
     return _KV_READ[adapter.module.read](adapter, backend, dec)
 
 
-# ---------------------------------------------------------------- rung
-
-def _rung_armed(rm, model) -> Callable[[int], ContextManager]:
-    @contextlib.contextmanager
-    def armed(P: int):
-        K = rm.K
-
-        def has_slots(x):
-            return x.shape[1] >= P + K
-
-        def splice_slots(x, rows):
-            return torch.cat([x[:, :P], rows.to(x.dtype), x[:, P + K:]], 1)
-
-        def pre_gain(li, which, mod, args):
-            x = args[0]
-            if not has_slots(x):
-                return None
-            g = (rm.gK if which == "k" else rm.gV)[li]
-            return (splice_slots(x, x[:, P:P + K, :].float() * g),) + args[1:]
-
-        def post_edit(li, which, mod, args, out):
-            if not has_slots(args[0]):
-                return None
-            rows = out[:, P:P + K, :].float()
-            if which == "v" and rm.rung >= 1:
-                rows = rows * rm.m[li].view(1, K, 1)
-            if rm.rung >= 4:
-                rows = rows + (rm.dK if which == "k" else rm.dV)[li]
-            return splice_slots(out, rows)
-
-        def slot_bias(inner, module, query, key, value, attention_mask, *a, **kw):
-            T = key.shape[2]
-            if T >= P + K:
-                pad = torch.zeros(T, device=query.device, dtype=query.dtype)
-                pad[P:P + K] = rm.bias[module.layer_idx].to(pad.dtype)
-                pad = pad.view(1, 1, 1, -1)
-                attention_mask = pad if attention_mask is None else attention_mask[:, :, :, :T] + pad
-            return inner(module, query, key, value, attention_mask, *a, **kw)
-
-        with contextlib.ExitStack() as stack:
-            for li, layer in enumerate(model.model.layers):
-                at = layer.self_attn
-                hs = []
-                if rm.rung >= 3:
-                    hs.append(at.k_proj.register_forward_pre_hook(partial(pre_gain, li, "k")))
-                    hs.append(at.v_proj.register_forward_pre_hook(partial(pre_gain, li, "v")))
-                if rm.rung >= 4:
-                    hs.append(at.k_proj.register_forward_hook(partial(post_edit, li, "k")))
-                if rm.rung >= 1:
-                    hs.append(at.v_proj.register_forward_hook(partial(post_edit, li, "v")))
-                for h in hs:
-                    stack.callback(h.remove)
-            if rm.rung >= 2:
-                stack.enter_context(_attn_wrapped(model, slot_bias))
-            yield
-    return armed
-
-
-def _rung(adapter: Adapter, backend: Backend, dec: Decoder) -> Attached:
-    if backend is Backend.vllm:
-        raise ValueError("rung changes how slot K/V are produced and read inside attention; "
-                         "vLLM prompt_embeds cannot express it (use hf_eager)")
-    if dec.cfg.attn != "eager":
-        raise ValueError(f"rung needs attn=eager (an additive score mask), decoder has {dec.cfg.attn}")
-    rm = adapter.module
-    return _hf(dec, lambda ids: rm.rows(), rm.K, armed=_rung_armed(rm, dec.model), positional=True)
-
-
 _ATTACH = {
     AdapterKind.identity: _identity,
-    AdapterKind.soft_block: _soft_block,
     AdapterKind.lora: _lora,
     AdapterKind.kv_prefix: _kv_prefix,
-    AdapterKind.rung: _rung,
-    AdapterKind.thinker: _thinker,
     AdapterKind.full: _full,
 }
 

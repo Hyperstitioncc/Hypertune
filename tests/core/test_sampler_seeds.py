@@ -67,7 +67,7 @@ def test_vllm_requests_get_mixed_seeds(tiny_dir, monkeypatch):
 
 # ---------------------------------------------------------------- (b) HF non-batched: one stream per problem
 
-@pytest.mark.parametrize("kind", ["identity", "soft_block"])
+@pytest.mark.parametrize("kind", ["identity", "kv_prefix"])
 def test_hf_one_gives_each_problem_its_own_stream(kind):
     dec = eager_dec()
     a = build(AdapterCfg(adapter=AdapterKind(kind), k=4, init_seed=3), dec)

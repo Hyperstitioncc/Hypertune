@@ -1,0 +1,95 @@
+{
+ "tasks": [
+  {
+   "task": "contest_zs",
+   "label": "math",
+   "kind": "rl"
+  },
+  {
+   "task": "mbpp_nt_zs",
+   "label": "code",
+   "kind": "rl"
+  },
+  {
+   "task": "logic_zs",
+   "label": "logic",
+   "kind": "rl"
+  },
+  {
+   "task": "know_law",
+   "label": "law",
+   "kind": "rl"
+  },
+  {
+   "task": "know_casehold",
+   "label": "casehold",
+   "kind": "rl"
+  },
+  {
+   "task": "know_medqa",
+   "label": "medqa",
+   "kind": "rl"
+  },
+  {
+   "task": "know_trivia",
+   "label": "trivia",
+   "kind": "rl"
+  },
+  {
+   "task": "bf",
+   "label": "Brainfuck",
+   "kind": "sft"
+  },
+  {
+   "task": "finqa",
+   "label": "FinQA",
+   "kind": "sft"
+  },
+  {
+   "task": "funcall",
+   "label": "function calling",
+   "kind": "sft"
+  },
+  {
+   "task": "intent",
+   "label": "intent",
+   "kind": "sft"
+  },
+  {
+   "task": "parse",
+   "label": "parsing",
+   "kind": "sft"
+  },
+  {
+   "task": "formula",
+   "label": "formula",
+   "kind": "sft"
+  }
+ ],
+ "arms": {
+  "cart": {
+   "label": "cartridge",
+   "colour": "#2a78d6",
+   "marker": "o"
+  },
+  "lora": {
+   "label": "LoRA rank 1",
+   "colour": "#eb6834",
+   "marker": "s"
+  },
+  "lora8": {
+   "label": "LoRA rank 8, trained alone",
+   "colour": "#1baf7a",
+   "marker": "^"
+  }
+ },
+ "x_axis": {
+  "rl": "examples seen: warm-start steps x 8 up to the warm checkpoint GRPO starts from, then + GRPO steps x 16 problems x 8 rollouts",
+  "sft": "examples seen: SFT steps x 16"
+ },
+ "stack": "at progress point k (0..8) every task's adapter is its snapshot nearest k/8 of the examples that run sees; all 13 cartridges (16 K/V slots each, 208 in all) or all 13 rank-1 LoRAs (summed exactly as one rank-13 LoRA) are loaded together",
+ "splits": {
+  "clean": "held-out problems never used to pick an LR or a checkpoint (the default figures)",
+  "held": "every held-out problem, probe ones included (the _held figures)"
+ }
+}

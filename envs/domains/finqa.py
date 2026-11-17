@@ -76,19 +76,49 @@ def finqa_exec(program, table):
 
 
 def _fq_same(a, b):
+    """Equal at the five decimals both sides are rounded to (finqa_exec and the dataset's exe_ans alike, as FinQA's own
+    evaluation compares them), give or take one unit of the last decimal where that is within 1e-4 relative (a
+    value on a rounding boundary), plus float noise. The old test, 1e-4 relative and 1e-4 absolute below 1, passed
+    different numbers: 260/177947 = 0.00146 for a gold 0.00136, 0.93934 for 0.93939."""
     if isinstance(a, str) or isinstance(b, str):
         return a == b
-    return abs(a - b) <= 1e-4 * max(1.0, abs(b))
+    return abs(a - b) <= min(1e-4 * abs(b), 1e-5) + 1e-9 * max(1.0, abs(b))
 
 
-def grade(text: str, gold: dict[str, Any]) -> bool:
+# A question that asks for a percentage (or a rate, return or margin, which FinQA states in percent) is answered by
+# the fraction and by the same number times 100 alike: the dataset's own gold programs take either form (most stop at
+# the fraction, some multiply by const_100) and the prompt names no convention.
+_PCT_Q = re.compile(r"percent|%|\brates?\b|\breturns?\b|\bmargins?\b|\byields?\b", re.I)
+_QUESTION = re.compile(r"\nQuestion: (.*)\n")
+
+
+def question(prompt: str) -> str:
+    m = _QUESTION.search(prompt)
+    return m.group(1) if m else ""
+
+
+def grade(text: str, gold: dict[str, Any], question: str = "") -> bool:
     line = text.strip().split("\n")[0]
     got = finqa_exec(line, gold["table"])
-    return got is not None and _fq_same(got, gold["exe"])
+    if got is None:
+        return False
+    if _fq_same(got, gold["exe"]):
+        return True
+    exe = gold["exe"]
+    if isinstance(got, str) or isinstance(exe, str) or not _PCT_Q.search(question):
+        return False
+    # compared at the fraction's scale and its five decimals, the precision a fraction-scale gold carries
+    return _fq_same(got, round(exe / 100, 5)) or _fq_same(round(got / 100, 5), exe)
+
+
+@dataclass(frozen=True)
+class FinqaEnv(DomainEnv):
+    def grade(self, pairs):
+        return [float(grade(t, p.truth, question(p.prompt))) for p, t in pairs]
 
 
 def make(cfg: FinqaCfg) -> DomainEnv:
-    return DomainEnv("finqa", cfg.finqa_data, grade)
+    return FinqaEnv("finqa", cfg.finqa_data, grade)
 
 
 def build(cfg: FinqaCfg, b: BuildCfg, r: random.Random, raw: RawCfg) -> tuple[dict[str, Rows], str]:

@@ -2,12 +2,11 @@ import pytest
 import torch
 
 from adapters.lora import LoRA
-from adapters.soft_block import SoftBlock
 from conftest import as_decoder, tiny_model
 from shared import dist
 from shared.adapter import Adapter, AdapterKind
 from shared.backprop import BackpropCfg, logprobs
-from test_backprop import make_rows
+from test_backprop import kv_adapter, make_rows
 
 
 def groups():
@@ -27,7 +26,7 @@ def job(adapter, cfg):
     return fn
 
 
-@pytest.mark.parametrize("kind", ["soft_block", "lora"])
+@pytest.mark.parametrize("kind", ["kv_prefix", "lora"])
 def test_replicas_sum_to_single(kind):
     decs = [as_decoder(tiny_model()) for _ in range(3)]
     if kind == "lora":
@@ -37,8 +36,7 @@ def test_replicas_sum_to_single(kind):
                 b.normal_(0, 0.05)
         a = Adapter(AdapterKind.lora, mod)
     else:
-        a = Adapter(AdapterKind.soft_block, SoftBlock(torch.randn(16, decs[0].d) * 0.5, torch.zeros(0, decs[0].d),
-                                                      False, False))
+        a = kv_adapter(decs[0])
     cfg = BackpropCfg()
     gs = groups()
     dist.score_parallel(decs[:1], gs, job(a, cfg))

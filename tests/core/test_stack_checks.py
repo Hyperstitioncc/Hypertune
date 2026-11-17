@@ -6,9 +6,8 @@ import torch
 import torch.nn.functional as F
 
 from adapters import AdapterCfg, build
-from adapters.kv_prefix import KVPrefix, check_rows, load_units, stack, stack_seed
+from adapters.kv_prefix import KVPrefix, check_rows, load_units, random_rows, stack, stack_seed
 from adapters.lora import LoRA, stack as stack_lora
-from adapters.soft_block import random_rows
 from conftest import as_decoder, tiny_model
 from shared.adapter import Adapter, AdapterKind
 

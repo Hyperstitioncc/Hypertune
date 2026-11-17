@@ -26,7 +26,7 @@ class Bigram(torch.nn.Module):
 
 
 def adapter(seed: int = 0) -> Adapter:
-    return Adapter(AdapterKind.soft_block, Bigram(seed, True))
+    return Adapter(AdapterKind.lora, Bigram(seed, True))
 
 
 def identity() -> Adapter:

@@ -210,9 +210,6 @@ def main(argv: list[str]) -> None:
     bank = Bank.load(bank_dir / "bank.json")
     decoder = dec.load(dcfg)
     adapter = adapters.build(acfg, decoder)
-    if acfg.adapter is AdapterKind.thinker:
-        first = {p.id: p for p in env.problems(bank.split)}[bank.pool[0]]
-        adapter.module.calibrate(decoder.tok.encode(first.prompt, add_special_tokens=False))
     sampler = rollout.sampler(adapter, sel.backend, decoder, rcfg)
     algo = algo_make(gcfg, env, sampler, decoder, pcfg, bank, decode, bank_dir, roots.data)
     train(algo, adapter, env, Optim(adapter.params(), ocfg), bank, tcfg, run_dir)

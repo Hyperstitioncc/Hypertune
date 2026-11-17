@@ -16,6 +16,11 @@ class KVRead(enum.Enum):
     dsm = "dsm"
 
 
+def random_rows(k: int, d: int, estd: float, scale: float, seed: int, device: torch.device) -> torch.Tensor:
+    g = torch.Generator(device=device).manual_seed(seed)
+    return torch.randn(k, d, device=device, generator=g) * estd * scale
+
+
 def load_units(spec: str, L: int, Hkv: int, K: int) -> torch.Tensor:
     m = torch.zeros(L, K, Hkv, dtype=torch.bool)
     if spec == "all":

@@ -45,6 +45,13 @@ def draw(sampler: Sampler, env: Env, problems: list[Problem], s: Sampling) -> di
     return {p.id: [r for _, r in row] for p, row in zip(problems, graded(sampler, env, problems, s))}
 
 
+def draw_texts(sampler: Sampler, env: Env, problems: list[Problem],
+               s: Sampling) -> tuple[dict[str, list[float]], dict[str, list[str]]]:
+    rows = graded(sampler, env, problems, s)
+    return ({p.id: [r for _, r in row] for p, row in zip(problems, rows)},
+            {p.id: [c.text for c, _ in row] for p, row in zip(problems, rows)})
+
+
 def _feed(h, v: object) -> None:
     import torch
     if isinstance(v, dict):
@@ -74,7 +81,9 @@ def adapter_fingerprint(state: dict) -> str:
 
 
 def evaluate(sampler: Sampler, env: Env, problems: list[Problem], s: Sampling, chunks: int,
-             out_dir: Path, adapter: str | None = None) -> dict[str, list[float]]:
+             out_dir: Path, adapter: str | None = None, keep_text: bool = False) -> dict[str, list[float]]:
+    """keep_text: each chunk file also holds the completion texts (\"texts\"), so the grades can be redone when
+    a grader changes, without sampling again."""
     agg: dict[str, list[float]] = {p.id: [] for p in problems}
     for c in range(chunks):
         path = Path(out_dir) / f"eval_chunk_{c}.json"
@@ -91,8 +100,14 @@ def evaluate(sampler: Sampler, env: Env, problems: list[Problem], s: Sampling, c
                 print(f"{path}: drawn with adapter {rec['key'].get('adapter')}, now {adapter}: discarding it",
                       flush=True)
                 rec = None
+        if rec is not None and keep_text and "texts" not in rec:
+            rec = None
         if rec is None:
-            rec = {"key": key, "grades": draw(sampler, env, problems, sc)}
+            if keep_text:
+                grades, texts = draw_texts(sampler, env, problems, sc)
+                rec = {"key": key, "grades": grades, "texts": texts}
+            else:
+                rec = {"key": key, "grades": draw(sampler, env, problems, sc)}
             atomic_json(rec, path)
         for i, g in rec["grades"].items():
             agg[i] += g
@@ -265,6 +280,11 @@ class BankCfg:
     pool_hi: float = 0.5
     probe_k: int = 24
     probe_seed: int = 11
+    # the split of the solved problems (version 2): probe_k probe problems first, then the held-out share
+    # (held_frac of them, at least held_min, at most what leaves train as large as held), then train. The probe is
+    # no longer carved out of the held-out share, so every held-out problem stays clean.
+    held_frac: float = 0.2
+    held_min: int = 50
 
 
 def build_bank(sampler: Sampler, env: Env, cfg: BankCfg, decode: DecodeCfg, out_dir: Path,
@@ -273,6 +293,11 @@ def build_bank(sampler: Sampler, env: Env, cfg: BankCfg, decode: DecodeCfg, out_
     key = {type(c).__name__: plain(c) for c in (cfg, decode, *identity)}
     key.update(env=env.name, backend=sampler.backend.name)
     kp = out_dir / "bank_key.json"
+    if kp.exists():  # a bank begun before held_frac/held_min existed keeps its split (bank.json is final once written)
+        disk = read_json(kp)
+        for f in SPLIT_V2:
+            if f not in disk.get("BankCfg", {}):
+                key["BankCfg"].pop(f, None)
     if kp.exists() and read_json(kp) != key:
         raise SystemExit(f"bank definition changed since its files were drawn.\n  on disk: {read_json(kp)}\n"
                          f"  now:     {key}\nUse a new --bank.")
@@ -337,18 +362,29 @@ def build_bank(sampler: Sampler, env: Env, cfg: BankCfg, decode: DecodeCfg, out_
             correct[p.id] = corr
         if n_ok > 0 and inc:
             solved.append(p.id)
-    shuf = solved[:]
-    random.Random(1).shuffle(shuf)
-    n_held = max(1, len(shuf) // 5)
-    held, train = shuf[:n_held], shuf[n_held:]
+    probe, held, train = split_solved(solved, cfg)
     bank = Bank(backend=sampler.backend, split=cfg.bank_split, decode=decode, rates=rates, train=tuple(train),
-                held=tuple(held), probe=tuple(random.Random(cfg.probe_seed).sample(held, min(cfg.probe_k, len(held)))),
-                pool_hi=cfg.pool_hi, ident=ident)
+                held=tuple(probe + held), probe=tuple(probe), pool_hi=cfg.pool_hi, ident=ident)
     if len(bank.pool) < cfg.min_pool:
         raise SystemExit(f"train pool below {cfg.pool_hi} is {len(bank.pool)}: widen the family")
     atomic_json(correct, out_dir / "correct.json")
     bank.save(out_dir / "bank.json")
     return bank
+
+
+SPLIT_V2 = ("held_frac", "held_min")
+
+
+def split_solved(solved: list[str], cfg: BankCfg) -> tuple[list[str], list[str], list[str]]:
+    """(probe, clean held-out, train) of the solved problems. Probe and held-out are drawn first and apart, so the
+    clean held-out set is held_frac of the problems (at least held_min) whatever probe_k is; train keeps the rest,
+    and never fewer problems than the held-out set."""
+    shuf = solved[:]
+    random.Random(1).shuffle(shuf)
+    n_probe = min(cfg.probe_k, len(shuf) // 4)
+    rest = len(shuf) - n_probe
+    n_held = min(max(round(cfg.held_frac * len(shuf)), cfg.held_min), rest // 2)
+    return shuf[:n_probe], shuf[n_probe:n_probe + n_held], shuf[n_probe + n_held:]
 
 
 def split_bank(sampler: Sampler, env: Env, cfg: BankCfg, decode: DecodeCfg, out_dir: Path,
@@ -395,7 +431,9 @@ def merge_banks(parts: dict[str, Bank], balance: bool, seed: int, probe_k: int, 
     keep = {n: set(p) for n, p in pools.items()}
     train = tuple(f"{n}/{i}" for n, b in parts.items() for i in b.train if i in keep[n])
     held = tuple(f"{n}/{i}" for n, b in parts.items() for i in b.held)
+    # the probe comes from the parts' probes, so every part's clean held-out problems stay clean
+    probes = [f"{n}/{i}" for n, b in parts.items() for i in b.probe]
     return Bank(backend=first.backend, split="all", decode=first.decode,
                 rates={f"{n}/{i}": r for n, b in parts.items() for i, r in b.rates.items()},
-                train=train, held=held, probe=tuple(random.Random(probe_seed).sample(held, min(probe_k, len(held)))),
+                train=train, held=held, probe=tuple(random.Random(probe_seed).sample(probes, min(probe_k, len(probes)))),
                 pool_hi=first.pool_hi, ident={"decoder": known[0], "env": None} if known else None)

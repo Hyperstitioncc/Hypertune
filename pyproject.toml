@@ -1,5 +1,5 @@
 [project]
-name = "soft-prompts"
+name = "hypertune"
 version = "0.1.0"
 requires-python = ">=3.11"
 # the versions every reported run used (Python 3.12, CUDA 13)
@@ -18,7 +18,6 @@ dependencies = [
 [project.optional-dependencies]
 vllm = ["vllm==0.33.0"]          # sampling through an engine (--backend vllm); the SFT runs use --backend hf_eager
 chem = ["rdkit==2026.9.2"]       # envs/domains/chem.py
-thinker = ["peft"]               # adapters/thinker.py
 test = ["pytest==9.2.0"]
 
 [build-system]

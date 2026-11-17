@@ -9,7 +9,6 @@ import torch.nn.functional as F
 from adapters.identity import Identity
 from adapters.kv_prefix import KVPrefix, load_units
 from adapters.lora import LoRA
-from adapters.soft_block import SoftBlock
 from conftest import V, as_decoder, tiny_cfg, tiny_model
 from shared.adapter import Adapter, AdapterKind
 from shared.attach import attach, save_peft
@@ -122,22 +121,17 @@ def check(dec, adapter, rows, cand, weights, params, mode_list, atol=2e-3, gatol
         run_mode(dec, mode, budget, go)
 
 
-def soft_adapter(dec, row_tail=False, pos0=False, frozen=0):
+def kv_adapter(dec, row_tail=False, pos0=False):
+    c = dec.model.config
+    L, Hkv, hd = c.num_hidden_layers, c.num_key_value_heads, 16
     g = torch.Generator().manual_seed(1)
-    soft = torch.randn(K, dec.d, generator=g) * 0.5
-    fz = torch.randn(frozen, dec.d, generator=g) * 0.5
-    return Adapter(AdapterKind.soft_block, SoftBlock(soft, fz, row_tail, pos0))
-
-
-@pytest.mark.parametrize("impl", ["eager", "grouped_mm"])
-@pytest.mark.parametrize("layout", ["plain", "row_tail", "pos0", "composed"])
-def test_soft_block(impl, layout):
-    dec = as_decoder(tiny_model())
-    dec.model.set_experts_implementation(impl)
-    a = soft_adapter(dec, row_tail=layout == "row_tail", pos0=layout == "pos0",
-                     frozen=4 if layout == "composed" else 0)
-    rows = make_rows()
-    check(dec, a, rows, ids_cand(rows), W, a.params(), modes(dec), pos0=layout == "pos0")
+    base = (torch.randn(K, dec.d, generator=g) * 0.5).to(torch.bfloat16)
+    z = torch.zeros(L, K, Hkv, hd)
+    mod = KVPrefix(base, L, Hkv, hd, load_units("all", L, Hkv, K), False, False, z, z, pos0, False, row_tail)
+    with torch.no_grad():
+        mod.dk.normal_(0, 0.3, generator=g)
+        mod.dv.normal_(0, 0.3, generator=g)
+    return Adapter(AdapterKind.kv_prefix, mod)
 
 
 def test_identity_and_topk():
@@ -146,7 +140,7 @@ def test_identity_and_topk():
     g = torch.Generator().manual_seed(5)
     cand = [torch.cat([torch.tensor(r.ids)[:, None], torch.randint(0, V, (len(r.ids), 3), generator=g)], 1)
             for r in rows]
-    a = soft_adapter(dec)
+    a = kv_adapter(dec)
     check(dec, a, rows, cand, W, a.params(), modes(dec))
     ident = Adapter(AdapterKind.identity, Identity())
     with torch.no_grad():
@@ -249,39 +243,9 @@ def test_full():
     check(dec, a, rows, ids_cand(rows), W, ps, modes(dec), gatol=2e-4)
 
 
-def test_rung():
-    from adapters.rung import Rung
-    dec = as_decoder(tiny_model("eager"), attn="eager")
-    g = torch.Generator().manual_seed(2)
-    rm = Rung(torch.randn(K, dec.d, generator=g) * 0.5, 4, True, 2, dec.d, 2 * 16)
-    with torch.no_grad():
-        for p in rm.parameters():
-            p.add_(torch.randn(p.shape, generator=g) * 0.05)
-    a = Adapter(AdapterKind.rung, rm)
-    rows = make_rows()
-    check(dec, a, rows, ids_cand(rows), W, a.params(), [("row", 8192)])
-    with pytest.raises(ValueError, match="row only"):
-        logprobs(dec, a, rows, ids_cand(rows), BackpropCfg(score_mode=ScoreMode.prefix))
-
-
-def test_thinker(tmp_path):
-    from transformers import Qwen3MoeForCausalLM
-    from adapters import AdapterCfg, build
-    torch.manual_seed(7)
-    Qwen3MoeForCausalLM(tiny_cfg()).save_pretrained(tmp_path / "thinker")
-    dec = as_decoder(tiny_model())
-    dec.tok = type("T", (), {"eos_token_id": 3})()
-    a = build(AdapterCfg(adapter=AdapterKind.thinker, k=4, thinker_model=str(tmp_path / "thinker"), thinker_rank=0),
-              dec)
-    rows = make_rows()
-    ps = [a.module.head.weight] + [p for n, p in a.module.lm.named_parameters() if "q_proj" in n]
-    # the thinker runs under bf16 autocast: prefix backprops one shared block, row one per row
-    check(dec, a, rows, ids_cand(rows), W, ps, modes(dec), gatol=1e-2, grtol=2e-2)
-
-
 def test_eager_decoder_all_modes():
     dec = as_decoder(tiny_model("eager"), attn="eager")
-    a = soft_adapter(dec)
+    a = kv_adapter(dec)
     rows = make_rows()
     check(dec, a, rows, ids_cand(rows), W, a.params(), [m for m in modes(dec) if m[0] != "pack"])
 

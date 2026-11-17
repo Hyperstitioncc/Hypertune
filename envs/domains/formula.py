@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import random
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -14,9 +15,31 @@ class FormulaCfg:
     formula_data: Path
 
 
+_FORMULA = re.compile(r"((?:[A-Z][a-z]?\d*)+)([+-]\d*)?")
+
+
+def composition(f: str) -> tuple[dict[str, int], int] | None:
+    """Element counts and net charge of a formula such as C20H36N3O3+3 (None if it is not one). Any element order
+    (Hill or not) and repeated elements (C2H5OH) count the same atoms; zero counts are kept, so C1H0 is not C."""
+    m = _FORMULA.fullmatch(f)
+    if not m:
+        return None
+    counts: dict[str, int] = {}
+    for el, n in re.findall(r"([A-Z][a-z]?)(\d*)", m.group(1)):
+        counts[el] = counts.get(el, 0) + int(n or 1)
+    q = m.group(2) or ""
+    return counts, ((1 if q[0] == "+" else -1) * int(q[1:] or 1) if q else 0)
+
+
 def grade(text: str, gold: str) -> bool:
     t = text.strip().split()
-    return bool(t) and t[0].rstrip(".") == gold
+    if not t:
+        return False
+    got = t[0].rstrip(".")
+    if got == gold:
+        return True
+    c = composition(got)
+    return c is not None and c == composition(gold)
 
 
 def make(cfg: FormulaCfg) -> DomainEnv:

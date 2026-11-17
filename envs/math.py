@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from envs.base import Problem
-from envs.mathgrade import cut_at_first_boxed, grade_str, last_boxed
+from envs.mathgrade import cut_at_first_boxed, final_boxed, grade_str, last_boxed, strip_lhs
 from envs.splits import check as check_split
 
 
@@ -161,7 +161,7 @@ def _sympy_verdict(pred: str, truth: str) -> bool | None:
     return _SYMPY(pred, truth)
 
 
-def math_equal(pred: str, truth: str) -> bool:
+def _equal(pred: str, truth: str) -> bool:
     if grade_str(pred, truth):
         return True
     if len(pred) > SYMPY_MAX_PRED:
@@ -172,8 +172,18 @@ def math_equal(pred: str, truth: str) -> bool:
         return False
 
 
+def math_equal(pred: str, truth: str) -> bool:
+    if _equal(pred, truth):
+        return True
+    if ("=" in pred) != ("=" in truth):  # "x = 5" against 5 (or the reverse): compare the right-hand side
+        rhs = strip_lhs(pred if "=" in pred else truth)
+        if rhs is not None:
+            return _equal(rhs, truth) if "=" in pred else _equal(pred, rhs)
+    return False
+
+
 def grade_boxed(text: str, truth: str) -> bool:
-    pred = last_boxed(text)
+    pred = final_boxed(text)
     return pred is not None and math_equal(pred, truth)
 
 

@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 import torch
 
-from adapters.kv_prefix import NDIM, KVRead
+from adapters.kv_prefix import NDIM, KVRead, random_rows
 from shared.adapter import Adapter, AdapterKind
 from shared.decoder import Decoder, head_dim
 
@@ -16,7 +16,6 @@ class AdapterCfg:
     init_scale: float = 1.0
     init_seed: int = 0
     init_path: str | None = None
-    frozen_paths: tuple[str, ...] = ()
     row_tail: bool = False
     pos0: bool = False
     lora_rank: int = 1
@@ -34,12 +33,6 @@ class AdapterCfg:
     kv_partner_p: float = 0.3
     lora_partners: str | None = None
     lora_partner_p: float = 0.3
-    rung: int = 1
-    rung_train_vec: bool = False
-    thinker_model: str | None = None
-    thinker_rank: int = 16
-    thinker_alpha: float = 32.0
-    thinker_head_only: bool = False
 
 
 def _soft(path: str, dev: torch.device) -> torch.Tensor:
@@ -47,7 +40,6 @@ def _soft(path: str, dev: torch.device) -> torch.Tensor:
 
 
 def _init_rows(cfg: AdapterCfg, dec: Decoder) -> torch.Tensor:
-    from adapters.soft_block import random_rows
     if cfg.init_path is not None:
         s = _soft(cfg.init_path, dec.dev)
         if s.shape != (cfg.k, dec.d):
@@ -59,14 +51,6 @@ def _init_rows(cfg: AdapterCfg, dec: Decoder) -> torch.Tensor:
 def _identity(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
     from adapters.identity import Identity
     return Identity()
-
-
-def _soft_block(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
-    from adapters.soft_block import SoftBlock
-    frozen = [_soft(p, dec.dev) for p in cfg.frozen_paths]
-    fz = torch.cat(frozen, 0) if frozen else torch.zeros(0, dec.d, device=dec.dev)
-    soft = _init_rows(cfg, dec) if cfg.k else torch.zeros(0, dec.d, device=dec.dev)
-    return SoftBlock(soft, fz, cfg.row_tail, cfg.pos0)
 
 
 def _lora(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
@@ -120,40 +104,6 @@ def _kv_prefix(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
     return mod
 
 
-def _rung(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
-    from adapters.rung import Rung
-    c = dec.model.config
-    return Rung(_init_rows(cfg, dec), cfg.rung, cfg.rung_train_vec, c.num_hidden_layers, dec.d,
-                c.num_key_value_heads * head_dim(dec.model))
-
-
-def _thinker(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
-    from transformers import AutoModelForCausalLM
-    from adapters.thinker import Thinker
-    if cfg.thinker_model is None:
-        raise ValueError("a thinker adapter needs --thinker-model")
-    lora = cfg.thinker_rank > 0
-    lm = AutoModelForCausalLM.from_pretrained(cfg.thinker_model,
-                                              dtype=torch.bfloat16 if lora else torch.float32)
-    lm.config.use_cache = False
-    hdim = lm.config.hidden_size
-    lm.lm_head = torch.nn.Identity()
-    lm = lm.to(dec.dev)
-    if lora:
-        from peft import LoraConfig, get_peft_model
-        torch.manual_seed(cfg.init_seed)
-        lm = get_peft_model(lm, LoraConfig(
-            r=cfg.thinker_rank, lora_alpha=cfg.thinker_alpha, lora_dropout=0.0, bias="none",
-            target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]))
-        lm.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
-        for p in lm.parameters():
-            if p.requires_grad:
-                p.data = p.data.float()
-    if cfg.thinker_head_only:
-        lm.requires_grad_(False)
-    return Thinker(lm, hdim, dec.d, cfg.k, dec.tok.eos_token_id, dec.estd, cfg.init_seed, dec.dev)
-
-
 def _full(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
     import copy
     from adapters.full import Full
@@ -162,11 +112,8 @@ def _full(cfg: AdapterCfg, dec: Decoder) -> torch.nn.Module:
 
 _BUILD = {
     AdapterKind.identity: _identity,
-    AdapterKind.soft_block: _soft_block,
     AdapterKind.lora: _lora,
     AdapterKind.kv_prefix: _kv_prefix,
-    AdapterKind.rung: _rung,
-    AdapterKind.thinker: _thinker,
     AdapterKind.full: _full,
 }
 

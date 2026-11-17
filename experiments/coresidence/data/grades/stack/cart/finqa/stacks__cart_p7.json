@@ -1,0 +1,3033 @@
+{
+ "file": "stacks/cart_p7.pt",
+ "verdict": {
+  "n_problems": 500,
+  "n_per_problem": 1,
+  "absolute_rate": 0.516,
+  "backend": "hf_eager",
+  "decode": {
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 96
+  },
+  "paired_with_bank": true,
+  "mean_uplift": 0.516,
+  "se": 0.022371610982580396,
+  "passed": true,
+  "base_rate": 0.0,
+  "clean_subset": {
+   "n_problems": 500,
+   "mean_uplift": 0.516,
+   "se": 0.022371610982580396,
+   "passed": true
+  }
+ },
+ "grades": {
+  "finqa-DVN/2012/page_77.pdf-1": [
+   0.0
+  ],
+  "finqa-AWK/2013/page_122.pdf-2": [
+   0.0
+  ],
+  "finqa-CMCSA/2015/page_112.pdf-2": [
+   1.0
+  ],
+  "finqa-TFX/2017/page_78.pdf-3": [
+   0.0
+  ],
+  "finqa-CMCSA/2008/page_36.pdf-3": [
+   0.0
+  ],
+  "finqa-AMT/2007/page_127.pdf-4": [
+   1.0
+  ],
+  "finqa-STT/2006/page_95.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2007/page_25.pdf-1": [
+   0.0
+  ],
+  "finqa-STT/2011/page_69.pdf-4": [
+   1.0
+  ],
+  "finqa-JPM/2012/page_140.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2011/page_33.pdf-4": [
+   1.0
+  ],
+  "finqa-ILMN/2003/page_58.pdf-3": [
+   0.0
+  ],
+  "finqa-HOLX/2003/page_52.pdf-1": [
+   0.0
+  ],
+  "finqa-UAA/2016/page_42.pdf-3": [
+   0.0
+  ],
+  "finqa-HST/2018/page_135.pdf-1": [
+   1.0
+  ],
+  "finqa-IPG/2008/page_72.pdf-2": [
+   1.0
+  ],
+  "finqa-AAPL/2006/page_131.pdf-2": [
+   0.0
+  ],
+  "finqa-MRO/2013/page_39.pdf-3": [
+   0.0
+  ],
+  "finqa-V/2014/page_126.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2004/page_239.pdf-3": [
+   1.0
+  ],
+  "finqa-MRO/2013/page_39.pdf-2": [
+   0.0
+  ],
+  "finqa-HWM/2015/page_173.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_118.pdf-2": [
+   1.0
+  ],
+  "finqa-AMAT/2013/page_37.pdf-1": [
+   0.0
+  ],
+  "finqa-MRO/2013/page_19.pdf-2": [
+   0.0
+  ],
+  "finqa-AON/2007/page_175.pdf-2": [
+   0.0
+  ],
+  "finqa-ANSS/2012/page_93.pdf-4": [
+   0.0
+  ],
+  "finqa-DRE/2002/page_15.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2007/page_127.pdf-2": [
+   1.0
+  ],
+  "finqa-ETFC/2012/page_43.pdf-3": [
+   0.0
+  ],
+  "finqa-NKE/2009/page_43.pdf-2": [
+   1.0
+  ],
+  "finqa-MAR/2004/page_45.pdf-2": [
+   1.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-5": [
+   0.0
+  ],
+  "finqa-GS/2018/page_78.pdf-2": [
+   0.0
+  ],
+  "finqa-BLK/2012/page_145.pdf-2": [
+   0.0
+  ],
+  "finqa-AAL/2016/page_8.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2006/page_15.pdf-2": [
+   1.0
+  ],
+  "finqa-FIS/2012/page_48.pdf-3": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_45.pdf-1": [
+   1.0
+  ],
+  "finqa-ETR/2011/page_17.pdf-3": [
+   1.0
+  ],
+  "finqa-JPM/2015/page_137.pdf-3": [
+   0.0
+  ],
+  "finqa-ADBE/2008/page_74.pdf-3": [
+   1.0
+  ],
+  "finqa-ECL/2017/page_79.pdf-1": [
+   0.0
+  ],
+  "finqa-C/2009/page_197.pdf-1": [
+   0.0
+  ],
+  "finqa-BKNG/2016/page_33.pdf-2": [
+   0.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-1": [
+   0.0
+  ],
+  "finqa-FIS/2006/page_31.pdf-2": [
+   0.0
+  ],
+  "finqa-PNC/2015/page_93.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2008/page_45.pdf-1": [
+   1.0
+  ],
+  "finqa-ANSS/2012/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-ZBH/2009/page_58.pdf-4": [
+   0.0
+  ],
+  "finqa-GPN/2010/page_89.pdf-1": [
+   1.0
+  ],
+  "finqa-IPG/2008/page_72.pdf-3": [
+   1.0
+  ],
+  "finqa-MRO/2004/page_125.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_100.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2017/page_96.pdf-2": [
+   1.0
+  ],
+  "finqa-AES/2010/page_227.pdf-4": [
+   0.0
+  ],
+  "finqa-PKG/2013/page_88.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2009/page_45.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2011/page_17.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2003/page_106.pdf-1": [
+   1.0
+  ],
+  "finqa-CDNS/2015/page_30.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-3": [
+   1.0
+  ],
+  "finqa-APD/2018/page_121.pdf-2": [
+   0.0
+  ],
+  "finqa-AAPL/2006/page_131.pdf-1": [
+   0.0
+  ],
+  "finqa-V/2008/page_180.pdf-1": [
+   1.0
+  ],
+  "finqa-JPM/2018/page_90.pdf-1": [
+   1.0
+  ],
+  "finqa-ECL/2017/page_69.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2007/page_29.pdf-4": [
+   0.0
+  ],
+  "finqa-ETFC/2012/page_43.pdf-1": [
+   1.0
+  ],
+  "finqa-AOS/2010/page_18.pdf-1": [
+   0.0
+  ],
+  "finqa-IPG/2006/page_77.pdf-4": [
+   0.0
+  ],
+  "finqa-GS/2013/page_63.pdf-1": [
+   1.0
+  ],
+  "finqa-UA/2011/page_69.pdf-2": [
+   0.0
+  ],
+  "finqa-JKHY/2019/page_18.pdf-1": [
+   0.0
+  ],
+  "finqa-NCLH/2018/page_97.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2009/page_175.pdf-4": [
+   0.0
+  ],
+  "finqa-IP/2006/page_75.pdf-3": [
+   1.0
+  ],
+  "finqa-IP/2006/page_35.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2010/page_123.pdf-1": [
+   1.0
+  ],
+  "finqa-LMT/2014/page_50.pdf-1": [
+   1.0
+  ],
+  "finqa-INTC/2015/page_41.pdf-4": [
+   1.0
+  ],
+  "finqa-AMT/2012/page_144.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2016/page_125.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2016/page_23.pdf-4": [
+   0.0
+  ],
+  "finqa-LMT/2012/page_73.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2011/page_33.pdf-3": [
+   1.0
+  ],
+  "finqa-RSG/2016/page_135.pdf-1": [
+   0.0
+  ],
+  "finqa-DRE/2008/page_46.pdf-1": [
+   0.0
+  ],
+  "finqa-ADI/2010/page_80.pdf-1": [
+   0.0
+  ],
+  "finqa-TFX/2017/page_78.pdf-2": [
+   0.0
+  ],
+  "finqa-JKHY/2019/page_18.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-2": [
+   1.0
+  ],
+  "finqa-TMUS/2017/page_29.pdf-2": [
+   0.0
+  ],
+  "finqa-ETR/2008/page_298.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_49.pdf-3": [
+   0.0
+  ],
+  "finqa-AON/2007/page_188.pdf-2": [
+   0.0
+  ],
+  "finqa-ADI/2010/page_80.pdf-3": [
+   0.0
+  ],
+  "finqa-NCLH/2018/page_64.pdf-4": [
+   0.0
+  ],
+  "finqa-C/2009/page_45.pdf-2": [
+   0.0
+  ],
+  "finqa-ETFC/2012/page_43.pdf-2": [
+   1.0
+  ],
+  "finqa-PKG/2005/page_74.pdf-1": [
+   1.0
+  ],
+  "finqa-MO/2014/page_39.pdf-4": [
+   1.0
+  ],
+  "finqa-ETR/2004/page_281.pdf-2": [
+   0.0
+  ],
+  "finqa-DVN/2018/page_35.pdf-4": [
+   0.0
+  ],
+  "finqa-RSG/2016/page_139.pdf-1": [
+   1.0
+  ],
+  "finqa-V/2014/page_126.pdf-2": [
+   0.0
+  ],
+  "finqa-SNA/2018/page_31.pdf-3": [
+   1.0
+  ],
+  "finqa-AAL/2014/page_15.pdf-1": [
+   1.0
+  ],
+  "finqa-WRK/2018/page_107.pdf-5": [
+   1.0
+  ],
+  "finqa-MAS/2012/page_26.pdf-2": [
+   0.0
+  ],
+  "finqa-ABMD/2005/page_29.pdf-3": [
+   1.0
+  ],
+  "finqa-MRO/2004/page_46.pdf-1": [
+   1.0
+  ],
+  "finqa-FBHS/2017/page_83.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_69.pdf-3": [
+   0.0
+  ],
+  "finqa-SNA/2007/page_29.pdf-3": [
+   0.0
+  ],
+  "finqa-ETFC/2011/page_144.pdf-1": [
+   1.0
+  ],
+  "finqa-JPM/2003/page_106.pdf-3": [
+   0.0
+  ],
+  "finqa-AWK/2014/page_121.pdf-1": [
+   0.0
+  ],
+  "finqa-GS/2013/page_85.pdf-2": [
+   0.0
+  ],
+  "finqa-HII/2015/page_121.pdf-2": [
+   0.0
+  ],
+  "finqa-UPS/2007/page_49.pdf-2": [
+   1.0
+  ],
+  "finqa-CME/2017/page_89.pdf-4": [
+   1.0
+  ],
+  "finqa-AAPL/2003/page_48.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2008/page_94.pdf-2": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_143.pdf-3": [
+   0.0
+  ],
+  "finqa-AES/2001/page_33.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_69.pdf-1": [
+   1.0
+  ],
+  "finqa-ADBE/2008/page_89.pdf-4": [
+   1.0
+  ],
+  "finqa-DVN/2015/page_79.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2012/page_31.pdf-4": [
+   0.0
+  ],
+  "finqa-SYY/2006/page_71.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2007/page_92.pdf-2": [
+   0.0
+  ],
+  "finqa-AWK/2013/page_122.pdf-1": [
+   0.0
+  ],
+  "finqa-GIS/2017/page_31.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2016/page_52.pdf-3": [
+   0.0
+  ],
+  "finqa-JPM/2008/page_117.pdf-2": [
+   0.0
+  ],
+  "finqa-AAL/2013/page_172.pdf-3": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_9.pdf-2": [
+   1.0
+  ],
+  "finqa-MRK/2013/page_125.pdf-2": [
+   1.0
+  ],
+  "finqa-RSG/2012/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2005/page_102.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2010/page_123.pdf-4": [
+   0.0
+  ],
+  "finqa-DRE/2008/page_46.pdf-2": [
+   0.0
+  ],
+  "finqa-CDW/2017/page_38.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2010/page_89.pdf-3": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_143.pdf-2": [
+   1.0
+  ],
+  "finqa-INTC/2015/page_41.pdf-1": [
+   1.0
+  ],
+  "finqa-GS/2018/page_78.pdf-1": [
+   1.0
+  ],
+  "finqa-GS/2013/page_63.pdf-3": [
+   1.0
+  ],
+  "finqa-BLK/2015/page_124.pdf-1": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_68.pdf-2": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_174.pdf-5": [
+   1.0
+  ],
+  "finqa-PPG/2018/page_85.pdf-3": [
+   1.0
+  ],
+  "finqa-GS/2013/page_85.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2006/page_31.pdf-3": [
+   1.0
+  ],
+  "finqa-INTC/2013/page_31.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2014/page_70.pdf-1": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-4": [
+   0.0
+  ],
+  "finqa-STT/2011/page_69.pdf-2": [
+   0.0
+  ],
+  "finqa-PKG/2005/page_74.pdf-4": [
+   0.0
+  ],
+  "finqa-RSG/2010/page_98.pdf-2": [
+   1.0
+  ],
+  "finqa-BLK/2017/page_121.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2009/page_42.pdf-1": [
+   0.0
+  ],
+  "finqa-PPG/2006/page_42.pdf-3": [
+   1.0
+  ],
+  "finqa-GS/2012/page_142.pdf-2": [
+   0.0
+  ],
+  "finqa-NKE/2009/page_43.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2010/page_89.pdf-4": [
+   0.0
+  ],
+  "finqa-BLL/2011/page_32.pdf-1": [
+   1.0
+  ],
+  "finqa-GS/2017/page_179.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2005/page_102.pdf-1": [
+   1.0
+  ],
+  "finqa-UPS/2010/page_52.pdf-4": [
+   1.0
+  ],
+  "finqa-UNP/2006/page_15.pdf-4": [
+   1.0
+  ],
+  "finqa-SNA/2013/page_83.pdf-3": [
+   0.0
+  ],
+  "finqa-ABMD/2012/page_79.pdf-1": [
+   0.0
+  ],
+  "finqa-AES/2002/page_128.pdf-4": [
+   0.0
+  ],
+  "finqa-PPG/2008/page_52.pdf-3": [
+   1.0
+  ],
+  "finqa-JPM/2009/page_175.pdf-5": [
+   0.0
+  ],
+  "finqa-GRMN/2008/page_85.pdf-1": [
+   1.0
+  ],
+  "finqa-ABMD/2006/page_43.pdf-3": [
+   0.0
+  ],
+  "finqa-STT/2014/page_54.pdf-2": [
+   0.0
+  ],
+  "finqa-DRE/2005/page_30.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2006/page_35.pdf-3": [
+   0.0
+  ],
+  "finqa-MRO/2004/page_125.pdf-1": [
+   0.0
+  ],
+  "finqa-ECL/2016/page_52.pdf-2": [
+   1.0
+  ],
+  "finqa-IP/2009/page_45.pdf-3": [
+   0.0
+  ],
+  "finqa-EL/2008/page_59.pdf-1": [
+   0.0
+  ],
+  "finqa-UNP/2006/page_15.pdf-1": [
+   0.0
+  ],
+  "finqa-DVN/2018/page_35.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2012/page_31.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2014/page_149.pdf-1": [
+   0.0
+  ],
+  "finqa-MKTX/2004/page_99.pdf-1": [
+   0.0
+  ],
+  "finqa-MKTX/2004/page_99.pdf-3": [
+   1.0
+  ],
+  "finqa-ILMN/2008/page_86.pdf-4": [
+   1.0
+  ],
+  "finqa-UNP/2009/page_35.pdf-1": [
+   0.0
+  ],
+  "finqa-PM/2017/page_32.pdf-1": [
+   1.0
+  ],
+  "finqa-LMT/2014/page_50.pdf-3": [
+   1.0
+  ],
+  "finqa-WRK/2018/page_107.pdf-3": [
+   1.0
+  ],
+  "finqa-GIS/2019/page_68.pdf-1": [
+   0.0
+  ],
+  "finqa-CE/2016/page_19.pdf-1": [
+   1.0
+  ],
+  "finqa-CDW/2015/page_93.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_50.pdf-1": [
+   1.0
+  ],
+  "finqa-AWK/2012/page_117.pdf-2": [
+   0.0
+  ],
+  "finqa-UAA/2016/page_42.pdf-2": [
+   0.0
+  ],
+  "finqa-LMT/2014/page_50.pdf-2": [
+   1.0
+  ],
+  "finqa-HUM/2009/page_105.pdf-2": [
+   1.0
+  ],
+  "finqa-GS/2015/page_171.pdf-3": [
+   0.0
+  ],
+  "finqa-ADI/2019/page_29.pdf-1": [
+   0.0
+  ],
+  "finqa-RL/2008/page_23.pdf-2": [
+   1.0
+  ],
+  "finqa-ZBH/2009/page_58.pdf-3": [
+   0.0
+  ],
+  "finqa-HUM/2017/page_118.pdf-3": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_100.pdf-1": [
+   1.0
+  ],
+  "finqa-BLL/2010/page_35.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2010/page_120.pdf-2": [
+   1.0
+  ],
+  "finqa-AMAT/2018/page_33.pdf-2": [
+   0.0
+  ],
+  "finqa-UNP/2016/page_52.pdf-2": [
+   0.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-3": [
+   0.0
+  ],
+  "finqa-AAPL/2004/page_68.pdf-1": [
+   1.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-1": [
+   0.0
+  ],
+  "finqa-ALLE/2015/page_24.pdf-2": [
+   0.0
+  ],
+  "finqa-LMT/2014/page_91.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_23.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-4": [
+   1.0
+  ],
+  "finqa-GIS/2018/page_110.pdf-1": [
+   1.0
+  ],
+  "finqa-SLG/2001/page_48.pdf-2": [
+   1.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-3": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_9.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2013/page_21.pdf-1": [
+   1.0
+  ],
+  "finqa-C/2009/page_45.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2013/page_84.pdf-2": [
+   0.0
+  ],
+  "finqa-BLK/2012/page_145.pdf-1": [
+   0.0
+  ],
+  "finqa-RSG/2013/page_123.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2017/page_96.pdf-3": [
+   0.0
+  ],
+  "finqa-CB/2008/page_229.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_29.pdf-2": [
+   0.0
+  ],
+  "finqa-RSG/2015/page_98.pdf-1": [
+   0.0
+  ],
+  "finqa-MO/2014/page_39.pdf-1": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_68.pdf-1": [
+   1.0
+  ],
+  "finqa-CB/2010/page_83.pdf-1": [
+   1.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-4": [
+   1.0
+  ],
+  "finqa-PPG/2006/page_42.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_150.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2014/page_160.pdf-4": [
+   0.0
+  ],
+  "finqa-AAL/2013/page_18.pdf-2": [
+   1.0
+  ],
+  "finqa-AWK/2018/page_146.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2003/page_157.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2011/page_24.pdf-2": [
+   1.0
+  ],
+  "finqa-MKTX/2004/page_99.pdf-4": [
+   1.0
+  ],
+  "finqa-STT/2006/page_95.pdf-1": [
+   0.0
+  ],
+  "finqa-AAL/2016/page_8.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-1": [
+   1.0
+  ],
+  "finqa-RSG/2013/page_123.pdf-1": [
+   1.0
+  ],
+  "finqa-C/2008/page_22.pdf-2": [
+   0.0
+  ],
+  "finqa-UPS/2010/page_52.pdf-3": [
+   1.0
+  ],
+  "finqa-GRMN/2008/page_73.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-4": [
+   1.0
+  ],
+  "finqa-ALXN/2016/page_153.pdf-1": [
+   0.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-3": [
+   1.0
+  ],
+  "finqa-AES/2001/page_85.pdf-1": [
+   1.0
+  ],
+  "finqa-SYY/2006/page_71.pdf-1": [
+   0.0
+  ],
+  "finqa-SNA/2013/page_34.pdf-2": [
+   0.0
+  ],
+  "finqa-STT/2006/page_95.pdf-4": [
+   1.0
+  ],
+  "finqa-MRO/2004/page_46.pdf-2": [
+   1.0
+  ],
+  "finqa-MMM/2007/page_84.pdf-1": [
+   0.0
+  ],
+  "finqa-MSI/2014/page_76.pdf-1": [
+   1.0
+  ],
+  "finqa-MS/2007/page_179.pdf-2": [
+   1.0
+  ],
+  "finqa-ILMN/2003/page_58.pdf-1": [
+   1.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-4": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_9.pdf-4": [
+   0.0
+  ],
+  "finqa-APD/2016/page_40.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2017/page_40.pdf-5": [
+   0.0
+  ],
+  "finqa-APD/2016/page_40.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2008/page_78.pdf-4": [
+   1.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-2": [
+   0.0
+  ],
+  "finqa-ILMN/2003/page_58.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2014/page_111.pdf-2": [
+   0.0
+  ],
+  "finqa-AES/2010/page_227.pdf-3": [
+   1.0
+  ],
+  "finqa-STT/2009/page_127.pdf-3": [
+   0.0
+  ],
+  "finqa-V/2010/page_28.pdf-1": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_68.pdf-5": [
+   1.0
+  ],
+  "finqa-DRE/2002/page_15.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2008/page_298.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2012/page_41.pdf-4": [
+   1.0
+  ],
+  "finqa-AES/2001/page_33.pdf-1": [
+   1.0
+  ],
+  "finqa-DVN/2014/page_87.pdf-3": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_247.pdf-2": [
+   0.0
+  ],
+  "finqa-DISCA/2011/page_49.pdf-4": [
+   0.0
+  ],
+  "finqa-BLK/2012/page_33.pdf-1": [
+   1.0
+  ],
+  "finqa-MMM/2015/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-STT/2007/page_111.pdf-2": [
+   0.0
+  ],
+  "finqa-PPG/2012/page_29.pdf-4": [
+   0.0
+  ],
+  "finqa-BLK/2017/page_121.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2007/page_25.pdf-4": [
+   1.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-1": [
+   0.0
+  ],
+  "finqa-UNP/2015/page_56.pdf-1": [
+   1.0
+  ],
+  "finqa-AON/2015/page_96.pdf-2": [
+   0.0
+  ],
+  "finqa-K/2006/page_52.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2009/page_175.pdf-2": [
+   0.0
+  ],
+  "finqa-NWS/2017/page_119.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2006/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-ETR/2008/page_298.pdf-3": [
+   0.0
+  ],
+  "finqa-AES/2001/page_33.pdf-4": [
+   0.0
+  ],
+  "finqa-CE/2013/page_16.pdf-1": [
+   1.0
+  ],
+  "finqa-MMM/2007/page_23.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2014/page_160.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_372.pdf-1": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_118.pdf-1": [
+   0.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-4": [
+   0.0
+  ],
+  "finqa-GS/2015/page_188.pdf-1": [
+   1.0
+  ],
+  "finqa-UA/2007/page_70.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2016/page_49.pdf-3": [
+   1.0
+  ],
+  "finqa-SNA/2012/page_110.pdf-1": [
+   0.0
+  ],
+  "finqa-AON/2010/page_86.pdf-1": [
+   1.0
+  ],
+  "finqa-AES/2002/page_128.pdf-2": [
+   0.0
+  ],
+  "finqa-DVN/2012/page_77.pdf-2": [
+   1.0
+  ],
+  "finqa-ZBH/2008/page_57.pdf-1": [
+   0.0
+  ],
+  "finqa-JPM/2005/page_80.pdf-2": [
+   0.0
+  ],
+  "finqa-ANET/2015/page_156.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_374.pdf-4": [
+   0.0
+  ],
+  "finqa-ADI/2010/page_80.pdf-2": [
+   0.0
+  ],
+  "finqa-MS/2013/page_139.pdf-2": [
+   1.0
+  ],
+  "finqa-GPN/2018/page_94.pdf-2": [
+   1.0
+  ],
+  "finqa-AON/2007/page_188.pdf-3": [
+   1.0
+  ],
+  "finqa-HII/2015/page_88.pdf-1": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_50.pdf-4": [
+   1.0
+  ],
+  "finqa-EL/2008/page_59.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2013/page_34.pdf-3": [
+   0.0
+  ],
+  "finqa-UPS/2007/page_49.pdf-4": [
+   0.0
+  ],
+  "finqa-C/2018/page_175.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2016/page_150.pdf-4": [
+   0.0
+  ],
+  "finqa-C/2009/page_63.pdf-2": [
+   1.0
+  ],
+  "finqa-ANSS/2016/page_47.pdf-1": [
+   0.0
+  ],
+  "finqa-LMT/2015/page_89.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-3": [
+   1.0
+  ],
+  "finqa-CME/2017/page_89.pdf-3": [
+   0.0
+  ],
+  "finqa-ADBE/2008/page_89.pdf-2": [
+   1.0
+  ],
+  "finqa-RSG/2015/page_98.pdf-2": [
+   0.0
+  ],
+  "finqa-DXC/2018/page_56.pdf-2": [
+   1.0
+  ],
+  "finqa-EOG/2018/page_75.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2010/page_281.pdf-1": [
+   0.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-3": [
+   1.0
+  ],
+  "finqa-BLK/2012/page_145.pdf-3": [
+   0.0
+  ],
+  "finqa-RCL/2012/page_75.pdf-2": [
+   1.0
+  ],
+  "finqa-CME/2010/page_69.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2009/page_42.pdf-4": [
+   1.0
+  ],
+  "finqa-ECL/2017/page_79.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2009/page_151.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2015/page_56.pdf-4": [
+   1.0
+  ],
+  "finqa-ADBE/1999/page_64.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2018/page_90.pdf-2": [
+   0.0
+  ],
+  "finqa-KHC/2018/page_132.pdf-2": [
+   0.0
+  ],
+  "finqa-DRE/2002/page_15.pdf-4": [
+   1.0
+  ],
+  "finqa-PPG/2018/page_85.pdf-2": [
+   1.0
+  ],
+  "finqa-AES/2001/page_85.pdf-4": [
+   1.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-4": [
+   0.0
+  ],
+  "finqa-ABMD/2007/page_78.pdf-3": [
+   0.0
+  ],
+  "finqa-GS/2013/page_72.pdf-2": [
+   0.0
+  ],
+  "finqa-CDW/2015/page_70.pdf-1": [
+   1.0
+  ],
+  "finqa-AAL/2010/page_72.pdf-2": [
+   0.0
+  ],
+  "finqa-GIS/2015/page_62.pdf-1": [
+   0.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-3": [
+   0.0
+  ],
+  "finqa-ETFC/2018/page_153.pdf-2": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_174.pdf-4": [
+   0.0
+  ],
+  "finqa-AAPL/2006/page_100.pdf-2": [
+   0.0
+  ],
+  "finqa-IP/2006/page_30.pdf-1": [
+   1.0
+  ],
+  "finqa-AAPL/2003/page_48.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2009/page_84.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2008/page_107.pdf-3": [
+   0.0
+  ],
+  "finqa-PKG/2002/page_52.pdf-2": [
+   1.0
+  ],
+  "finqa-GS/2018/page_69.pdf-4": [
+   1.0
+  ],
+  "finqa-GIS/2019/page_68.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_65.pdf-2": [
+   1.0
+  ],
+  "finqa-TMUS/2017/page_29.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2005/page_29.pdf-1": [
+   0.0
+  ],
+  "finqa-GS/2013/page_149.pdf-1": [
+   1.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2017/page_40.pdf-2": [
+   0.0
+  ],
+  "finqa-ABMD/2012/page_79.pdf-4": [
+   1.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-1": [
+   1.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-3": [
+   0.0
+  ],
+  "finqa-STT/2007/page_111.pdf-4": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_372.pdf-3": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_100.pdf-3": [
+   1.0
+  ],
+  "finqa-C/2018/page_176.pdf-2": [
+   1.0
+  ],
+  "finqa-BLK/2015/page_124.pdf-2": [
+   1.0
+  ],
+  "finqa-DISCA/2011/page_49.pdf-2": [
+   0.0
+  ],
+  "finqa-DVN/2014/page_87.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2007/page_126.pdf-2": [
+   0.0
+  ],
+  "finqa-AON/2018/page_87.pdf-3": [
+   0.0
+  ],
+  "finqa-ADBE/2008/page_89.pdf-3": [
+   0.0
+  ],
+  "finqa-ABMD/2012/page_79.pdf-3": [
+   1.0
+  ],
+  "finqa-C/2015/page_96.pdf-2": [
+   1.0
+  ],
+  "finqa-GPN/2008/page_78.pdf-3": [
+   0.0
+  ],
+  "finqa-CMCSA/2015/page_67.pdf-3": [
+   1.0
+  ],
+  "finqa-PNC/2015/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-CME/2010/page_123.pdf-3": [
+   1.0
+  ],
+  "finqa-JKHY/2017/page_26.pdf-1": [
+   1.0
+  ],
+  "finqa-KHC/2018/page_132.pdf-1": [
+   1.0
+  ],
+  "finqa-CME/2010/page_123.pdf-2": [
+   0.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-4": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_50.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_247.pdf-4": [
+   0.0
+  ],
+  "finqa-GPN/2014/page_92.pdf-1": [
+   1.0
+  ],
+  "finqa-ADBE/1999/page_64.pdf-1": [
+   0.0
+  ],
+  "finqa-LMT/2016/page_49.pdf-4": [
+   0.0
+  ],
+  "finqa-GS/2013/page_63.pdf-2": [
+   1.0
+  ],
+  "finqa-C/2008/page_44.pdf-2": [
+   0.0
+  ],
+  "finqa-DRE/2012/page_40.pdf-1": [
+   0.0
+  ],
+  "finqa-HIG/2011/page_53.pdf-2": [
+   0.0
+  ],
+  "finqa-GS/2017/page_132.pdf-2": [
+   0.0
+  ],
+  "finqa-ADBE/1999/page_64.pdf-3": [
+   1.0
+  ],
+  "finqa-BLK/2012/page_33.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2012/page_110.pdf-2": [
+   0.0
+  ],
+  "finqa-IP/2009/page_84.pdf-4": [
+   0.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-2": [
+   0.0
+  ],
+  "finqa-MSI/2008/page_69.pdf-3": [
+   0.0
+  ],
+  "finqa-MSI/2012/page_87.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2003/page_84.pdf-1": [
+   1.0
+  ],
+  "finqa-GPN/2013/page_87.pdf-4": [
+   0.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2009/page_151.pdf-3": [
+   0.0
+  ],
+  "finqa-C/2008/page_44.pdf-1": [
+   0.0
+  ],
+  "finqa-SNA/2018/page_31.pdf-1": [
+   1.0
+  ],
+  "finqa-AAL/2013/page_18.pdf-3": [
+   0.0
+  ],
+  "finqa-SNA/2013/page_34.pdf-1": [
+   1.0
+  ],
+  "finqa-D/2002/page_87.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2007/page_93.pdf-2": [
+   0.0
+  ],
+  "finqa-MAS/2012/page_26.pdf-3": [
+   0.0
+  ],
+  "finqa-RSG/2018/page_94.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2013/page_92.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2014/page_70.pdf-2": [
+   0.0
+  ],
+  "finqa-UNP/2010/page_21.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2007/page_78.pdf-2": [
+   0.0
+  ],
+  "finqa-MO/2014/page_62.pdf-4": [
+   1.0
+  ],
+  "finqa-MRK/2013/page_3.pdf-1": [
+   1.0
+  ],
+  "finqa-MRO/2011/page_108.pdf-2": [
+   1.0
+  ],
+  "finqa-NCLH/2018/page_64.pdf-1": [
+   1.0
+  ],
+  "finqa-ADI/2019/page_29.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2011/page_32.pdf-4": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-1": [
+   1.0
+  ],
+  "finqa-CDNS/2018/page_66.pdf-1": [
+   1.0
+  ],
+  "finqa-HOLX/2008/page_143.pdf-1": [
+   0.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-2": [
+   1.0
+  ],
+  "finqa-STT/2007/page_111.pdf-3": [
+   1.0
+  ],
+  "finqa-IP/2009/page_84.pdf-3": [
+   0.0
+  ],
+  "finqa-MRK/2013/page_3.pdf-2": [
+   1.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2006/page_35.pdf-1": [
+   1.0
+  ],
+  "finqa-FIS/2012/page_48.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2014/page_122.pdf-2": [
+   1.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-2": [
+   1.0
+  ],
+  "finqa-ZBH/2015/page_57.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2012/page_110.pdf-3": [
+   0.0
+  ],
+  "finqa-IP/2006/page_38.pdf-2": [
+   1.0
+  ],
+  "finqa-AAL/2013/page_172.pdf-4": [
+   1.0
+  ],
+  "finqa-GS/2012/page_142.pdf-3": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_174.pdf-3": [
+   1.0
+  ],
+  "finqa-PPG/2018/page_85.pdf-4": [
+   1.0
+  ],
+  "finqa-ZBH/2008/page_57.pdf-2": [
+   0.0
+  ],
+  "finqa-HUM/2017/page_118.pdf-1": [
+   0.0
+  ],
+  "finqa-STT/2006/page_95.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2014/page_160.pdf-3": [
+   0.0
+  ],
+  "finqa-SLB/2012/page_56.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2012/page_118.pdf-3": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_150.pdf-3": [
+   0.0
+  ],
+  "finqa-LMT/2015/page_89.pdf-3": [
+   1.0
+  ],
+  "finqa-AON/2007/page_171.pdf-3": [
+   0.0
+  ],
+  "finqa-RSG/2016/page_139.pdf-2": [
+   1.0
+  ],
+  "finqa-MAR/2018/page_43.pdf-2": [
+   1.0
+  ],
+  "finqa-HII/2015/page_121.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2012/page_41.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-1": [
+   1.0
+  ],
+  "finqa-NCLH/2018/page_97.pdf-3": [
+   0.0
+  ],
+  "finqa-AMT/2003/page_27.pdf-3": [
+   1.0
+  ],
+  "finqa-CME/2017/page_89.pdf-2": [
+   1.0
+  ],
+  "finqa-IP/2006/page_38.pdf-4": [
+   1.0
+  ],
+  "finqa-LMT/2012/page_73.pdf-4": [
+   0.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-6": [
+   0.0
+  ],
+  "finqa-VNO/2014/page_57.pdf-1": [
+   0.0
+  ],
+  "finqa-CB/2008/page_229.pdf-3": [
+   1.0
+  ],
+  "finqa-INTC/2015/page_41.pdf-3": [
+   1.0
+  ],
+  "finqa-UPS/2012/page_32.pdf-2": [
+   0.0
+  ],
+  "finqa-GS/2014/page_74.pdf-2": [
+   1.0
+  ],
+  "finqa-C/2009/page_63.pdf-4": [
+   1.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-1": [
+   1.0
+  ],
+  "finqa-MO/2016/page_19.pdf-1": [
+   1.0
+  ],
+  "finqa-GPN/2013/page_87.pdf-2": [
+   1.0
+  ],
+  "finqa-ADBE/2008/page_74.pdf-2": [
+   1.0
+  ],
+  "finqa-C/2008/page_65.pdf-3": [
+   1.0
+  ],
+  "finqa-RSG/2009/page_140.pdf-1": [
+   1.0
+  ],
+  "finqa-AON/2007/page_171.pdf-2": [
+   0.0
+  ],
+  "finqa-ADI/2011/page_61.pdf-1": [
+   0.0
+  ],
+  "finqa-MS/2013/page_139.pdf-1": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_45.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2006/page_104.pdf-1": [
+   0.0
+  ],
+  "finqa-GS/2014/page_51.pdf-1": [
+   0.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2006/page_104.pdf-4": [
+   1.0
+  ],
+  "finqa-L/2009/page_84.pdf-2": [
+   0.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-3": [
+   0.0
+  ]
+ },
+ "grades_sampled": {
+  "finqa-DVN/2012/page_77.pdf-1": [
+   0.0
+  ],
+  "finqa-AWK/2013/page_122.pdf-2": [
+   0.0
+  ],
+  "finqa-CMCSA/2015/page_112.pdf-2": [
+   1.0
+  ],
+  "finqa-TFX/2017/page_78.pdf-3": [
+   0.0
+  ],
+  "finqa-CMCSA/2008/page_36.pdf-3": [
+   0.0
+  ],
+  "finqa-AMT/2007/page_127.pdf-4": [
+   1.0
+  ],
+  "finqa-STT/2006/page_95.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2007/page_25.pdf-1": [
+   0.0
+  ],
+  "finqa-STT/2011/page_69.pdf-4": [
+   1.0
+  ],
+  "finqa-JPM/2012/page_140.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2011/page_33.pdf-4": [
+   1.0
+  ],
+  "finqa-ILMN/2003/page_58.pdf-3": [
+   0.0
+  ],
+  "finqa-HOLX/2003/page_52.pdf-1": [
+   0.0
+  ],
+  "finqa-UAA/2016/page_42.pdf-3": [
+   0.0
+  ],
+  "finqa-HST/2018/page_135.pdf-1": [
+   1.0
+  ],
+  "finqa-IPG/2008/page_72.pdf-2": [
+   1.0
+  ],
+  "finqa-AAPL/2006/page_131.pdf-2": [
+   0.0
+  ],
+  "finqa-MRO/2013/page_39.pdf-3": [
+   0.0
+  ],
+  "finqa-V/2014/page_126.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2004/page_239.pdf-3": [
+   1.0
+  ],
+  "finqa-MRO/2013/page_39.pdf-2": [
+   0.0
+  ],
+  "finqa-HWM/2015/page_173.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_118.pdf-2": [
+   1.0
+  ],
+  "finqa-AMAT/2013/page_37.pdf-1": [
+   0.0
+  ],
+  "finqa-MRO/2013/page_19.pdf-2": [
+   0.0
+  ],
+  "finqa-AON/2007/page_175.pdf-2": [
+   0.0
+  ],
+  "finqa-ANSS/2012/page_93.pdf-4": [
+   0.0
+  ],
+  "finqa-DRE/2002/page_15.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2007/page_127.pdf-2": [
+   1.0
+  ],
+  "finqa-ETFC/2012/page_43.pdf-3": [
+   0.0
+  ],
+  "finqa-NKE/2009/page_43.pdf-2": [
+   1.0
+  ],
+  "finqa-MAR/2004/page_45.pdf-2": [
+   1.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-5": [
+   0.0
+  ],
+  "finqa-GS/2018/page_78.pdf-2": [
+   0.0
+  ],
+  "finqa-BLK/2012/page_145.pdf-2": [
+   0.0
+  ],
+  "finqa-AAL/2016/page_8.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2006/page_15.pdf-2": [
+   1.0
+  ],
+  "finqa-FIS/2012/page_48.pdf-3": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_45.pdf-1": [
+   1.0
+  ],
+  "finqa-ETR/2011/page_17.pdf-3": [
+   1.0
+  ],
+  "finqa-JPM/2015/page_137.pdf-3": [
+   0.0
+  ],
+  "finqa-ADBE/2008/page_74.pdf-3": [
+   1.0
+  ],
+  "finqa-ECL/2017/page_79.pdf-1": [
+   0.0
+  ],
+  "finqa-C/2009/page_197.pdf-1": [
+   0.0
+  ],
+  "finqa-BKNG/2016/page_33.pdf-2": [
+   0.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-1": [
+   0.0
+  ],
+  "finqa-FIS/2006/page_31.pdf-2": [
+   0.0
+  ],
+  "finqa-PNC/2015/page_93.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2008/page_45.pdf-1": [
+   1.0
+  ],
+  "finqa-ANSS/2012/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-ZBH/2009/page_58.pdf-4": [
+   0.0
+  ],
+  "finqa-GPN/2010/page_89.pdf-1": [
+   1.0
+  ],
+  "finqa-IPG/2008/page_72.pdf-3": [
+   1.0
+  ],
+  "finqa-MRO/2004/page_125.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_100.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2017/page_96.pdf-2": [
+   1.0
+  ],
+  "finqa-AES/2010/page_227.pdf-4": [
+   0.0
+  ],
+  "finqa-PKG/2013/page_88.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2009/page_45.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2011/page_17.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2003/page_106.pdf-1": [
+   1.0
+  ],
+  "finqa-CDNS/2015/page_30.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-3": [
+   1.0
+  ],
+  "finqa-APD/2018/page_121.pdf-2": [
+   0.0
+  ],
+  "finqa-AAPL/2006/page_131.pdf-1": [
+   0.0
+  ],
+  "finqa-V/2008/page_180.pdf-1": [
+   1.0
+  ],
+  "finqa-JPM/2018/page_90.pdf-1": [
+   1.0
+  ],
+  "finqa-ECL/2017/page_69.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2007/page_29.pdf-4": [
+   0.0
+  ],
+  "finqa-ETFC/2012/page_43.pdf-1": [
+   1.0
+  ],
+  "finqa-AOS/2010/page_18.pdf-1": [
+   0.0
+  ],
+  "finqa-IPG/2006/page_77.pdf-4": [
+   0.0
+  ],
+  "finqa-GS/2013/page_63.pdf-1": [
+   1.0
+  ],
+  "finqa-UA/2011/page_69.pdf-2": [
+   0.0
+  ],
+  "finqa-JKHY/2019/page_18.pdf-1": [
+   0.0
+  ],
+  "finqa-NCLH/2018/page_97.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2009/page_175.pdf-4": [
+   0.0
+  ],
+  "finqa-IP/2006/page_75.pdf-3": [
+   1.0
+  ],
+  "finqa-IP/2006/page_35.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2010/page_123.pdf-1": [
+   1.0
+  ],
+  "finqa-LMT/2014/page_50.pdf-1": [
+   1.0
+  ],
+  "finqa-INTC/2015/page_41.pdf-4": [
+   1.0
+  ],
+  "finqa-AMT/2012/page_144.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2016/page_125.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2016/page_23.pdf-4": [
+   0.0
+  ],
+  "finqa-LMT/2012/page_73.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2011/page_33.pdf-3": [
+   1.0
+  ],
+  "finqa-RSG/2016/page_135.pdf-1": [
+   0.0
+  ],
+  "finqa-DRE/2008/page_46.pdf-1": [
+   0.0
+  ],
+  "finqa-ADI/2010/page_80.pdf-1": [
+   0.0
+  ],
+  "finqa-TFX/2017/page_78.pdf-2": [
+   0.0
+  ],
+  "finqa-JKHY/2019/page_18.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-2": [
+   1.0
+  ],
+  "finqa-TMUS/2017/page_29.pdf-2": [
+   0.0
+  ],
+  "finqa-ETR/2008/page_298.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_49.pdf-3": [
+   0.0
+  ],
+  "finqa-AON/2007/page_188.pdf-2": [
+   0.0
+  ],
+  "finqa-ADI/2010/page_80.pdf-3": [
+   0.0
+  ],
+  "finqa-NCLH/2018/page_64.pdf-4": [
+   0.0
+  ],
+  "finqa-C/2009/page_45.pdf-2": [
+   0.0
+  ],
+  "finqa-ETFC/2012/page_43.pdf-2": [
+   1.0
+  ],
+  "finqa-PKG/2005/page_74.pdf-1": [
+   1.0
+  ],
+  "finqa-MO/2014/page_39.pdf-4": [
+   1.0
+  ],
+  "finqa-ETR/2004/page_281.pdf-2": [
+   0.0
+  ],
+  "finqa-DVN/2018/page_35.pdf-4": [
+   0.0
+  ],
+  "finqa-RSG/2016/page_139.pdf-1": [
+   1.0
+  ],
+  "finqa-V/2014/page_126.pdf-2": [
+   0.0
+  ],
+  "finqa-SNA/2018/page_31.pdf-3": [
+   1.0
+  ],
+  "finqa-AAL/2014/page_15.pdf-1": [
+   1.0
+  ],
+  "finqa-WRK/2018/page_107.pdf-5": [
+   1.0
+  ],
+  "finqa-MAS/2012/page_26.pdf-2": [
+   0.0
+  ],
+  "finqa-ABMD/2005/page_29.pdf-3": [
+   1.0
+  ],
+  "finqa-MRO/2004/page_46.pdf-1": [
+   1.0
+  ],
+  "finqa-FBHS/2017/page_83.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_69.pdf-3": [
+   0.0
+  ],
+  "finqa-SNA/2007/page_29.pdf-3": [
+   0.0
+  ],
+  "finqa-ETFC/2011/page_144.pdf-1": [
+   1.0
+  ],
+  "finqa-JPM/2003/page_106.pdf-3": [
+   0.0
+  ],
+  "finqa-AWK/2014/page_121.pdf-1": [
+   0.0
+  ],
+  "finqa-GS/2013/page_85.pdf-2": [
+   0.0
+  ],
+  "finqa-HII/2015/page_121.pdf-2": [
+   0.0
+  ],
+  "finqa-UPS/2007/page_49.pdf-2": [
+   1.0
+  ],
+  "finqa-CME/2017/page_89.pdf-4": [
+   1.0
+  ],
+  "finqa-AAPL/2003/page_48.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2008/page_94.pdf-2": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_143.pdf-3": [
+   0.0
+  ],
+  "finqa-AES/2001/page_33.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_69.pdf-1": [
+   1.0
+  ],
+  "finqa-ADBE/2008/page_89.pdf-4": [
+   1.0
+  ],
+  "finqa-DVN/2015/page_79.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2012/page_31.pdf-4": [
+   0.0
+  ],
+  "finqa-SYY/2006/page_71.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2007/page_92.pdf-2": [
+   0.0
+  ],
+  "finqa-AWK/2013/page_122.pdf-1": [
+   0.0
+  ],
+  "finqa-GIS/2017/page_31.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2016/page_52.pdf-3": [
+   0.0
+  ],
+  "finqa-JPM/2008/page_117.pdf-2": [
+   0.0
+  ],
+  "finqa-AAL/2013/page_172.pdf-3": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_9.pdf-2": [
+   1.0
+  ],
+  "finqa-MRK/2013/page_125.pdf-2": [
+   1.0
+  ],
+  "finqa-RSG/2012/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2005/page_102.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2010/page_123.pdf-4": [
+   0.0
+  ],
+  "finqa-DRE/2008/page_46.pdf-2": [
+   0.0
+  ],
+  "finqa-CDW/2017/page_38.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2010/page_89.pdf-3": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_143.pdf-2": [
+   1.0
+  ],
+  "finqa-INTC/2015/page_41.pdf-1": [
+   1.0
+  ],
+  "finqa-GS/2018/page_78.pdf-1": [
+   1.0
+  ],
+  "finqa-GS/2013/page_63.pdf-3": [
+   1.0
+  ],
+  "finqa-BLK/2015/page_124.pdf-1": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_68.pdf-2": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_174.pdf-5": [
+   1.0
+  ],
+  "finqa-PPG/2018/page_85.pdf-3": [
+   1.0
+  ],
+  "finqa-GS/2013/page_85.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2006/page_31.pdf-3": [
+   1.0
+  ],
+  "finqa-INTC/2013/page_31.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2014/page_70.pdf-1": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-4": [
+   0.0
+  ],
+  "finqa-STT/2011/page_69.pdf-2": [
+   0.0
+  ],
+  "finqa-PKG/2005/page_74.pdf-4": [
+   0.0
+  ],
+  "finqa-RSG/2010/page_98.pdf-2": [
+   1.0
+  ],
+  "finqa-BLK/2017/page_121.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2009/page_42.pdf-1": [
+   0.0
+  ],
+  "finqa-PPG/2006/page_42.pdf-3": [
+   1.0
+  ],
+  "finqa-GS/2012/page_142.pdf-2": [
+   0.0
+  ],
+  "finqa-NKE/2009/page_43.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2010/page_89.pdf-4": [
+   0.0
+  ],
+  "finqa-BLL/2011/page_32.pdf-1": [
+   1.0
+  ],
+  "finqa-GS/2017/page_179.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2005/page_102.pdf-1": [
+   1.0
+  ],
+  "finqa-UPS/2010/page_52.pdf-4": [
+   1.0
+  ],
+  "finqa-UNP/2006/page_15.pdf-4": [
+   1.0
+  ],
+  "finqa-SNA/2013/page_83.pdf-3": [
+   0.0
+  ],
+  "finqa-ABMD/2012/page_79.pdf-1": [
+   0.0
+  ],
+  "finqa-AES/2002/page_128.pdf-4": [
+   0.0
+  ],
+  "finqa-PPG/2008/page_52.pdf-3": [
+   1.0
+  ],
+  "finqa-JPM/2009/page_175.pdf-5": [
+   0.0
+  ],
+  "finqa-GRMN/2008/page_85.pdf-1": [
+   1.0
+  ],
+  "finqa-ABMD/2006/page_43.pdf-3": [
+   0.0
+  ],
+  "finqa-STT/2014/page_54.pdf-2": [
+   0.0
+  ],
+  "finqa-DRE/2005/page_30.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2006/page_35.pdf-3": [
+   0.0
+  ],
+  "finqa-MRO/2004/page_125.pdf-1": [
+   0.0
+  ],
+  "finqa-ECL/2016/page_52.pdf-2": [
+   1.0
+  ],
+  "finqa-IP/2009/page_45.pdf-3": [
+   0.0
+  ],
+  "finqa-EL/2008/page_59.pdf-1": [
+   0.0
+  ],
+  "finqa-UNP/2006/page_15.pdf-1": [
+   0.0
+  ],
+  "finqa-DVN/2018/page_35.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2012/page_31.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2014/page_149.pdf-1": [
+   0.0
+  ],
+  "finqa-MKTX/2004/page_99.pdf-1": [
+   0.0
+  ],
+  "finqa-MKTX/2004/page_99.pdf-3": [
+   1.0
+  ],
+  "finqa-ILMN/2008/page_86.pdf-4": [
+   1.0
+  ],
+  "finqa-UNP/2009/page_35.pdf-1": [
+   0.0
+  ],
+  "finqa-PM/2017/page_32.pdf-1": [
+   1.0
+  ],
+  "finqa-LMT/2014/page_50.pdf-3": [
+   1.0
+  ],
+  "finqa-WRK/2018/page_107.pdf-3": [
+   1.0
+  ],
+  "finqa-GIS/2019/page_68.pdf-1": [
+   0.0
+  ],
+  "finqa-CE/2016/page_19.pdf-1": [
+   1.0
+  ],
+  "finqa-CDW/2015/page_93.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_50.pdf-1": [
+   1.0
+  ],
+  "finqa-AWK/2012/page_117.pdf-2": [
+   0.0
+  ],
+  "finqa-UAA/2016/page_42.pdf-2": [
+   0.0
+  ],
+  "finqa-LMT/2014/page_50.pdf-2": [
+   1.0
+  ],
+  "finqa-HUM/2009/page_105.pdf-2": [
+   1.0
+  ],
+  "finqa-GS/2015/page_171.pdf-3": [
+   0.0
+  ],
+  "finqa-ADI/2019/page_29.pdf-1": [
+   0.0
+  ],
+  "finqa-RL/2008/page_23.pdf-2": [
+   1.0
+  ],
+  "finqa-ZBH/2009/page_58.pdf-3": [
+   0.0
+  ],
+  "finqa-HUM/2017/page_118.pdf-3": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_100.pdf-1": [
+   1.0
+  ],
+  "finqa-BLL/2010/page_35.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2010/page_120.pdf-2": [
+   1.0
+  ],
+  "finqa-AMAT/2018/page_33.pdf-2": [
+   0.0
+  ],
+  "finqa-UNP/2016/page_52.pdf-2": [
+   0.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-3": [
+   0.0
+  ],
+  "finqa-AAPL/2004/page_68.pdf-1": [
+   1.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-1": [
+   0.0
+  ],
+  "finqa-ALLE/2015/page_24.pdf-2": [
+   0.0
+  ],
+  "finqa-LMT/2014/page_91.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_23.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-4": [
+   1.0
+  ],
+  "finqa-GIS/2018/page_110.pdf-1": [
+   1.0
+  ],
+  "finqa-SLG/2001/page_48.pdf-2": [
+   1.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-3": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_9.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2013/page_21.pdf-1": [
+   1.0
+  ],
+  "finqa-C/2009/page_45.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2013/page_84.pdf-2": [
+   0.0
+  ],
+  "finqa-BLK/2012/page_145.pdf-1": [
+   0.0
+  ],
+  "finqa-RSG/2013/page_123.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2017/page_96.pdf-3": [
+   0.0
+  ],
+  "finqa-CB/2008/page_229.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2007/page_29.pdf-2": [
+   0.0
+  ],
+  "finqa-RSG/2015/page_98.pdf-1": [
+   0.0
+  ],
+  "finqa-MO/2014/page_39.pdf-1": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_68.pdf-1": [
+   1.0
+  ],
+  "finqa-CB/2010/page_83.pdf-1": [
+   1.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-4": [
+   1.0
+  ],
+  "finqa-PPG/2006/page_42.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_150.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2014/page_160.pdf-4": [
+   0.0
+  ],
+  "finqa-AAL/2013/page_18.pdf-2": [
+   1.0
+  ],
+  "finqa-AWK/2018/page_146.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2003/page_157.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2011/page_24.pdf-2": [
+   1.0
+  ],
+  "finqa-MKTX/2004/page_99.pdf-4": [
+   1.0
+  ],
+  "finqa-STT/2006/page_95.pdf-1": [
+   0.0
+  ],
+  "finqa-AAL/2016/page_8.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-1": [
+   1.0
+  ],
+  "finqa-RSG/2013/page_123.pdf-1": [
+   1.0
+  ],
+  "finqa-C/2008/page_22.pdf-2": [
+   0.0
+  ],
+  "finqa-UPS/2010/page_52.pdf-3": [
+   1.0
+  ],
+  "finqa-GRMN/2008/page_73.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2018/page_74.pdf-4": [
+   1.0
+  ],
+  "finqa-ALXN/2016/page_153.pdf-1": [
+   0.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-3": [
+   1.0
+  ],
+  "finqa-AES/2001/page_85.pdf-1": [
+   1.0
+  ],
+  "finqa-SYY/2006/page_71.pdf-1": [
+   0.0
+  ],
+  "finqa-SNA/2013/page_34.pdf-2": [
+   0.0
+  ],
+  "finqa-STT/2006/page_95.pdf-4": [
+   1.0
+  ],
+  "finqa-MRO/2004/page_46.pdf-2": [
+   1.0
+  ],
+  "finqa-MMM/2007/page_84.pdf-1": [
+   0.0
+  ],
+  "finqa-MSI/2014/page_76.pdf-1": [
+   1.0
+  ],
+  "finqa-MS/2007/page_179.pdf-2": [
+   1.0
+  ],
+  "finqa-ILMN/2003/page_58.pdf-1": [
+   1.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-4": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_9.pdf-4": [
+   0.0
+  ],
+  "finqa-APD/2016/page_40.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2017/page_40.pdf-5": [
+   0.0
+  ],
+  "finqa-APD/2016/page_40.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2008/page_78.pdf-4": [
+   1.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-2": [
+   0.0
+  ],
+  "finqa-ILMN/2003/page_58.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2014/page_111.pdf-2": [
+   0.0
+  ],
+  "finqa-AES/2010/page_227.pdf-3": [
+   1.0
+  ],
+  "finqa-STT/2009/page_127.pdf-3": [
+   0.0
+  ],
+  "finqa-V/2010/page_28.pdf-1": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_68.pdf-5": [
+   1.0
+  ],
+  "finqa-DRE/2002/page_15.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2008/page_298.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2012/page_41.pdf-4": [
+   1.0
+  ],
+  "finqa-AES/2001/page_33.pdf-1": [
+   1.0
+  ],
+  "finqa-DVN/2014/page_87.pdf-3": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_247.pdf-2": [
+   0.0
+  ],
+  "finqa-DISCA/2011/page_49.pdf-4": [
+   0.0
+  ],
+  "finqa-BLK/2012/page_33.pdf-1": [
+   1.0
+  ],
+  "finqa-MMM/2015/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-STT/2007/page_111.pdf-2": [
+   0.0
+  ],
+  "finqa-PPG/2012/page_29.pdf-4": [
+   0.0
+  ],
+  "finqa-BLK/2017/page_121.pdf-3": [
+   1.0
+  ],
+  "finqa-UNP/2007/page_25.pdf-4": [
+   1.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-1": [
+   0.0
+  ],
+  "finqa-UNP/2015/page_56.pdf-1": [
+   1.0
+  ],
+  "finqa-AON/2015/page_96.pdf-2": [
+   0.0
+  ],
+  "finqa-K/2006/page_52.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2009/page_175.pdf-2": [
+   0.0
+  ],
+  "finqa-NWS/2017/page_119.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2006/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-ETR/2008/page_298.pdf-3": [
+   0.0
+  ],
+  "finqa-AES/2001/page_33.pdf-4": [
+   0.0
+  ],
+  "finqa-CE/2013/page_16.pdf-1": [
+   1.0
+  ],
+  "finqa-MMM/2007/page_23.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2014/page_160.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_372.pdf-1": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_118.pdf-1": [
+   0.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-4": [
+   0.0
+  ],
+  "finqa-GS/2015/page_188.pdf-1": [
+   1.0
+  ],
+  "finqa-UA/2007/page_70.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2016/page_49.pdf-3": [
+   1.0
+  ],
+  "finqa-SNA/2012/page_110.pdf-1": [
+   0.0
+  ],
+  "finqa-AON/2010/page_86.pdf-1": [
+   1.0
+  ],
+  "finqa-AES/2002/page_128.pdf-2": [
+   0.0
+  ],
+  "finqa-DVN/2012/page_77.pdf-2": [
+   1.0
+  ],
+  "finqa-ZBH/2008/page_57.pdf-1": [
+   0.0
+  ],
+  "finqa-JPM/2005/page_80.pdf-2": [
+   0.0
+  ],
+  "finqa-ANET/2015/page_156.pdf-1": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_374.pdf-4": [
+   0.0
+  ],
+  "finqa-ADI/2010/page_80.pdf-2": [
+   0.0
+  ],
+  "finqa-MS/2013/page_139.pdf-2": [
+   1.0
+  ],
+  "finqa-GPN/2018/page_94.pdf-2": [
+   1.0
+  ],
+  "finqa-AON/2007/page_188.pdf-3": [
+   1.0
+  ],
+  "finqa-HII/2015/page_88.pdf-1": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_50.pdf-4": [
+   1.0
+  ],
+  "finqa-EL/2008/page_59.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2013/page_34.pdf-3": [
+   0.0
+  ],
+  "finqa-UPS/2007/page_49.pdf-4": [
+   0.0
+  ],
+  "finqa-C/2018/page_175.pdf-3": [
+   1.0
+  ],
+  "finqa-ETR/2016/page_150.pdf-4": [
+   0.0
+  ],
+  "finqa-C/2009/page_63.pdf-2": [
+   1.0
+  ],
+  "finqa-ANSS/2016/page_47.pdf-1": [
+   0.0
+  ],
+  "finqa-LMT/2015/page_89.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-3": [
+   1.0
+  ],
+  "finqa-CME/2017/page_89.pdf-3": [
+   0.0
+  ],
+  "finqa-ADBE/2008/page_89.pdf-2": [
+   1.0
+  ],
+  "finqa-RSG/2015/page_98.pdf-2": [
+   0.0
+  ],
+  "finqa-DXC/2018/page_56.pdf-2": [
+   1.0
+  ],
+  "finqa-EOG/2018/page_75.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2010/page_281.pdf-1": [
+   0.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-3": [
+   1.0
+  ],
+  "finqa-BLK/2012/page_145.pdf-3": [
+   0.0
+  ],
+  "finqa-RCL/2012/page_75.pdf-2": [
+   1.0
+  ],
+  "finqa-CME/2010/page_69.pdf-1": [
+   1.0
+  ],
+  "finqa-UNP/2009/page_42.pdf-4": [
+   1.0
+  ],
+  "finqa-ECL/2017/page_79.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2009/page_151.pdf-2": [
+   1.0
+  ],
+  "finqa-UNP/2015/page_56.pdf-4": [
+   1.0
+  ],
+  "finqa-ADBE/1999/page_64.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2018/page_90.pdf-2": [
+   0.0
+  ],
+  "finqa-KHC/2018/page_132.pdf-2": [
+   0.0
+  ],
+  "finqa-DRE/2002/page_15.pdf-4": [
+   1.0
+  ],
+  "finqa-PPG/2018/page_85.pdf-2": [
+   1.0
+  ],
+  "finqa-AES/2001/page_85.pdf-4": [
+   1.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-4": [
+   0.0
+  ],
+  "finqa-ABMD/2007/page_78.pdf-3": [
+   0.0
+  ],
+  "finqa-GS/2013/page_72.pdf-2": [
+   0.0
+  ],
+  "finqa-CDW/2015/page_70.pdf-1": [
+   1.0
+  ],
+  "finqa-AAL/2010/page_72.pdf-2": [
+   0.0
+  ],
+  "finqa-GIS/2015/page_62.pdf-1": [
+   0.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-3": [
+   0.0
+  ],
+  "finqa-ETFC/2018/page_153.pdf-2": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_174.pdf-4": [
+   0.0
+  ],
+  "finqa-AAPL/2006/page_100.pdf-2": [
+   0.0
+  ],
+  "finqa-IP/2006/page_30.pdf-1": [
+   1.0
+  ],
+  "finqa-AAPL/2003/page_48.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2009/page_84.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2008/page_107.pdf-3": [
+   0.0
+  ],
+  "finqa-PKG/2002/page_52.pdf-2": [
+   1.0
+  ],
+  "finqa-GS/2018/page_69.pdf-4": [
+   1.0
+  ],
+  "finqa-GIS/2019/page_68.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_65.pdf-2": [
+   1.0
+  ],
+  "finqa-TMUS/2017/page_29.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2005/page_29.pdf-1": [
+   0.0
+  ],
+  "finqa-GS/2013/page_149.pdf-1": [
+   1.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-2": [
+   0.0
+  ],
+  "finqa-CME/2017/page_40.pdf-2": [
+   0.0
+  ],
+  "finqa-ABMD/2012/page_79.pdf-4": [
+   1.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-1": [
+   1.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-3": [
+   0.0
+  ],
+  "finqa-STT/2007/page_111.pdf-4": [
+   0.0
+  ],
+  "finqa-ETR/2017/page_372.pdf-3": [
+   0.0
+  ],
+  "finqa-PNC/2012/page_100.pdf-3": [
+   1.0
+  ],
+  "finqa-C/2018/page_176.pdf-2": [
+   1.0
+  ],
+  "finqa-BLK/2015/page_124.pdf-2": [
+   1.0
+  ],
+  "finqa-DISCA/2011/page_49.pdf-2": [
+   0.0
+  ],
+  "finqa-DVN/2014/page_87.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2007/page_126.pdf-2": [
+   0.0
+  ],
+  "finqa-AON/2018/page_87.pdf-3": [
+   0.0
+  ],
+  "finqa-ADBE/2008/page_89.pdf-3": [
+   0.0
+  ],
+  "finqa-ABMD/2012/page_79.pdf-3": [
+   1.0
+  ],
+  "finqa-C/2015/page_96.pdf-2": [
+   1.0
+  ],
+  "finqa-GPN/2008/page_78.pdf-3": [
+   0.0
+  ],
+  "finqa-CMCSA/2015/page_67.pdf-3": [
+   1.0
+  ],
+  "finqa-PNC/2015/page_93.pdf-1": [
+   1.0
+  ],
+  "finqa-CME/2010/page_123.pdf-3": [
+   1.0
+  ],
+  "finqa-JKHY/2017/page_26.pdf-1": [
+   1.0
+  ],
+  "finqa-KHC/2018/page_132.pdf-1": [
+   1.0
+  ],
+  "finqa-CME/2010/page_123.pdf-2": [
+   0.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-4": [
+   0.0
+  ],
+  "finqa-AMT/2012/page_50.pdf-2": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_247.pdf-4": [
+   0.0
+  ],
+  "finqa-GPN/2014/page_92.pdf-1": [
+   1.0
+  ],
+  "finqa-ADBE/1999/page_64.pdf-1": [
+   0.0
+  ],
+  "finqa-LMT/2016/page_49.pdf-4": [
+   0.0
+  ],
+  "finqa-GS/2013/page_63.pdf-2": [
+   1.0
+  ],
+  "finqa-C/2008/page_44.pdf-2": [
+   0.0
+  ],
+  "finqa-DRE/2012/page_40.pdf-1": [
+   0.0
+  ],
+  "finqa-HIG/2011/page_53.pdf-2": [
+   0.0
+  ],
+  "finqa-GS/2017/page_132.pdf-2": [
+   0.0
+  ],
+  "finqa-ADBE/1999/page_64.pdf-3": [
+   1.0
+  ],
+  "finqa-BLK/2012/page_33.pdf-2": [
+   1.0
+  ],
+  "finqa-SNA/2012/page_110.pdf-2": [
+   0.0
+  ],
+  "finqa-IP/2009/page_84.pdf-4": [
+   0.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-2": [
+   0.0
+  ],
+  "finqa-MSI/2008/page_69.pdf-3": [
+   0.0
+  ],
+  "finqa-MSI/2012/page_87.pdf-2": [
+   1.0
+  ],
+  "finqa-MRO/2003/page_84.pdf-1": [
+   1.0
+  ],
+  "finqa-GPN/2013/page_87.pdf-4": [
+   0.0
+  ],
+  "finqa-VRTX/2006/page_111.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2009/page_151.pdf-3": [
+   0.0
+  ],
+  "finqa-C/2008/page_44.pdf-1": [
+   0.0
+  ],
+  "finqa-SNA/2018/page_31.pdf-1": [
+   1.0
+  ],
+  "finqa-AAL/2013/page_18.pdf-3": [
+   0.0
+  ],
+  "finqa-SNA/2013/page_34.pdf-1": [
+   1.0
+  ],
+  "finqa-D/2002/page_87.pdf-2": [
+   0.0
+  ],
+  "finqa-HOLX/2007/page_93.pdf-2": [
+   0.0
+  ],
+  "finqa-MAS/2012/page_26.pdf-3": [
+   0.0
+  ],
+  "finqa-RSG/2018/page_94.pdf-1": [
+   0.0
+  ],
+  "finqa-GPN/2013/page_92.pdf-2": [
+   0.0
+  ],
+  "finqa-JPM/2014/page_70.pdf-2": [
+   0.0
+  ],
+  "finqa-UNP/2010/page_21.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2007/page_78.pdf-2": [
+   0.0
+  ],
+  "finqa-MO/2014/page_62.pdf-4": [
+   1.0
+  ],
+  "finqa-MRK/2013/page_3.pdf-1": [
+   1.0
+  ],
+  "finqa-MRO/2011/page_108.pdf-2": [
+   1.0
+  ],
+  "finqa-NCLH/2018/page_64.pdf-1": [
+   1.0
+  ],
+  "finqa-ADI/2019/page_29.pdf-3": [
+   0.0
+  ],
+  "finqa-BLL/2011/page_32.pdf-4": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_31.pdf-1": [
+   1.0
+  ],
+  "finqa-CDNS/2018/page_66.pdf-1": [
+   1.0
+  ],
+  "finqa-HOLX/2008/page_143.pdf-1": [
+   0.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-2": [
+   1.0
+  ],
+  "finqa-STT/2007/page_111.pdf-3": [
+   1.0
+  ],
+  "finqa-IP/2009/page_84.pdf-3": [
+   0.0
+  ],
+  "finqa-MRK/2013/page_3.pdf-2": [
+   1.0
+  ],
+  "finqa-MAS/2017/page_27.pdf-1": [
+   1.0
+  ],
+  "finqa-IP/2006/page_35.pdf-1": [
+   1.0
+  ],
+  "finqa-FIS/2012/page_48.pdf-2": [
+   1.0
+  ],
+  "finqa-JPM/2014/page_122.pdf-2": [
+   1.0
+  ],
+  "finqa-DISH/2011/page_122.pdf-2": [
+   1.0
+  ],
+  "finqa-ZBH/2015/page_57.pdf-1": [
+   1.0
+  ],
+  "finqa-SNA/2012/page_110.pdf-3": [
+   0.0
+  ],
+  "finqa-IP/2006/page_38.pdf-2": [
+   1.0
+  ],
+  "finqa-AAL/2013/page_172.pdf-4": [
+   1.0
+  ],
+  "finqa-GS/2012/page_142.pdf-3": [
+   1.0
+  ],
+  "finqa-PNC/2012/page_174.pdf-3": [
+   1.0
+  ],
+  "finqa-PPG/2018/page_85.pdf-4": [
+   1.0
+  ],
+  "finqa-ZBH/2008/page_57.pdf-2": [
+   0.0
+  ],
+  "finqa-HUM/2017/page_118.pdf-1": [
+   0.0
+  ],
+  "finqa-STT/2006/page_95.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2014/page_160.pdf-3": [
+   0.0
+  ],
+  "finqa-SLB/2012/page_56.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2012/page_118.pdf-3": [
+   0.0
+  ],
+  "finqa-ETR/2016/page_150.pdf-3": [
+   0.0
+  ],
+  "finqa-LMT/2015/page_89.pdf-3": [
+   1.0
+  ],
+  "finqa-AON/2007/page_171.pdf-3": [
+   0.0
+  ],
+  "finqa-RSG/2016/page_139.pdf-2": [
+   1.0
+  ],
+  "finqa-MAR/2018/page_43.pdf-2": [
+   1.0
+  ],
+  "finqa-HII/2015/page_121.pdf-4": [
+   1.0
+  ],
+  "finqa-ABMD/2012/page_41.pdf-1": [
+   1.0
+  ],
+  "finqa-AMT/2003/page_102.pdf-1": [
+   1.0
+  ],
+  "finqa-NCLH/2018/page_97.pdf-3": [
+   0.0
+  ],
+  "finqa-AMT/2003/page_27.pdf-3": [
+   1.0
+  ],
+  "finqa-CME/2017/page_89.pdf-2": [
+   1.0
+  ],
+  "finqa-IP/2006/page_38.pdf-4": [
+   1.0
+  ],
+  "finqa-LMT/2012/page_73.pdf-4": [
+   0.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-6": [
+   0.0
+  ],
+  "finqa-VNO/2014/page_57.pdf-1": [
+   0.0
+  ],
+  "finqa-CB/2008/page_229.pdf-3": [
+   1.0
+  ],
+  "finqa-INTC/2015/page_41.pdf-3": [
+   1.0
+  ],
+  "finqa-UPS/2012/page_32.pdf-2": [
+   0.0
+  ],
+  "finqa-GS/2014/page_74.pdf-2": [
+   1.0
+  ],
+  "finqa-C/2009/page_63.pdf-4": [
+   1.0
+  ],
+  "finqa-BLL/2010/page_37.pdf-1": [
+   1.0
+  ],
+  "finqa-MO/2016/page_19.pdf-1": [
+   1.0
+  ],
+  "finqa-GPN/2013/page_87.pdf-2": [
+   1.0
+  ],
+  "finqa-ADBE/2008/page_74.pdf-2": [
+   1.0
+  ],
+  "finqa-C/2008/page_65.pdf-3": [
+   1.0
+  ],
+  "finqa-RSG/2009/page_140.pdf-1": [
+   1.0
+  ],
+  "finqa-AON/2007/page_171.pdf-2": [
+   0.0
+  ],
+  "finqa-ADI/2011/page_61.pdf-1": [
+   0.0
+  ],
+  "finqa-MS/2013/page_139.pdf-1": [
+   1.0
+  ],
+  "finqa-FIS/2016/page_45.pdf-2": [
+   1.0
+  ],
+  "finqa-AMT/2006/page_104.pdf-1": [
+   0.0
+  ],
+  "finqa-GS/2014/page_51.pdf-1": [
+   0.0
+  ],
+  "finqa-BKR/2017/page_56.pdf-2": [
+   0.0
+  ],
+  "finqa-AMT/2006/page_104.pdf-4": [
+   1.0
+  ],
+  "finqa-L/2009/page_84.pdf-2": [
+   0.0
+  ],
+  "finqa-SLG/2011/page_91.pdf-3": [
+   0.0
+  ]
+ },
+ "regraded": {
+  "flips": 0,
+  "to_correct": 0
+ }
+}
